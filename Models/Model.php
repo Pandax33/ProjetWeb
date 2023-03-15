@@ -3,7 +3,7 @@
 namespace App\Models;
 
 // On importe la classe Db
-use App\Db\Db;
+use App\Core\Db;
 
 // On crée la classe Model qui hérite de Db
 class Model extends Db

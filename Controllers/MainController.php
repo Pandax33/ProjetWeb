@@ -1,8 +1,8 @@
 <?php
-
+//PERMET D'ACCEDER A LA PAGE D'ACCUEIL
 namespace App\Controllers;
 
-class MainController
+class MainController extends Controller
 {
     public function index()
     {

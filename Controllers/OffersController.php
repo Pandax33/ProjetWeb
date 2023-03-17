@@ -6,6 +6,7 @@ class OffersController extends Controller
 {
     public function index()
     {
-        echo 'liste annonce';
+        $donnees = ['a','b'];
+        include_once ROOT . '/Views/offers/index.php';
     }
 }

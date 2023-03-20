@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class UsersModel extends Model
+class PersonModel extends Model
 {
     protected $id;
     protected $email;
@@ -11,7 +11,8 @@ class UsersModel extends Model
     public function __construct()
     {
         $class =str_replace( __NAMESPACE__.'\\', '', __CLASS__ );
-        $this->table = strtolower(str_replace('Model', '', $class));
+        $this->table = "Person";
+        $this->IdCollumName= "ID_P";
     }
 
     /**

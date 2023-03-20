@@ -10,6 +10,7 @@ class Model extends Db
 {
     // Table de la base de données
     protected $table;
+    protected $IdCollumName;
 
     //Instance de Db
     private $db;
@@ -38,9 +39,9 @@ class Model extends Db
     return $this->requete("SELECT * FROM {$this->table} WHERE $liste_champs", $valeurs)->fetchAll();
     }
 
-    public function find(int $id)
+    public function find($id)
     {
-        return $this->requete("SELECT * FROM {$this->table} WHERE id = ?", [$id])->fetch();
+        return $this->requete("SELECT * FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id])->fetch();
     }
 
 //CREATE
@@ -54,7 +55,7 @@ class Model extends Db
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        if($valeur !== null && $champ != 'table' && $champ != 'db'){
+        if($valeur !== null  && $champ != 'IdCollumName' && $champ != 'table' && $champ != 'db'){
         $champs[] = $champ;
         $inter[] = "?";
         $valeurs[]= $valeur;
@@ -69,7 +70,7 @@ class Model extends Db
     }
 
 //UPDATE
-    public function update(int $id, Model $model)
+    public function update($id, Model $model)
     {
         //update offers set entitled = ?, duration = ?, date_publish = ?, salary = ?, space_available = ?, state = ?, description = ? where id = ?
         $champs = [];
@@ -78,7 +79,8 @@ class Model extends Db
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        if($valeur !== null && $champ != 'table' && $champ != 'db'){
+        
+        if($valeur !== null && $champ != 'table' && $champ != 'IdCollumName' && $champ != 'db'){
         $champs[] = "$champ = ?";
         $valeurs[]= $valeur;
         }
@@ -88,14 +90,14 @@ class Model extends Db
 
     
     // On exécute la requête
-    return $this->requete("UPDATE {$this->table} SET $liste_champs WHERE id = ?", $valeurs );
+    return $this->requete("UPDATE {$this->table} SET $liste_champs WHERE {$this->IdCollumName} = ?", $valeurs );
     } 
 
 //DELETE
     public function delete(int $id)
     {
     // DELETE FROM offers WHERE id = ?
-    return $this->requete("DELETE FROM {$this->table} WHERE id = ?", [$id]);
+    return $this->requete("DELETE FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id]);
     }
     
 

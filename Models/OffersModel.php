@@ -15,9 +15,8 @@ class OffersModel extends Model
     public function __construct()
     {
 
-        
-        $this->table = "offers";
-        
+        $this->table = "offers";  
+        $this->IdCollumName="ID_O";
     }
 
 

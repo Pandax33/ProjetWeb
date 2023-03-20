@@ -1,31 +1,31 @@
 <?php 
 // PERMET DE CONSULTER LA LISTE DES ANNONCES
 namespace App\Controllers;
-use App\Models\OffersModel;
+use App\Models\PersonModel;
 
-class OffersController extends Controller
+class TeacherController extends Controller
 {
     //lister les annonces de la bdd
     public function index()
     {
         //On instancie le modele coresspondant a la table offers
-        $offersModel = new OffersModel;
+        $teacherModel = new PersonModel;
 
         //On recupere les annonces de la bdd 
-        $offers = $offersModel->findBy(['state' => 1]);
-        $this -> render('offers/index', ['offers' => $offers]);
+        $teachers = $teacherModel->findBy(['Role_P' => 'Teacher']);
+        $this -> render('teachers/index', ['teachers' => $teachers]);
 
     }
 
     // Afficher une annonce
     public function detail(int $id){
         // On instancie le modèle
-        $offersModel = new OffersModel;
+        $teacherModel = new PersonModel;
 
         // On récupère l'annonce
-        $offer = $offersModel->find($id);
+        $teacher = $teacherModel->find($id);
 
         // On affiche la vue
-        $this->render('offers/detail', ['offer' => $offer]);
+        $this->render('teachers/detail', ['teacher' => $teacher]);
     }
 }

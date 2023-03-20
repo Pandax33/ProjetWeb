@@ -1,19 +1,20 @@
 <?php 
-// PERMET DE CONSULTER LA LISTE DES ANNONCES
+// PERMET DE CONSULTER LA LISTE DES Wishlist
 namespace App\Controllers;
+use App\Models\WishlistModel;
 use App\Models\OffersModel;
 
-class OffersController extends Controller
+class WishlistController extends Controller
 {
     //lister les annonces de la bdd
     public function index()
     {
         //On instancie le modele coresspondant a la table offers
-        $offersModel = new OffersModel;
+        $wishlistModel = new WishlistModel;
 
         //On recupere les annonces de la bdd 
-        $offers = $offersModel->findBy(['state' => 1]);
-        $this -> render('offers/index', ['offers' => $offers]);
+        $wishlist = $wishlistModel->find();
+        $this -> render('wishlist/index', ['wishlist' => $wishlist]);
 
     }
 

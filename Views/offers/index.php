@@ -3,7 +3,7 @@
 //On affiche les annonces
 foreach($offers as $offer) : ?>
 <article>
-    <h2><a href="index.php?p=offers/lire/<?= $offer->ID ?>"><?=$offer -> entitled  ?></a></h2>
+    <h2><a href="index.php?p=offers/detail/<?= $offer->ID ?>"><?=$offer -> entitled  ?></a></h2>
     <div><?=$offer -> description ?></div>
 
 </article>

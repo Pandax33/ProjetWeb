@@ -6,6 +6,6 @@ class MainController extends Controller
 {
     public function index()
     {
-        echo "Ceci est l'accueil";
+        $this -> render('main/index', [], 'home');
     }
 }

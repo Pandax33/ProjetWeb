@@ -18,6 +18,7 @@ class PersonModel extends Model
         $class =str_replace( __NAMESPACE__.'\\', '', __CLASS__ );
         $this->table = "Person";
         $this->IdCollumName= "ID_P";
+    }
 
     /**
      * Get the value of ID_P
@@ -138,4 +139,4 @@ class PersonModel extends Model
 
         return $this;
     }
-    }
+}

@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\PersonModel;
 
-class StudentController extends Controller
+class StudentsController extends Controller
 {
     //lister les étudiants de la bdd
     public function index()

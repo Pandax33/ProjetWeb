@@ -28,4 +28,10 @@ class OffersController extends Controller
         // On affiche la vue
         $this->render('offers/detail', ['offer' => $offer]);
     }
+
+    // Afficher le formulaire de création d'une annonce
+    public function create(){
+        // On affiche la vue
+        $this->render('offers/create');
+    }
 }

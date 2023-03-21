@@ -1,0 +1,139 @@
+body {
+    background-image: url('img1.png');
+        background-size: cover;
+        backdrop-filter: blur(5px);
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+/*.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+}*/
+.container {
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/*.white-faded-square {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 5px;
+}*/
+
+.logo-placeholder {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.create-enterprise-border {
+    font-family: 'Special Font', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #7d7a7a;
+    border-radius: 10px;
+    padding: 10px;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+form {
+    display: grid;
+    gap: 10px;
+}
+
+.locations-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.locations-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.locations-select-container::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.locations-select-container select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .locations-select-container::after {
+    font-size: 1rem;
+  }
+  
+  .locations-select-container select {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
+
+
+
+.interns-label {
+    margin-left: 20px;
+}
+
+#rating {
+    font-size: 2rem;
+}
+
+.continue-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.continue-btn:hover {
+    background-color: #555;
+    }
+    
+    footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    }
+    
+    hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    }

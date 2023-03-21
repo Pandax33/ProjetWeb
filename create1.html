@@ -22,19 +22,12 @@
             <input type="text" id="activity-sectors">
           </div>
           <div class="form-row">
-            <label for="locations">Locations</label>
             <label for="interns" class="interns-label">Number of Interns</label>
-        </div>
-        <div class="form-row">
-            <select id="locations-select" multiple>
-                <option></option>
-            </select>
-            <input type="number" id="interns" list="interns-list" min="1" step="1">
-            <datalist id="interns-list"></datalist>
-        </div>
-        
-        <div class="form-row">
             <label for="rating">Rating</label>
+            </div>
+            <div class="form-row">
+                <input type="number" id="interns" list="interns-list" min="1" step="1">
+                <datalist id="interns-list"></datalist>
             <div id="rating">
               <span class="star">&#9733;</span>
               <span class="star">&#9733;</span>
@@ -42,8 +35,21 @@
               <span class="star">&#9733;</span>
               <span class="star">&#9733;</span>
             </div>
+            
           </div>
         </div>
+          <div class="form-row">
+            <label for="locations">Locations</label>
+           <!---->
+        </div>
+        <div class="form-row">
+            <select id="locations-select" multiple>
+                <option></option>
+            </select>
+           <!-- -->
+        </div>
+        
+        
         <button type="submit" class="continue-btn">Continue</button>
       </form>
     </div>
@@ -103,4 +109,6 @@ const getCities = async () => {
   $(document).ready(() => {
     getCities();
   });
+
+  
   </script>

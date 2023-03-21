@@ -1,0 +1,28 @@
+body {
+    background-image: url('https://picsum.photos/1920/1080');
+background-size: cover;
+background-position: center;
+filter: blur(5px);
+}
+
+.navbar {
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.vl {
+border-left: 1px solid rgba(0, 0, 0, 0.1);
+height: 30px;
+margin: 0 10px;
+}
+
+.card {
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-link {
+border-radius: 50%;
+}
+
+footer {
+padding: 20px 0;
+}

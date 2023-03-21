@@ -1,111 +1,44 @@
 body {
     background-image: url('img1.png');
-        background-size: cover;
-        backdrop-filter: blur(5px);
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-/*.container {
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0 20px;
-}*/
-.container {
+  }
+  
+  .container {
     max-width: 500px;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin: 0 auto;
-}
-
-/*.white-faded-square {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 30px;
-    border-radius: 5px;
-}*/
-
-
-
-
-.create-enterprise-border {
-    font-family: 'Special Font', cursive;
+  }
+  
+  .create-enterprise-border {
+    font-family: Arial, sans-serif;
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 20px;
-    /*border: 2px solid #7d7a7a;
-    border-radius: 10px;
-    padding: 10px;*/
-}
-.form-row {
+  }
+  
+  .form-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
   }
   
-  .form-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-form {
+  form {
     display: grid;
     gap: 10px;
-}
-
-/*.locations-label {
-  font-size: 0.4rem;
-  font-weight: bold;
-}
-
-.locations-select-container {
-  position: relative;
-  width: 100%;
-}
-
-.locations-select-container::after {
-  content: "\25BC";
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-  pointer-events: none;
-}
-
-.locations-select-container select {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2rem;
-  border: none;
-  background-color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  box-shadow: none;
-}
-
-@media only screen and (max-width: 600px) {
-  .locations-select-container::after {
-    font-size: 1rem;
   }
   
-  .locations-select-container select {
-    font-size: 1rem;
-    padding: 8px;
-  }
-}*/
-select {
+  select {
     display: block;
     margin-bottom: 20px;
     font-size: 20px;
@@ -117,12 +50,13 @@ select {
     width: 100%;
     height: 45px;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;  
-}
-
-input {
+    font-family: Arial, sans-serif;
+  }
+  
+  form input[type="text"] {
     display: block;
     margin-bottom: 20px;
+    margin-top: 10px;
     margin-right: 10px;
     font-size: 20px;
     padding: 10px;
@@ -130,20 +64,31 @@ input {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.646);
     width: 100%;
-
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-
-.interns-label {
-    margin-left: 20px; /* set the margin-left to 20px */
-}
-
-
-#rating {
+  }
+  
+  form input[type="number"] {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 30px;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid rgb(187, 184, 184);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.646);
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  #rating {
     font-size: 2rem;
-}
-.star {
+  }
+  
+  .star {
     font-size: 2rem;
     cursor: pointer;
     color: #bbb;
@@ -153,85 +98,50 @@ input {
     color: #f9b74c;
   }
   
-
-.continue-btn {
+  .continue-btn {
     background-color: #d99240;
     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-.continue-btn:hover {
+  }
+  
+  .continue-btn:hover {
     background-color: #fa8a00;
-    }
-    
-    footer {
+  }
+  footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    }
-    
-    hr {
+  }
+  
+  hr {
     margin: 0;
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
-    }
-    /* Style the input element */
-/* Style the input element */
-#locations {
-    display: block;
+  }
+  #rating {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
     margin-bottom: 20px;
-    font-size: 20px;
-    padding: 10px;
-    border: 1px solid rgb(187, 184, 184);
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.646);
-    width: 100%;
-    height: 45px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
   }
   
-  /* Hide the arrow on the right side of the input element */
-  #locations::-webkit-contacts-auto-fill-button {
-    display: none;
-  }
+
+  @media only screen and (max-width: 767px) {
+    /* styles for small screens */
   
-  /* Style the datalist */
-  #locations-list {
-    display: none;
-  }
+    .form-row {
+      display: flex;
+      flex-direction: column; /* add this line */
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   
-  /* Show the datalist when the input element is in focus */
-  #locations:focus + #locations-list {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    margin-top: -1px;
-    border: 1px solid rgb(187, 184, 184);
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    background-color: #fff;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
+    /* other styles... */
   }
-  
-  /* Style the options in the datalist */
-  #locations-list option {
-    padding: 10px;
-    font-size: 20px;
-    color: #333;
-  }
-  
-  /* Style the selected options */
-  #locations-list option:checked {
-    background-color: #ddd;
-  }
-  

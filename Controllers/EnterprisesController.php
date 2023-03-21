@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\EnterpriseModel;
 
-class EnterpriseController extends Controller
+class EnterprisesController extends Controller
 {
     //lister les entreprises de la bdd
     public function index()

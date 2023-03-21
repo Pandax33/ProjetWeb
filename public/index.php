@@ -25,14 +25,10 @@ require_once ROOT . '/Autoloader.php';
 Autoloader::register();
 
 // On instancie Main (ROUTEUR)
+$app = new Main();
 
-
-$oui= new _IsModel;
-
-print_r($oui->find(3));
-
-
-
+// On lance l'application
+$app->start();
 
 
 

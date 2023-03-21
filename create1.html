@@ -11,6 +11,7 @@
         <div class="white-faded-square">
             <div class="create-enterprise-border">Create Enterprise</div>
             <form>
+            <div class="form row">
                 <div class="form-row">
                     <label for="full-name">Full Name</label>
                     <label for="activity-sectors">Activity Sectors</label>
@@ -20,21 +21,15 @@
                     <input type="text" id="activity-sectors">
                 </div>
                 <div class="form-row">
-                    
                     <label for="locations">Locations</label>
                     <label for="interns" class="interns-label">Number of Interns</label>
-                    </div>
+                </div>
                     <div class="form-row">
-                   
-            <div class="locations-select-container">
-              <select multiple id="locations"></select></div>
-                    <div>
-                        <input type="number" id="interns" list="interns-list" min="1" step="1">
+                        <select multiple id="locations"></select>
+              <input type="number" id="interns" list="interns-list" min="1" step="1">
                     <datalist id="interns-list">
                     </datalist>
                     </div>
-                </div>
-                
                 <div class="form-row">
                     <label for="rating">Rating</label>
                     <div id="rating">
@@ -42,6 +37,7 @@
                         ★ ★ ★ ★ ★
                     </div>
                 </div>
+            </div>
                 <button type="submit" class="continue-btn">Continue</button>
             </form>
         </div>
@@ -58,41 +54,27 @@
         for (let i = 1; i <= limit; i++) {
             const option = document.createElement('option');
             option.value = i;
-            dataList.appendChild(option);
+           dataList.appendChild(option);
         }
     };
 
     generateInternsList(100); 
 
+    const getCities = async () => {
+        const username = 'ibRa14'; // Your Geonames username
+        const response = await fetch(`http://api.geonames.org/searchJSON?country=FR&maxRows=1000&username=${username}`);
+        const cities = await response.json();
+        const locationSelect = document.getElementById('locations');
+        cities.geonames.forEach(city => {
+            const option = document.createElement('option');
+            option.value = city.name;
+            option.textContent = city.name;
+            locationSelect.appendChild(option);
+        });
+    };
 
-   const locationsSelect = document.getElementById("locations");
-
-// Fetch cities data from API
-const fetchCitiesData = async () => {
-  try {
-    const response = await fetch(
-      "https://api-adresse.data.gouv.fr/search/?q=&type=municipality&limit=1000"
-    );
-    const citiesData = await response.json();
-    return citiesData.features.map((feature) => feature.properties.city);
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-// Populate select options with cities data
-const populateSelectOptions = async () => {
-  const citiesData = await fetchCitiesData();
-  citiesData.forEach((city) => {
-    const option = document.createElement("option");
-    option.value = city;
-    option.text = city;
-    locationsSelect.appendChild(option);
-  });
-};
-
-populateSelectOptions();
-
-
+    getCities();
+    
 </script>
+
 

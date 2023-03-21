@@ -1,6 +1,6 @@
-<h1> Annonce </h1>
+<h3> Annonce </h3>
 <article>
-    <h1><a href="index.php?p=offers/detail/<?= $offer->ID ?>"><?=$offer -> entitled  ?></a></h1>
-    <div><?=$offer -> description ?></div>
+    <h1><?=$offer -> Entitled_O  ?></h1>
+    <div><?=$offer -> Description ?></div>
 
 </article>

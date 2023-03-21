@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\PersonModel;
 
-class TeacherController extends Controller
+class TeachersController extends Controller
 {
     //lister les annonces de la bdd
     public function index()

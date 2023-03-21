@@ -1,83 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="create1.css">
-    <title>Create Enterprise</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="create1.css">
+  <title>Create Enterprise</title>
 </head>
 <body>
-    <div class="container">
-        <div class="white-faded-square">
-            <div class="create-enterprise-border">Create Enterprise</div>
-            <form>
-            <div class="form row">
-                <div class="form-row">
-                    <label for="full-name">Full Name</label>
-                    <label for="activity-sectors">Activity Sectors</label>
-                </div>
-                <div class="form-row">
-                    <input type="text" id="full-name">
-                    <input type="text" id="activity-sectors">
-                </div>
-                <div class="form-row">
-                    <label for="locations">Locations</label>
-                    <label for="interns" class="interns-label">Number of Interns</label>
-                </div>
-                    <div class="form-row">
-                        <select multiple id="locations"></select>
-              <input type="number" id="interns" list="interns-list" min="1" step="1">
-                    <datalist id="interns-list">
-                    </datalist>
-                    </div>
-                    <div class="form-row">
-                        <label for="rating">Rating</label>
-                        <div id="rating">
-                          <span class="star">&#9733;</span>
-                          <span class="star">&#9733;</span>
-                          <span class="star">&#9733;</span>
-                          <span class="star">&#9733;</span>
-                          <span class="star">&#9733;</span>
-                        </div>
-                      </div>
-                      
-            </div>
-                <button type="submit" class="continue-btn">Continue</button>
-            </form>
+  <div class="container">
+    <div class="white-faded-square">
+      <div class="create-enterprise-border">Create Enterprise</div>
+      <form>
+        <div class="form row">
+          <div class="form-row">
+            <label for="full-name">Full Name</label>
+            <label for="activity-sectors">Activity Sectors</label>
+          </div>
+          <div class="form-row">
+            <input type="text" id="full-name">
+            <input type="text" id="activity-sectors">
+          </div>
+          <div class="form-row">
+            <label for="locations">Locations</label>
+            <label for="interns" class="interns-label">Number of Interns</label>
         </div>
+        <div class="form-row">
+            <select id="locations-select" multiple>
+                <option></option>
+            </select>
+            <input type="number" id="interns" list="interns-list" min="1" step="1">
+            <datalist id="interns-list"></datalist>
+        </div>
+        
+        <div class="form-row">
+            <label for="rating">Rating</label>
+            <div id="rating">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="continue-btn">Continue</button>
+      </form>
     </div>
-    <footer>
-        <hr>
-        <p>Footer</p>
-    </footer>
+  </div>
+  <footer>
+    <hr>
+    <p>Footer</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  
 </body>
 </html>
-<script>
-    const generateInternsList = (limit) => {
-        const dataList = document.getElementById('interns-list');
-        for (let i = 1; i <= limit; i++) {
-            const option = document.createElement('option');
-            option.value = i;
-           dataList.appendChild(option);
-        }
-    };
-
-    generateInternsList(100); 
-
-    const getCities = async () => {
-        const username = 'ibRa14'; // Your Geonames username
-        const response = await fetch(`http://api.geonames.org/searchJSON?country=FR&maxRows=1000&username=${username}`);
-        const cities = await response.json();
-        const locationSelect = document.getElementById('locations');
-        cities.geonames.forEach(city => {
-            const option = document.createElement('option');
-            option.value = city.name;
-            option.textContent = city.name;
-            locationSelect.appendChild(option);
-        });
-    };
-
-    getCities();
+  <script>
     const ratingContainer = document.getElementById('rating');
 let rating = 0;
 
@@ -100,5 +81,26 @@ function updateRating() {
   });
 }
 
-</script>
 
+const getCities = async () => {
+    const username = 'ibRa14'; // Your Geonames username
+    const response = await fetch(`http://api.geonames.org/searchJSON?country=FR&maxRows=1000&username=${username}`);
+    const cities = await response.json();
+    const locationSelect = $('#locations-select');
+    for (let i = 0; i < cities.geonames.length; i++) {
+      const option = new Option(cities.geonames[i].name, cities.geonames[i].name, false, false);
+      locationSelect.append(option);
+    }
+    locationSelect.select2({
+      placeholder: 'Select locations',
+      allowClear: true,
+      closeOnSelect: false,
+      multiple: true,
+      maximumSelectionLength: 5
+    });
+  };
+  
+  $(document).ready(() => {
+    getCities();
+  });
+  </script>

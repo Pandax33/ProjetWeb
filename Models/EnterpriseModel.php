@@ -9,6 +9,8 @@ class EnterpriseModel extends Model
     protected $Intership_E;
     protected $Visibily_E;
     protected $TrustRate_E;
+
+    protected $LinkPicture;
     
     
     public function __construct()
@@ -82,6 +84,17 @@ class EnterpriseModel extends Model
     public function setTrustRateE($TrustRate_E)
     {
         $this->TrustRate_E = $TrustRate_E;
+        return $this;
+    }
+
+    public function getLinkPicture()
+    {
+        return $this->LinkPicture;
+    }
+
+    public function setLinkPicture($LinkPicture)
+    {
+        $this->LinkPicture = $LinkPicture;
         return $this;
     }
 

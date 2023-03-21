@@ -13,6 +13,7 @@ class OffersController extends Controller
 
         //On recupere les annonces de la bdd 
         $offers = $offersModel->findBy(['state' => 1]);
+
         $this->smarty->assign('myArray', $offers);
         $this->smarty->assign('Nom','Liste des offres');
         $this->smarty->display('ma_template.tpl');

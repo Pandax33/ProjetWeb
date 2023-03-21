@@ -11,6 +11,7 @@ class OffersModel extends Model
     protected $space_available;
     protected $state;
     protected $description;
+    protected $LinkPicture;
     
     public function __construct()
     {
@@ -177,6 +178,17 @@ class OffersModel extends Model
     {
         $this->entitled = $entitled;
 
+        return $this;
+    }
+
+    public function getLinkPicture()
+    {
+        return $this->LinkPicture;
+    }
+
+    public function setLinkPicture($LinkPicture)
+    {
+        $this->LinkPicture = $LinkPicture;
         return $this;
     }
 }

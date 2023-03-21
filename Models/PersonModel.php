@@ -10,6 +10,7 @@ class PersonModel extends Model
     protected $Role_P;
     protected $mail;
     protected $password;
+    protected $LinkPicture;
     
 
 
@@ -53,9 +54,9 @@ class PersonModel extends Model
      *
      * @return  self
      */ 
-    public function setFirstname_P($FirstName_P)
+    public function setFirstname_P($FirstName)
     {
-        $this->Firstname_P = $Firstname_P;
+        $this->Firstname_P = $Firstname;
 
         return $this;
     }
@@ -137,6 +138,17 @@ class PersonModel extends Model
     {
         $this->password = $password;
 
+        return $this;
+    }
+
+    public function getLinkPicture()
+    {
+        return $this->LinkPicture;
+    }
+
+    public function setLinkPicture($LinkPicture)
+    {
+        $this->LinkPicture = $LinkPicture;
         return $this;
     }
 }

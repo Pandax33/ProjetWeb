@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const activityInput = document.getElementById('inputSecteur d\'activité4');
     const descriptionInput = document.getElementById('inputDescription4');
     const nbStagiaireInput = document.getElementById('inputNbStagiaire');
-    const localiteInput = document.getElementById('inputLocalite');
+    
   
     const star1 = document.getElementById('star1');
     const star2 = document.getElementById('star2');
@@ -26,7 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
       activityInput.value = activity;
       descriptionInput.value = description;
       nbStagiaireInput.value = nbStagiaire;
-    localiteInput.value = "Rouen";
+      var LocaliteInput = document.getElementById("inputLocalite");
+
+
+      for (var i = 0; i < LocaliteInput.options.length; i++) {
+        if (LocaliteInput.options[i].value == localite) {
+          LocaliteInput.selectedIndex = i;
+          break;
+        }
+      }
 
       
   

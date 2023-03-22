@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-22 15:55:09
+/* Smarty version 4.3.0, created on 2023-03-22 18:52:28
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateEditEnterprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641b24dd5709c2_16797938',
+  'unifunc' => 'content_641b4e6c66d443_63923513',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dbb7d005c8a48793d427053fdd608dee1109769b' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateEditEnterprise.tpl',
-      1 => 1679500507,
+      1 => 1679511145,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641b24dd5709c2_16797938 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b4e6c66d443_63923513 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
@@ -34,34 +34,22 @@ function content_641b24dd5709c2_16797938 (Smarty_Internal_Template $_smarty_tpl)
       <label for="inputNom">Nom</label>
       <select id="inputNom" class="form-control">
         <option selected>Choose...</option>
-        <?php
+       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['entreprises']->value, 'item');
 $_smarty_tpl->tpl_vars['item']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
-          <option data-activity="<?php echo $_smarty_tpl->tpl_vars['item']->value->Activity_E;?>
+  <option data-activity="<?php echo $_smarty_tpl->tpl_vars['item']->value->Activity_E;?>
 " data-ID="<?php echo $_smarty_tpl->tpl_vars['item']->value->ID_E;?>
 " data-Intership="<?php echo $_smarty_tpl->tpl_vars['item']->value->Intership_E;?>
 " data-description="<?php echo $_smarty_tpl->tpl_vars['item']->value->Description_E;?>
 " data-visibility="<?php echo $_smarty_tpl->tpl_vars['item']->value->Visibility_E;?>
+" data-localite="<?php echo $_smarty_tpl->tpl_vars['item']->value->Localite;?>
 " data-TrustRate="<?php echo $_smarty_tpl->tpl_vars['item']->value->TrustRate_E;?>
 "><?php echo $_smarty_tpl->tpl_vars['item']->value->Name_E;?>
 </option>
-          <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['locate']->value, 'item2');
-$_smarty_tpl->tpl_vars['item2']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item2']->value) {
-$_smarty_tpl->tpl_vars['item2']->do_else = false;
-?>
-            <?php if ($_smarty_tpl->tpl_vars['item']->value->ID_E == $_smarty_tpl->tpl_vars['item2']->value->ID_E) {?>
-              data-localite="<?php echo $_smarty_tpl->tpl_vars['item2']->value->Name_L;?>
-"
-            <?php }?>
-          <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        <?php
+<?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </select>
@@ -84,22 +72,23 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </div>
       
       <div class="form-group col-md-6">
-        <label for="inputLocalite">Localite</label>
-        <select id="inputLocalite" class="form-control">
-          <option selected>Choose...</option>
-           <?php
+    <label for="inputLocalite">Localite</label>
+    <select id="inputLocalite" class="form-control" multiple>
+        <option disabled>Choose...</option>
+        <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');
 $_smarty_tpl->tpl_vars['item']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
-           <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Name;?>
+            <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Name;?>
 </option>
-           <?php
+        <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        </select>
-      </div>
+        <option> oui </option>
+    </select>
+</div>
     </div>
   
      <fieldset class="rating">

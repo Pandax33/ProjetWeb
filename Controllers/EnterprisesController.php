@@ -33,21 +33,34 @@ class EnterprisesController extends Controller
     }
 
     public function modifier(){
-     
         $enterpriseModel = new EnterpriseModel;
         $locateModel= new LocateModel;
         $cityModel= new CityModel;
-        //On recupere les entreprises de la bdd 
+        // On recupere les entreprises de la bdd
         $enterprises = $enterpriseModel->findAll();
         $locate= $locateModel->findAll();
         $city= $cityModel->findAll();
+        
+        // Création du tableau associatif pour relier l'ID_E au nom de la localité
+        $localite_map = [];
+        foreach ($locate as $loc) {
+            foreach ($city as $ct) {
+                if ($loc->Name == $ct->Name) {
+                    $localite_map[$loc->ID_E] = $ct->Name;
+                    break;
+                }
+            }
+        }
+    
+        // Ajout de la localité à chaque entreprise
+        foreach ($enterprises as &$enterprise) {
+            $enterprise->Localite = $localite_map[$enterprise->ID_E];
+        }
+        
         $this->smarty->assign('entreprises', $enterprises);
         $this->smarty->assign('city', $city);
         $this->smarty->assign('locate', $locate);
         $this->smarty->display('TemplateEditEnterprise.tpl');
-       
-       
-
-        
+        var_dump($enterprises);
     }
 }

@@ -1,0 +1,113 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand .divider {
+    margin: 0 10px;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: grey;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: black;
+  }
+  
+  .search-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+  }
+  
+  .profile-section,
+  .sign-section {
+    margin-left: 20px;
+  }
+  
+  .hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+ /* Add this new rule */
+.nav-item.search-item {
+    display: none;
+  }
+  
+  /* Update the existing media query */
+  @media (max-width: 768px) {
+    .nav-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      display: none;
+    }
+  
+    .nav-list.nav-list-active {
+      display: flex;
+    }
+  
+    .nav-item {
+      margin: 10px;
+    }
+  
+    .nav-item.search-item {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .search-input {
+      width: 100%;
+    }
+  
+    .profile-section,
+    .sign-section {
+      display: none;
+    }
+  }
+  

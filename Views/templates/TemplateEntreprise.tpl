@@ -9,7 +9,7 @@
   <div class="container">
     <div class="card card-top">
       <div class="card-body">
-        <span>Offres</span> <span>| Entreprises</span>
+        <span>Offres</span> <span>| Entreprises</span> <span><a href="index.php?p=enterprises/modifier">Oui</a></span>
       </div>
     </div>
 
@@ -17,25 +17,15 @@
       <ul>
         {foreach from=$myArray item=object}
           <li>
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="..." class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">{$object->Entitled_O}</h5>
-                    <p class="card-text">{$object->Duration_O}</p>
-                    <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
-                    <div class="button-group">
-                      <button class="btn btn-orange">En savoir plus</button>
-                      <button class="btn btn-green">Ajouter à la wishlist</button>
-                      <button class="btn btn-red">Candidater</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{$object->Name_E}</h5>
+            <h4 class="card-title">{$object->Activity_E}</h4>
+            <h2 class="card-title">{$object->Intership_E}</h4>
+            <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+        </div>
           </li>
         {/foreach}
       </ul>

@@ -2,6 +2,8 @@
 // PERMET DE CONSULTER LA LISTE DES Entreprises
 namespace App\Controllers;
 use App\Models\EnterpriseModel;
+use App\Models\LocateModel;
+use App\Models\CityModel;
 
 class EnterprisesController extends Controller
 {
@@ -13,8 +15,9 @@ class EnterprisesController extends Controller
 
         //On recupere les entreprises de la bdd 
         $enterprises = $enterpriseModel->findAll();
-        $this -> render('enterprises/index', ['enterprises' => $enterprises]);
-
+        $this->smarty->assign('myArray', $enterprises);
+        $this->smarty->assign('Nom','Liste des entreprises');
+        $this->smarty->display('TemplateEntreprise.tpl');
     }
 
     // Afficher une annonce
@@ -27,5 +30,24 @@ class EnterprisesController extends Controller
 
         // On affiche la vue
         $this->render('enterprises/detail', ['enterprise' => $enterprise]);
+    }
+
+    public function modifier(){
+     
+        $enterpriseModel = new EnterpriseModel;
+        $locateModel= new LocateModel;
+        $cityModel= new CityModel;
+        //On recupere les entreprises de la bdd 
+        $enterprises = $enterpriseModel->findAll();
+        $locate= $locateModel->findAll();
+        $city= $cityModel->findAll();
+        $this->smarty->assign('entreprises', $enterprises);
+        $this->smarty->assign('city', $city);
+        $this->smarty->assign('locate', $locate);
+        $this->smarty->display('TemplateEditEnterprise.tpl');
+       
+       
+
+        
     }
 }

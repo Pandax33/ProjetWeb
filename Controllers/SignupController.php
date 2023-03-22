@@ -8,6 +8,7 @@ class SignupController extends Controller
     //afficher la page de login
     public function login()
     {
+    
         //on instancie le modele coresspondant a la table person
         $personModel = new PersonModel;
 

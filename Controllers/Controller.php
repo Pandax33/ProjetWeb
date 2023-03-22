@@ -27,7 +27,7 @@ class Controller
 
      }
      public function __construct(){
-         session_start();
+         
          $this->smarty = new Smarty();
          $this->smarty->setTemplateDir(ROOT . '/Views/templates');
          $this->smarty->setCompileDir(ROOT . '/Views/templates_c');

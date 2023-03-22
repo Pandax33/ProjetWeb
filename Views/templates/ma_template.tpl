@@ -9,7 +9,7 @@
   <div class="container">
     <div class="card card-top">
       <div class="card-body">
-        <span>Offres |</span> <span> Entreprises</span>
+        <span>Offres |</span> <span><a href="index.php?p=enterprises">Entreprises</a></span>
       </div>
     </div>
 
@@ -20,12 +20,11 @@
             <div class="card mb-3" style="max-width: 900px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="..." class="img-fluid rounded-start" alt="...">
+                  <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">{$object->Entitled_O}</h5>
-                    <h5 class="card-title">{$object->ent}</h5>
+                    <h5 class="card-title">{$object->Entitled_O} / {$object->ent} </h5>
                     <p class="card-text">{$object->Duration_O}</p> 
                     <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
                     </div>

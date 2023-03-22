@@ -9,16 +9,27 @@ element.style {
   max-width: 900px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 body {
   margin: 0;
-  padding: 0;
-  min-height: 100vh;
+  min-height: 100px;
+  /*Laisser de l'espace vide en haut */
+  padding-top: 150px;
   font-family: Poppins ExtraBold, sans-serif;
   background-image: url('img1.png');
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -28,6 +39,7 @@ body {
 
 span{
   font-family: Dela Gothic One, sans-serif;
+  font-size: 1.5em;
 }
 
 h5 {

@@ -29,4 +29,6 @@ class WishlistController extends Controller
         // On affiche la vue
         $this->render('offers/detail', ['offer' => $offer]);
     }
+
+
 }

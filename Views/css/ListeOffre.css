@@ -20,19 +20,18 @@ body {
 }
 
 .container {
-  max-width: 500px;
-  margin-top: 20px;
+  max-width: 80%; /* Modifier la largeur max pour prendre 80% de la largeur de la page */
   background-color: rgba(255, 255, 255, 0.7);
   padding: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   width: 80%;
-  margin: auto; /* centrer horizontalement */
+  margin: auto;
 }
 
 h2 {
   text-align: center;
-  font-size: 36px;
+  font-size: 48px; /* Augmenter la taille de la police */
   font-family: Arial, sans-serif;
   margin-bottom: 20px;
 }
@@ -43,138 +42,108 @@ h2 {
 }
 
 .card img {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  width: 100%; /* Ajouter cette ligne pour que l'image prenne toute la largeur de la colonne */
 }
 
-.card-body {
-  padding: 20px;
-}
-
-.card-title {font-size: 20px;
+.card-title {
+  font-size: 24px; /* Augmenter la taille de la police */
   margin-bottom: 10px;
-  }
-  
-  .card-text {
-  font-size: 16px;
+}
+
+.card-text {
+  font-size: 18px; /* Augmenter la taille de la police */
   margin-bottom: 5px;
-  }
-  
-  .text-muted {
-  font-size: 14px;
+}
+
+.text-muted {
+  font-size: 16px; /* Augmenter la taille de la police */
   color: #6c757d;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 100px auto 0;
+    padding: 20px;
   }
-  
-  ul {
-  list-style: none;
+  h2 {
+    font-size: 36px; /* Augmenter la taille de la police */
+  }
+  .card-title {
+    font-size: 20px; /* Augmenter la taille de la police */
+  }
+  .card-text, .text-muted {
+    font-size: 16px; /* Augmenter la taille de la police */
+  }
+}
+
+.card-top {
+  background-color: transparent; /* Rendre le fond transparent */
+  margin-bottom: 50px; /* Augmenter la distance avec les autres cartes */
+}
+
+.card-top .card-body {
+  display: flex;
+  justify-content: center; /* Centrer les éléments à l'intérieur */
+  align-items: center;
+}
+
+.card-top .card-body span:first-child {
+  color: black; /* "Offres" en noir */
+  margin-right: 10px; /* Ajouter une marge à droite pour séparer les deux éléments */
+}
+
+.card-top .card-body span:last-child {
+  color: gray; /* "| Entreprises" en gris */
+}
+
+/* Centrer les cartes */
+ul {list-style: none;
   padding: auto;
   margin: auto;
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center; /* Centrer les éléments horizontalement */
   }
+  
   li {
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-    width: 70%; /* Les éléments <li> prendront 70% de la largeur du conteneur */
-    margin-bottom: 20px; /* Ajouter de l'espace entre les cartes */
+  width: 70%; /* Les éléments <li> prendront 70% de la largeur du conteneur /
+  margin-bottom: 20px; / Ajouter de l'espace entre les cartes */
   }
+  
   .card.mb-3 {
-    width: 100%; /* Les cartes prendront 100% de la largeur du <li> */
+  width: 100%; /* Les cartes prendront 100% de la largeur du <li> */
   }
   
-  @media only screen and (max-width: 768px) {
-  .container {
-  margin: 100px auto 0;
-  padding: 20px;
+  .button-group {
+  display: flex; /* Les boutons seront affichés sur une seule ligne */
   }
-  h2 {
-  font-size: 28px;
+  
+  .button-group button:not(:last-child) {
+  margin-right: 10px; /* Ajouter une marge droite sur tous les boutons, sauf le dernier */
   }
-  .card-title {
-  font-size: 18px;
-  }
-  .card-text, .text-muted {
+  
+  .btn {
   font-size: 14px;
-  }
-  }
-  .container {
-    max-width: 80%; /* Modifier la largeur max pour prendre 80% de la largeur de la page */
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    width: 80%;
-    margin: auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
   }
   
-  h2 {
-    text-align: center;
-    font-size: 48px; /* Augmenter la taille de la police */
-    font-family: Arial, sans-serif;
-    margin-bottom: 20px;
+  .btn-orange {
+  background-color: orange;
+  color: white;
   }
   
-  .card img {
-    width: 100%; /* Ajouter cette ligne pour que l'image prenne toute la largeur de la colonne */
+  .btn-green {
+  background-color: green;
+  color: white;
   }
   
-  .card-title {
-    font-size: 24px; /* Augmenter la taille de la police */
-    margin-bottom: 10px;
+  .btn-red {
+  background-color: red;
+  color: white;
   }
-  
-  .card-text {
-    font-size: 18px; /* Augmenter la taille de la police */
-    margin-bottom: 5px;
-  }
-  
-  .text-muted {
-    font-size: 16px; /* Augmenter la taille de la police */
-    color: #6c757d;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .container {
-      margin: 100px auto 0;
-      padding: 20px;
-    }
-    h2 {
-      font-size: 36px; /* Augmenter la taille de la police */
-    }
-    .card-title {
-      font-size: 20px; /* Augmenter la taille de la police */
-    }
-    .card-text, .text-muted {
-      font-size: 16px; /* Augmenter la taille de la police */
-    }
-  }
-
-  .card-top {
-    background-color: transparent; /* Rendre le fond transparent */
-    margin-bottom: 50px; /* Augmenter la distance avec les autres cartes */
-  }
-  
-  .card-top .card-body {
-    display: flex;
-    justify-content: center; /* Centrer les éléments à l'intérieur */
-    align-items: center;
-  }
-  
-  .card-top .card-body span:first-child {
-    color: black; /* "Offres" en noir */
-    margin-right: 10px; /* Ajouter une marge à droite pour séparer les deux éléments */
-  }
-  
-  .card-top .card-body span:last-child {
-    color: gray; /* "| Entreprises" en gris */
-  }
-  
-  /* Centrer les cartes */
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-21 15:24:00
+/* Smarty version 4.3.0, created on 2023-03-22 09:58:29
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\ma_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6419cc106c1386_62179799',
+  'unifunc' => 'content_641ad1452d9b82_62825170',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cfe44b6ae77388e984f2d72e9511ccbb6b45bc2c' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\ma_template.tpl',
-      1 => 1679412236,
+      1 => 1679479106,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6419cc106c1386_62179799 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641ad1452d9b82_62825170 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -60,6 +60,11 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 </p>
                     <p class="card-text"><small class="text-muted"><?php echo $_smarty_tpl->tpl_vars['object']->value->DatePublish_O;?>
 </small></p>
+                    <div class="button-group">
+                      <button class="btn btn-orange">En savoir plus</button>
+                      <button class="btn btn-green">Ajouter à la wishlist</button>
+                      <button class="btn btn-red">Candidater</button>
+                    </div>
                   </div>
                 </div>
               </div>

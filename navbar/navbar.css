@@ -67,13 +67,22 @@
     cursor: pointer;
   }
   
- /* Add this new rule */
+ /* Add this new rule 
 .nav-item.search-item {
+    display: none;
+  }*/
+  
+  /* Add new rules */
+.desktop-only {
+    display: block;
+  }
+  
+  .mobile-only {
     display: none;
   }
   
   /* Update the existing media query */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .nav-list {
       position: absolute;
       top: 100%;
@@ -90,11 +99,13 @@
   
     .nav-item {
       margin: 10px;
+      text-align: center;
     }
   
-    .nav-item.search-item {
+    .nav-item.search-item,
+    .nav-item.profile-item,
+    .nav-item.sign-item {
       display: block;
-      margin: 10px 0;
     }
   
     .hamburger {
@@ -103,6 +114,14 @@
   
     .search-input {
       width: 100%;
+    }
+  
+    .desktop-only {
+      display: none;
+    }
+  
+    .mobile-only {
+      display: block;
     }
   
     .profile-section,

@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Navbar</title>
   <link rel="stylesheet" href="navbar.css">
+  
 </head>
 <body>
   <nav class="navbar">
     <div class="navbar-brand">
-      <span>SiteName</span>
+      <span>Héraclès</span>
       <span class="divider">|</span>
     </div>
     <ul class="nav-list" id="navList">
       <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Offres</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">ENT</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Entreprises</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Wishlist</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Compare</a></li>
       
-      <li class="nav-item profile-item mobile-only">Profile</li>
-      <li class="nav-item sign-item mobile-only">Sign</li>
+      <li class="nav-item profile-item mobile-only"><a href="#" class="nav-link">Profile</a></li>
+      <li class="nav-item sign-item mobile-only"><a href="#" class="nav-link1">Sign Out</a></li>
       <li class="nav-item search-item mobile-only"><input type="text" class="search-input" placeholder="Search..."></li>
     </ul>
     <input type="text" class="search-input desktop-only" placeholder="Search...">
-    <div class="profile-section">Profile</div>
-    <div class="sign-section">Sign</div>
+    <div class="profile-section"><a href="#" class="nav-link">Profile</a></div>
+    <div class="sign-section"><a href="#" class="nav-link1">Sign Out</a></div>
     <button class="hamburger" id="hamburger">&#9776;</button>
   </nav>
   <script src="navbar.js"></script>

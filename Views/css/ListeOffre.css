@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Dela+Gothic+One&display=swap');
+
 html {
   position: relative;
   min-height: 100%;
 }
 
+element.style {
+  max-width: 900px;
+}
+
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: Poppins ExtraBold, sans-serif;
   background-image: url('img1.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,25 +26,16 @@ body {
   height: 80%; /* occuper 80% de la page */
 }
 
-.container {
-  max-width: 80%; /* Modifier la largeur max pour prendre 80% de la largeur de la page */
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 50px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  width: 80%;
-  margin: auto;
+span{
+  font-family: Dela Gothic One, sans-serif;
 }
 
-h2 {
-  text-align: center;
-  font-size: 48px; /* Augmenter la taille de la police */
-  font-family: Arial, sans-serif;
-  margin-bottom: 20px;
+h5 {
+  font-family: Dela Gothic One, sans-serif;
 }
 
 .card {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 
@@ -77,13 +75,14 @@ h2 {
 }
 
 .card-top {
-  background-color: transparent; /* Rendre le fond transparent */
+  /* Rendre le fond blanc avec de la transparence*/
+  background-color: rgba(255, 255, 255, 0.9);
   margin-bottom: 50px; /* Augmenter la distance avec les autres cartes */
 }
 
 .card-top .card-body {
   display: flex;
-  justify-content: center; /* Centrer les éléments à l'intérieur */
+  justify-content: left; /* Centrer les éléments à l'intérieur */
   align-items: center;
 }
 
@@ -109,8 +108,9 @@ ul {list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%; /* Les éléments <li> prendront 70% de la largeur du conteneur /
-  margin-bottom: 20px; / Ajouter de l'espace entre les cartes */
+  width: 70%; 
+  margin: 0 auto;
+  margin-bottom: 20px;    
   }
   
   .card.mb-3 {
@@ -118,19 +118,40 @@ ul {list-style: none;
   }
   
   .button-group {
-  display: flex; /* Les boutons seront affichés sur une seule ligne */
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 75%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    align-content: center;  
+    /* ajouter un espace a droite */
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  /* créer un média pour changer le flex du button-group */
+  @media only screen and (max-width: 1000px) {
+    .button-group {
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
   }
   
-  .button-group button:not(:last-child) {
-  margin-right: 10px; /* Ajouter une marge droite sur tous les boutons, sauf le dernier */
-  }
   
   .btn {
-  font-size: 14px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
+    /* Adaptation de la taille des boutons selon la taille de l'écran */
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+
   }
   
   .btn-orange {
@@ -141,9 +162,8 @@ ul {list-style: none;
   .btn-green {
   background-color: green;
   color: white;
+  /* ajouter un espace a droite  et a gauche */
+  margin-right: 2%;
+  margin-left: 2%;
   }
   
-  .btn-red {
-  background-color: red;
-  color: white;
-  }

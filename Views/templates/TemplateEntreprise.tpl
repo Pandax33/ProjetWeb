@@ -14,7 +14,7 @@
     </div>
 
     {if $myArray|@count > 0}
-      <ul>
+      
         {foreach from=$myArray item=object}
           <li>
             <div class="card mb-3" style="max-width: 540px;">
@@ -29,7 +29,7 @@
                     <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
                     <div class="button-group">
                       <button class="btn btn-orange">En savoir plus</button>
-                      <button class="btn btn-green">Ajouter à la wishlist</button>
+                      <button class="btn btn-green">Ajouter à la Wishlist</button>
                       <button class="btn btn-red">Candidater</button>
                     </div>
                   </div>
@@ -38,7 +38,7 @@
             </div>
           </li>
         {/foreach}
-      </ul>
+      
     {else}
       <p>Aucune donnée trouvée.</p>
     {/if}

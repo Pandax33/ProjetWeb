@@ -8,14 +8,9 @@
 <body>
   <div class="container">
 
-  
-
     <div class="card card-top">
       <div class="card-body">
         <span>Offres |</span> <span><a href="index.php?p=enterprises">Entreprises</a></span>
-
-        <span class="create"><a href="index.php?p=offre">Créer une offre</a></span>
-
       </div>
     </div>
 

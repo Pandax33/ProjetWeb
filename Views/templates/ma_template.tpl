@@ -7,9 +7,15 @@
 </head>
 <body>
   <div class="container">
+
+  
+
     <div class="card card-top">
       <div class="card-body">
         <span>Offres |</span> <span><a href="index.php?p=enterprises">Entreprises</a></span>
+
+        <span class="create"><a href="index.php?p=offre">Créer une offre</a></span>
+
       </div>
     </div>
 
@@ -24,8 +30,9 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">{$object->Entitled_O} / {$object->ent} </h5>
-                    <p class="card-text">{$object->Duration_O}</p> 
+                    <h5 class="card-title">{$object->Entitled_O} /</h5>
+                    <h5 id="enter"> {$object->ent} </h5>
+                    <p class="card-text">Durée du stage : {$object->Duration_O}</p> 
                     <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
                     </div>
                     <div class="button-group">

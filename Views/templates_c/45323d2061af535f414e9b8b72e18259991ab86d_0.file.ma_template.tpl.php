@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-22 15:37:56
+/* Smarty version 4.3.0, created on 2023-03-22 16:33:57
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\ma_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641b12c44810b5_25786822',
+  'unifunc' => 'content_641b1fe58c4a29_08365793',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '45323d2061af535f414e9b8b72e18259991ab86d' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\ma_template.tpl',
-      1 => 1679495874,
+      1 => 1679499235,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641b12c44810b5_25786822 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b1fe58c4a29_08365793 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -32,9 +32,19 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 </head>
 <body>
   <div class="container">
+
+  <nav class="navbar sticky-top bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sticky top</a>
+  </div>
+</nav>
+
     <div class="card card-top">
       <div class="card-body">
         <span>Offres |</span> <span><a href="index.php?p=enterprises">Entreprises</a></span>
+
+        <span class="create"><a href="index.php?p=offre">Créer une offre</a></span>
+
       </div>
     </div>
 
@@ -55,9 +65,10 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
                 <div class="col-md-8">
                   <div class="card-body">
                     <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['object']->value->Entitled_O;?>
- / <?php echo $_smarty_tpl->tpl_vars['object']->value->ent;?>
+ /</h5>
+                    <h5 id="enter"> <?php echo $_smarty_tpl->tpl_vars['object']->value->ent;?>
  </h5>
-                    <p class="card-text"><?php echo $_smarty_tpl->tpl_vars['object']->value->Duration_O;?>
+                    <p class="card-text">Durée du stage : <?php echo $_smarty_tpl->tpl_vars['object']->value->Duration_O;?>
 </p> 
                     <p class="card-text"><small class="text-muted"><?php echo $_smarty_tpl->tpl_vars['object']->value->DatePublish_O;?>
 </small></p>

@@ -4,10 +4,6 @@
   <title>Liste des articles</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/TemplateEditEnterprise.css" type="text/css">
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-  <!-- Select2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
   <form>
@@ -38,15 +34,16 @@
       </div>
       
       <div class="form-group col-md-6">
-    <label for="inputLocalite">Localite</label>
-    <select id="inputLocalite" class="form-control" multiple>
-        <option disabled>Choose...</option>
-        {foreach $city as $item}
-            <option>{$item->Name}</option>
-        {/foreach}
-        <option> oui </option>
-    </select>
-</div>
+        <label for="inputLocalite">Localite</label>
+        <select id="inputLocalite" class="form-control">
+          <option selected>Choose...</option>
+           {foreach $city as $item}
+           <option>{$item->Name}</option>
+           
+           {/foreach}
+           <option> oui </option>
+        </select>
+      </div>
     </div>
   
      <fieldset class="rating">

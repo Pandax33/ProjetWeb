@@ -38,8 +38,7 @@ foreach ($offers as $offer) {
 
 
         
-
-
+        $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $new_offers);
         $this->smarty->assign('Nom','Liste des offres');
         $this->smarty->display('ma_template.tpl');

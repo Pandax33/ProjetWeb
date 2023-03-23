@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-22 16:38:59
+/* Smarty version 4.3.0, created on 2023-03-23 11:35:46
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\ma_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641b2113de9150_78031971',
+  'unifunc' => 'content_641c2b82771f79_15410653',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '45323d2061af535f414e9b8b72e18259991ab86d' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\ma_template.tpl',
-      1 => 1679499538,
+      1 => 1679567746,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641b2113de9150_78031971 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641c2b82771f79_15410653 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -33,43 +33,15 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 <body>
   <div class="container">
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <span>Offres</span>
-        </li>
-        <li class="nav-item">
-        <span><a href="index.php?p=enterprises">Entreprises</a></span>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        Navbar text with an inline element
-      </span>
-    </div>
-  </div>
-  </nav>
-  
-
     <div class="card card-top">
       <div class="card-body">
-        <span>Offres |</span> <span><a href="index.php?p=enterprises">Entreprises</a></span>
-
-        <span class="create"><a href="index.php?p=offre">Créer une offre</a></span>
-
+        <span>Offres |</span> <span><a href="index.php?p=enterprises" >Entreprises</a></span>
+        <h5 id="enter"> <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
+ </h5>
       </div>
     </div>
 
     <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['myArray']->value) > 0) {?>
-      
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['myArray']->value, 'object');
 $_smarty_tpl->tpl_vars['object']->do_else = true;
@@ -80,7 +52,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
             <div class="card mb-3" style="max-width: 900px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="...">
+                  <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="illustration d'entreprise">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">

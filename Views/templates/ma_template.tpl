@@ -10,18 +10,17 @@
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Offres |</span> <span><a href="index.php?p=enterprises">Entreprises</a></span>
+        <span>Offres |</span> <span><a href="index.php?p=enterprises" >Entreprises</a></span>
       </div>
     </div>
 
     {if $myArray|@count > 0}
-      
         {foreach from=$myArray item=object}
           <li>
             <div class="card mb-3" style="max-width: 900px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="...">
+                  <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="illustration d'entreprise">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">

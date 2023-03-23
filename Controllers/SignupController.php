@@ -25,9 +25,7 @@ class SignupController extends Controller
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        echo $email;
-        echo "<br>";
-        echo $password;
+ 
 
         //verifier si les données du formulaire correspondent à un enregistrement dans la bdd
         $user = $personModel->findBy([
@@ -38,9 +36,14 @@ class SignupController extends Controller
         //Si $user est un tableau, c'est que l'utilisateur existe
         if($user){
             //on stocke les données de l'utilisateur dans la session
-            $_SESSION['user'] = $user;
+            $role = $user[0]->Role_P;
+            $identifiant = $user[0]->ID_P;
+            $_SESSION['role'] = $role;
+            echo '<p> Vous êtes connecté en tant que : '.$role. ' '.$identifiant.'</p>';
+            
+
             //on redirige l'utilisateur vers la page d'accueil
-            header('Location: /public/index.php?p=main/index');
+            $this -> render('main/index', [], 'home');
         }else{
             //sinon on le redirige vers la page de login
             header('Location: /public/index.php?p=signup/login');

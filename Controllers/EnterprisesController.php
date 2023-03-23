@@ -13,7 +13,11 @@ class EnterprisesController extends Controller
 
         //On recupere les entreprises de la bdd 
         $enterprises = $enterpriseModel->findAll();
-        $this -> render('enterprises/index', ['enterprises' => $enterprises]);
+        
+        $this->smarty->assign('role', $_SESSION['role']);
+        $this->smarty->assign('myArray', $enterprises);
+        $this->smarty->assign('Nom','Liste des entreprises');
+        $this->smarty->display('enterprises.tpl');
 
     }
 

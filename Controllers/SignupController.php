@@ -43,7 +43,7 @@ class SignupController extends Controller
             
 
             //on redirige l'utilisateur vers la page d'accueil
-            $this -> render('main/index', [], 'home');
+            header('Location: /public/index.php?p=main/index');
         }else{
             //sinon on le redirige vers la page de login
             header('Location: /public/index.php?p=signup/login');

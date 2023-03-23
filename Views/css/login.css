@@ -64,7 +64,7 @@ button[type="submit"]:hover {
 
 .forgot-password a {
     text-decoration: underline;
-    font-size: 18px;
+    font-size: 75%;
     color: black;
 }
 button[type="submit"] {
@@ -127,7 +127,16 @@ footer {
     h1 {
         font-size: 28px;
     }
-    form label, form input[type="text"], form input[type="password"], button[type="submit"], .forgot-password a {
+    form label, form input[type="text"], form input[type="password"], button[type="submit"]{
         font-size: 16px;
     }
+}
+
+a{
+    font-size: 10%;
+}
+
+p{
+    text-align: center;
+    color: rgba(70, 70, 70, 0.688);
 }

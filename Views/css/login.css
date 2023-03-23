@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css?family=Dela+Gothic+One&display=swap');
+
+
+body{
+    font-family: Dela Gothic One, sans-serif;
+
+}
+
+.container {
+    margin: 5% auto 0;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 80%;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signin-box {
+    border: 2px solid rgb(198, 197, 197);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: Poppins ExtraBold, sans-serif;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+form input[type="text"], form input[type="password"] {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+    background-color: #fa8a00;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot-password a {
+    text-decoration: underline;
+    font-size: 18px;
+    color: black;
+}
+button[type="submit"] {
+    background-color: #d99240;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
+body {
+background-image: url('img1.png');
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    color: black;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-text {
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 100px auto 0;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    form label, form input[type="text"], form input[type="password"], button[type="submit"], .forgot-password a {
+        font-size: 16px;
+    }
+}

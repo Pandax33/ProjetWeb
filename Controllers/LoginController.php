@@ -3,17 +3,17 @@
 namespace App\Controllers;
 use App\Models\PersonModel;
 
-class SignupController extends Controller
+class LoginController extends Controller
 {
     //afficher la page de login
-    public function login()
+    public function index()
     {
     
         //on instancie le modele coresspondant a la table person
         $personModel = new PersonModel;
 
 
-        $this -> render('signup/login', []);
+        $this->smarty->display('login.tpl');
 
     }
 
@@ -46,7 +46,7 @@ class SignupController extends Controller
             header('Location: /public/index.php?p=main/index');
         }else{
             //sinon on le redirige vers la page de login
-            header('Location: /public/index.php?p=signup/login');
+            header('Location: /public/index.php?p=login');
             
             
         }

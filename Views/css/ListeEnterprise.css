@@ -68,10 +68,15 @@ h5 {
 .card {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  word-wrap: normal;
+    margin-right: 2%; 
+    margin-left: 2%;
 }
 
 .card img {
-  width: 100%; /* Ajouter cette ligne pour que l'image prenne toute la largeur de la colonne */
+    width: 75%;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
 .card-title {
@@ -119,7 +124,7 @@ h5 {
 
 .card-top .card-body span:first-child {
   color: black; /* "Offres" en noir */
-  margin-right: 2%; /* Ajouter une marge à droite pour séparer les deux éléments */
+  /* Ajouter une marge à droite pour séparer les deux éléments */
 }
 
 .card-top .card-body span:last-child {
@@ -198,3 +203,14 @@ ul {list-style: none;
   margin-left: 2%;
   }
   
+/*aligner le contenu des classes d-flex au centre de l'écran meme l'écran réduit*/
+.d-flex {
+    justify-content: center;
+    align-items: center;
+  }
+
+section{
+    /*ajouter un espace a droite  et a gauche*/
+    margin-right: 10%;
+    margin-left: 10%;
+}

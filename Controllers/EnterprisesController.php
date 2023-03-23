@@ -63,13 +63,58 @@ class EnterprisesController extends Controller
         $this->smarty->assign('city', $city);
         $this->smarty->assign('locate', $locate);
         $this->smarty->display('TemplateEditEnterprise.tpl');
-        var_dump($enterprises);
+       
         
     }
 
     public function update(){
+        $locateModel = new LocateModel;
+        $locate= $locateModel->findAll();
         $enterpriseModel = new EnterpriseModel;
-        echo $_POST['visible'];
+        $enterpriseModel->setIDE($_POST['ID']);
+        $enterpriseModel->setNameE($_POST['Nom']);
+        $enterpriseModel->setActivityE($_POST['activite']);
+        $enterpriseModel->setIntershipE($_POST['nbStagiaire']);
+        $enterpriseModel->setVisibilyE($_POST['visible']);
+        $enterpriseModel->setTrustRateE($_POST['rating']);
+        $enterpriseModel->update($enterpriseModel->getIDE(),$enterpriseModel);
+
+        $selectedCitys = $_POST['citys'];
+        $idE = $enterpriseModel->getIDE();
+
+        // Créez un tableau des noms de villes dans locate pour l'ID_E spécifié
+        $existingCitys = [];
+        foreach ($locate as $loc) {
+            if ($loc->ID_E == $idE) {
+                array_push($existingCitys, $loc->Name);
+            }
+        }
+
+        foreach ($selectedCitys as $city) {
+            // Recherche de la ville sélectionnée dans le tableau locate
+            $found = false;
+            foreach ($locate as $loc) {
+                if ($loc->Name == $city && $loc->ID_E == $idE) {
+                    $found = true;
+                    break;
+                }
+            }
+
+            if (!$found) {
+                echo "Ville sélectionnée non trouvée ou IDE différent: " . htmlspecialchars($city) . "<br>";
+            } else {
+                echo "Ville sélectionnée trouvée et IDE correspondant: " . htmlspecialchars($city) . "<br>";
+            }
+        }
+
+        // Trouvez les villes qui sont dans existingCitys mais pas dans selectedCitys
+        $missingCitys = array_diff($existingCitys, $selectedCitys);
+
+        // Affichez les villes manquantes
+        foreach ($missingCitys as $missingCity) {
+            echo "Ville présente dans locate mais pas dans le retour de city : " . htmlspecialchars($missingCity) . "<br>";
+        }
+        echo "Modification effectuée";
         
     }
     

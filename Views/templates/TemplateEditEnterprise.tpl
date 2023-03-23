@@ -9,10 +9,13 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
+
   <form method="POST" action="index.php?p=enterprises/update">
+  
+
     <div class="form-group col-md-6">
-      <label for="inputNom">Nom</label>
-      <select id="inputNom" class="form-control">
+      <label for="inputNom" name="Nom">Nom</label>
+      <select id="inputNom" name ="Nom" class="form-control">
         <option selected>Choose...</option>
        {foreach $entreprises as $item}
   <option data-activity="{$item->Activity_E}" data-ID="{$item->ID_E}" data-Intership="{$item->Intership_E}" data-description="{$item->Description_E}" data-visibility="{$item->Visibility_E}" data-localite="{$item->Localite}" data-TrustRate="{$item->TrustRate_E}">{$item->Name_E}</option>
@@ -20,6 +23,11 @@
       </select>
     </div>
     
+    <div class="form-group col-md-6">
+      <label for="ID">IDE</label>
+      <input type="text" class="form-control" id="ID" placeholder="ID" name="ID">
+    </div>
+
     <div class="form-group col-md-6">
       <label for="inputSecteurActivite4">Secteur d'activité</label>
       <input type="Secteur d'activité" class="form-control" id="inputSecteur d'activité4" placeholder="Secteur d'activité" name="activite">
@@ -38,7 +46,7 @@
       
       <div class="form-group col-md-6">
         <label for="inputLocalite">Localite</label>
-        <select id="inputLocalite" class="form-control" name="citys" multiple >
+        <select id="inputLocalite" class="form-control" name="citys[]" multiple >
         <option selected>Choose...</option>
         {foreach $city as $item}
           <option>{$item->Name}</option>

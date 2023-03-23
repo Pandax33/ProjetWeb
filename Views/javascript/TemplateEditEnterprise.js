@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const nameSelect = document.getElementById('inputNom');
+  const IDSelect = document.getElementById('ID');
   const activityInput = document.getElementById('inputSecteur d\'activité4');
   const descriptionInput = document.getElementById('inputDescription4');
   const nbStagiaireInput = document.getElementById('inputNbStagiaire');
@@ -25,12 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const activity = selectedOption.getAttribute('data-activity');
     const description = selectedOption.getAttribute('data-description');
     const nbStagiaire = selectedOption.getAttribute('data-Intership');
+    const ID = parseInt(selectedOption.getAttribute('data-ID'), 10);;
     const trustRate = parseInt(selectedOption.getAttribute('data-TrustRate'), 10);
     const visibility = parseInt(selectedOption.getAttribute('data-visibility'), 10);
     const localiteArray = selectedOption.getAttribute('data-localite').split(',').map(function(item) {
       return item.trim();
   });
-
+  
+    IDSelect.value = ID;
     activityInput.value = activity;
 descriptionInput.value = description;
 nbStagiaireInput.value = nbStagiaire;

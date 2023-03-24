@@ -57,15 +57,10 @@ class Model extends Db
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        if($valeur !== null && $champ != 'table' && $champ != 'IdCollumName' && $champ != 'Collumdeux' && $champ != 'db'){
-            $champs[] = "$champ = ?";
-
-            // Convertir les booléens en entiers
-            if (is_bool($valeur)) {
-                $valeur = (int) $valeur;
-            }
-
-            $valeurs[]= $valeur;
+        if($valeur !== null  && $champ != 'IdCollumName'  && $champ != 'Collumdeux' && $champ != 'table' && $champ != 'db'){
+        $champs[] = $champ;
+        $inter[] = "?";
+        $valeurs[]= $valeur;
         }
     }
     $liste_champs = implode(', ', $champs);

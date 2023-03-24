@@ -146,6 +146,25 @@ class EnterprisesController extends Controller
     public function create(){
         $locateModel = new LocateModel;
         $enterpriseModel = new EnterpriseModel;
+        $test="oui";
+        if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+            $test="non";
+            $target_dir = "../Views/image/";
+            $target_file = $target_dir . basename($_FILES["image"]["name"]);
+            $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        
+            // Vous pouvez ajouter des vérifications supplémentaires, par exemple vérifier la taille du fichier ou le type de fichier
+        
+            // Tentez de déplacer le fichier téléchargé vers le dossier de destination
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                echo "L'image ". htmlspecialchars(basename($_FILES["image"]["name"])). " a été téléchargée.";
+            } else {
+                echo "Erreur lors du téléchargement de l'image.";
+            }
+        }
+
+
+        $enterpriseModel->setLinkPicture(basename($_FILES["image"]["name"]));
         $enterpriseModel->setDescription($_POST['description']);
         $enterpriseModel->setNameE($_POST['Nom']);
         $enterpriseModel->setActivityE($_POST['activite']);
@@ -180,6 +199,8 @@ class EnterprisesController extends Controller
             $locateModel->setNameLocate($city);
             $locateModel->create($locateModel);
             echo "Creation faite";
+            var_dump($_FILES['image']);
+            
             }
 
     }

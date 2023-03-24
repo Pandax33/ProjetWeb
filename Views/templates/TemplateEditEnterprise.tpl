@@ -38,6 +38,8 @@
       <input type="text" class="form-control" id="inputDescription4" placeholder="description" name="description">
     </div>
   
+    
+
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputNbStagiaire">Nombre de stagiaire</label>

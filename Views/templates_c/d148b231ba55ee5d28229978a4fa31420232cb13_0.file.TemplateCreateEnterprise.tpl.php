@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-24 10:31:11
+/* Smarty version 4.3.0, created on 2023-03-24 13:35:33
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateEnterprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641d7befd2d703_44093721',
+  'unifunc' => 'content_641da725ba3f23_12430766',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd148b231ba55ee5d28229978a4fa31420232cb13' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateEnterprise.tpl',
-      1 => 1679653631,
+      1 => 1679664881,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641d7befd2d703_44093721 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641da725ba3f23_12430766 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
@@ -37,7 +37,8 @@ function content_641d7befd2d703_44093721 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 
-  <form method="POST" action="index.php?p=enterprises/create">
+<form method="POST" action="index.php?p=enterprises/create" enctype="multipart/form-data">
+
   
 
     
@@ -55,6 +56,11 @@ function content_641d7befd2d703_44093721 (Smarty_Internal_Template $_smarty_tpl)
       <label for="inputDescriptiond4">Description</label>
       <input type="text" class="form-control" id="inputDescription4" placeholder="description" name="description">
     </div>
+
+    <div class="form-group col-md-6">
+  <label for="inputImage">Image</label>
+  <input type="file" class="form-control-file" id="inputImage" name="image">
+</div>
   
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -111,13 +117,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
     <br></br>
-    <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" name="submitBtn" id="submitBtn" class="btn btn-primary">Sign in</button>
   </form>
 
 
 
 <?php echo '<script'; ?>
- src = "../../Views/javascript/TemplateEditEnterprise.js"> <?php echo '</script'; ?>
+ src = "../../Views/javascript/TemplateCreateEnterprise.js"> <?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
 >$(document).ready(function () {

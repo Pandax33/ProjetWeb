@@ -10,7 +10,8 @@
 </head>
 <body>
 
-  <form method="POST" action="index.php?p=enterprises/create">
+<form method="POST" action="index.php?p=enterprises/create" enctype="multipart/form-data">
+
   
 
     
@@ -28,6 +29,11 @@
       <label for="inputDescriptiond4">Description</label>
       <input type="text" class="form-control" id="inputDescription4" placeholder="description" name="description">
     </div>
+
+    <div class="form-group col-md-6">
+  <label for="inputImage">Image</label>
+  <input type="file" class="form-control-file" id="inputImage" name="image">
+</div>
   
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -76,12 +82,12 @@
 
 
     <br></br>
-    <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" name="submitBtn" id="submitBtn" class="btn btn-primary">Sign in</button>
   </form>
 
 
 
-<script src = "../../Views/javascript/TemplateEditEnterprise.js"> </script>
+<script src = "../../Views/javascript/TemplateCreateEnterprise.js"> </script>
 <script>$(document).ready(function () {
     $('#inputLocalite').select2();
     

@@ -1,39 +1,12 @@
-<?php
-/* Smarty version 4.3.0, created on 2023-03-24 16:55:44
-  from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateEnterprise.tpl' */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '4.3.0',
-  'unifunc' => 'content_641dd610cd84a9_58537040',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    'd148b231ba55ee5d28229978a4fa31420232cb13' => 
-    array (
-      0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateEnterprise.tpl',
-      1 => 1679676477,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_641dd610cd84a9_58537040 (Smarty_Internal_Template $_smarty_tpl) {
-?><html>
+<html>
 <head>
   <meta charset="utf-8">
   <title>Liste des articles</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../Views/css/TemplateEditEnterprise.css" type="text/css">
-  <?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.6.0.min.js"><?php echo '</script'; ?>
->
-  <?php echo '<script'; ?>
- src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"><?php echo '</script'; ?>
->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
 
@@ -72,17 +45,9 @@ function content_641dd610cd84a9_58537040 (Smarty_Internal_Template $_smarty_tpl)
         <label for="inputLocalite">Localite</label>
         <select id="inputLocalite" class="form-control" name="citys[]" multiple >
         
-        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');
-$_smarty_tpl->tpl_vars['item']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
-$_smarty_tpl->tpl_vars['item']->do_else = false;
-?>
-          <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Name;?>
-</option>
-        <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        {foreach $city as $item}
+          <option>{$item->Name}</option>
+        {/foreach}
         
       </select>
       </div>
@@ -122,15 +87,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 
-<?php echo '<script'; ?>
- src = "../../Views/javascript/TemplateCreateEnterprise.js"> <?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
->$(document).ready(function () {
+<script src = "../../Views/javascript/TemplateCreateEnterprise.js"> </script>
+<script>$(document).ready(function () {
     $('#inputLocalite').select2();
     
-});<?php echo '</script'; ?>
->
+});</script>
 </body>
-</html><?php }
-}
+</html>

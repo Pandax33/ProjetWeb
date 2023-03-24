@@ -146,9 +146,9 @@ class EnterprisesController extends Controller
     public function create(){
         $locateModel = new LocateModel;
         $enterpriseModel = new EnterpriseModel;
-        $test="oui";
+        
         if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-            $test="non";
+            
             $target_dir = "../Views/image/";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
             $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

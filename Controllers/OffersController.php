@@ -1,7 +1,9 @@
 <?php 
 // PERMET DE CONSULTER LA LISTE DES ANNONCES
 namespace App\Controllers;
+use App\Models\EnterpriseModel;
 use App\Models\OffersModel;
+use App\Models\CityModel;
 
 class OffersController extends Controller
 {
@@ -10,13 +12,37 @@ class OffersController extends Controller
     {
         //On instancie le modele coresspondant a la table offers
         $offersModel = new OffersModel;
+        $enterpriseModel = new EnterpriseModel;
 
         //On recupere les annonces de la bdd 
         $offers = $offersModel->findBy(['state' => 1]);
+        $enterprises = $enterpriseModel->findAll();
 
-        $this->smarty->assign('myArray', $offers);
+        $new_offers = array();
+
+foreach ($offers as $offer) {
+    $new_offer = clone $offer; // Cloner l'objet pour éviter de modifier l'original
+    $id_e = $offer->ID_E;
+    
+    // Trouver l'entreprise correspondante
+    $enterprise_name = "";
+    foreach ($enterprises as $enterprise) {
+        if ($enterprise->ID_E == $id_e) {
+            $enterprise_name = $enterprise->Name_E;
+            break;
+        }
+    }
+    
+    $new_offer->ent = $enterprise_name;
+    $new_offers[] = $new_offer;
+}
+
+
+        
+        $this->smarty->assign('role', $_SESSION['role']);
+        $this->smarty->assign('myArray', $new_offers);
         $this->smarty->assign('Nom','Liste des offres');
-        $this->smarty->display('ma_template.tpl');
+        $this->smarty->display('offers.tpl');
 
     }
 
@@ -33,11 +59,6 @@ class OffersController extends Controller
     }
 
     // Afficher le formulaire de création d'une annonce
-<<<<<<< Updated upstream
-    public function create(){
-        // On affiche la vue
-        $this->render('offers/create');
-=======
     public function cree(){
         $enterpriseModel= New EnterpriseModel;
         $enterprise=$enterpriseModel->findAll();
@@ -46,12 +67,12 @@ class OffersController extends Controller
         $this->smarty->assign('enterprise',$enterprise);
         $this->smarty->assign('city', $city);
         $this->smarty->display('TemplateCreateOffers.tpl');
->>>>>>> Stashed changes
     }
 
     public function create(){
         $offersModel = new OffersModel;
-        $offersModel->create($_POST);
-        $this->index();
+        
+        
+        
     }
 }

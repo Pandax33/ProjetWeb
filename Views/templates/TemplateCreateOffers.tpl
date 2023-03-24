@@ -4,7 +4,7 @@
   <title>Liste des articles</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../../Views/css/TemplateCreateEnterprise.css" type="text/css">
+  <link rel="stylesheet" href="../../Views/css/TemplateCreateOffers.css" type="text/css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
@@ -16,8 +16,8 @@
 
     
     <div class="form-group col-md-6">
-      <label for="Nom">Nom</label>
-      <input type="text" class="form-control" id="Nom" placeholder="Nom" name="Nom">
+      <label for="Intitule">Intitulé</label>
+      <input type="text" class="form-control" id="Intitule" placeholder="Intitule" name="Intitule">
     </div>
 
     <div class="form-group col-md-6">
@@ -43,7 +43,7 @@
       
       <div class="form-group col-md-6">
         <label for="inputLocalite">Localite</label>
-        <select id="inputLocalite" class="form-control" name="citys[]" multiple >
+        <select id="inputLocalite" class="form-control" name="citys">
         
         {foreach $city as $item}
           <option>{$item->Name}</option>
@@ -87,10 +87,5 @@
 
 
 
-<script src = "../../Views/javascript/TemplateCreateEnterprise.js"> </script>
-<script>$(document).ready(function () {
-    $('#inputLocalite').select2();
-    
-});</script>
 </body>
 </html>

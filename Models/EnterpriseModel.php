@@ -7,8 +7,10 @@ class EnterpriseModel extends Model
     protected $Name_E;
     protected $Activity_E;
     protected $Intership_E;
-    protected $Visibility_E;
+    protected Bool $Visibility_E;
     protected $TrustRate_E;
+    
+    protected $Description_E;
 
     protected $LinkPicture;
     
@@ -96,6 +98,17 @@ class EnterpriseModel extends Model
     {
         $this->LinkPicture = $LinkPicture;
         return $this;
+    }
+
+    public function setDescription($Description_E)
+    {
+        $this->Description_E = $Description_E;
+        return $this;
+    }
+
+    public function getDescription()
+    {
+        return $this->Description_E;
     }
 
 

@@ -71,12 +71,24 @@ class EnterprisesController extends Controller
         $locateModel = new LocateModel;
         $locate= $locateModel->findAll();
         $enterpriseModel = new EnterpriseModel;
+       
         $enterpriseModel->setIDE($_POST['ID']);
+       
         $enterpriseModel->setNameE($_POST['Nom']);
+        
         $enterpriseModel->setActivityE($_POST['activite']);
+        $enterpriseModel->setDescription($_POST['description']);
         $enterpriseModel->setIntershipE($_POST['nbStagiaire']);
+        if($_POST['visible']== "visible"){
+            $enterpriseModel->setVisibilyE(true);
+            
+        }else{
+            $enterpriseModel->setVisibilyE(false);
+        }
         $enterpriseModel->setVisibilyE($_POST['visible']);
         $enterpriseModel->setTrustRateE($_POST['rating']);
+
+        
         $enterpriseModel->update($enterpriseModel->getIDE(),$enterpriseModel);
 
         $selectedCitys = $_POST['citys'];
@@ -119,7 +131,57 @@ class EnterprisesController extends Controller
             $locateModel->deletePrecis($idE, $missingCity);
         }
         echo "Modification effectuée";
+        echo $_POST['visible']; 
         
+    }
+
+    public function cree(){
+        $cityModel= new CityModel;
+        $city=$cityModel->findAll();
+        $this->smarty->assign('city', $city);
+        $this->smarty->display('TemplateCreateEnterprise.tpl');
+
+    }
+
+    public function create(){
+        $locateModel = new LocateModel;
+        $enterpriseModel = new EnterpriseModel;
+        $enterpriseModel->setDescription($_POST['description']);
+        $enterpriseModel->setNameE($_POST['Nom']);
+        $enterpriseModel->setActivityE($_POST['activite']);
+        $enterpriseModel->setIntershipE($_POST['nbStagiaire']);
+        if($_POST['visible']== "visible"){
+            $enterpriseModel->setVisibilyE(1);}
+        else{
+            $enterpriseModel->setVisibilyE(0);
+        }
+        $enterpriseModel->setVisibilyE($_POST['visible']);
+        $enterpriseModel->setTrustRateE($_POST['rating']);
+        $enterpriseModel->create($enterpriseModel);
+
+        $selectedCitys = $_POST['citys'];
+
+        $enterprise= $enterpriseModel->findAll();
+        
+
+        for ($i = count($enterprise) - 1; $i >= 0; $i--) {
+            $entreprise = $enterprise[$i];
+            if ($_POST['Nom'] === $entreprise->Name_E) {
+              $selected_id = $entreprise->ID_E;
+              break; // Sort de la boucle si le nom correspond
+            }
+          }
+
+        $idE = $enterpriseModel->getIDE();
+
+        foreach ($selectedCitys as $city) {
+            // Recherche de la ville sélectionnée dans le tableau locate
+            $locateModel->setIdE($selected_id);
+            $locateModel->setNameLocate($city);
+            $locateModel->create($locateModel);
+            echo "Creation faite";
+            }
+
     }
     
     

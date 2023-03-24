@@ -10,23 +10,14 @@
 </head>
 <body>
 
-  <form method="POST" action="index.php?p=enterprises/update">
+  <form method="POST" action="index.php?p=enterprises/create">
   
 
-    <div class="form-group col-md-6">
-      <label for="inputNom" name="Nom">Nom</label>
-      <select id="inputNom" name ="Nom" class="form-control">
-        <option selected>Choose...</option>
-       {foreach $entreprises as $item}
-  <option data-activity="{$item->Activity_E}" data-ID="{$item->ID_E}" data-Intership="{$item->Intership_E}" data-description="{$item->Description_E}" data-visibility="{$item->Visibility_E}" data-localite="{$item->Localite}" data-TrustRate="{$item->TrustRate_E}">{$item->Name_E}</option>
-{/foreach}
-      </select>
-    </div>
     
     <div class="form-group col-md-6">
-    <label for="ID">IDE</label>
-    <input type="text" class="form-control" id="ID" placeholder="ID" name="ID" readonly>
-  </div>
+      <label for="Nom">Nom</label>
+      <input type="text" class="form-control" id="Nom" placeholder="Nom" name="Nom">
+    </div>
 
     <div class="form-group col-md-6">
       <label for="inputSecteurActivite4">Secteur d'activité</label>
@@ -34,7 +25,7 @@
     </div>
 
     <div class="form-group col-md-6">
-      <label for="inputDescriptiond4">Description_E</label>
+      <label for="inputDescriptiond4">Description</label>
       <input type="text" class="form-control" id="inputDescription4" placeholder="description" name="description">
     </div>
   
@@ -47,7 +38,7 @@
       <div class="form-group col-md-6">
         <label for="inputLocalite">Localite</label>
         <select id="inputLocalite" class="form-control" name="citys[]" multiple >
-
+        
         {foreach $city as $item}
           <option>{$item->Name}</option>
         {/foreach}
@@ -85,7 +76,7 @@
 
 
     <br></br>
-    <button type="submit" name="validation" class="btn btn-primary" id="submitButton">Modifier</button>
+    <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
   </form>
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-24 09:49:26
-  from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateEditEnterprise.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-24 10:31:11
+  from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateEnterprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641d722646f684_41625473',
+  'unifunc' => 'content_641d7befd2d703_44093721',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'dbb7d005c8a48793d427053fdd608dee1109769b' => 
+    'd148b231ba55ee5d28229978a4fa31420232cb13' => 
     array (
-      0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateEditEnterprise.tpl',
-      1 => 1679651356,
+      0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateEnterprise.tpl',
+      1 => 1679653631,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641d722646f684_41625473 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d7befd2d703_44093721 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
@@ -37,38 +37,14 @@ function content_641d722646f684_41625473 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 
-  <form method="POST" action="index.php?p=enterprises/update">
+  <form method="POST" action="index.php?p=enterprises/create">
   
 
-    <div class="form-group col-md-6">
-      <label for="inputNom" name="Nom">Nom</label>
-      <select id="inputNom" name ="Nom" class="form-control">
-        <option selected>Choose...</option>
-       <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['entreprises']->value, 'item');
-$_smarty_tpl->tpl_vars['item']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
-$_smarty_tpl->tpl_vars['item']->do_else = false;
-?>
-  <option data-activity="<?php echo $_smarty_tpl->tpl_vars['item']->value->Activity_E;?>
-" data-ID="<?php echo $_smarty_tpl->tpl_vars['item']->value->ID_E;?>
-" data-Intership="<?php echo $_smarty_tpl->tpl_vars['item']->value->Intership_E;?>
-" data-description="<?php echo $_smarty_tpl->tpl_vars['item']->value->Description_E;?>
-" data-visibility="<?php echo $_smarty_tpl->tpl_vars['item']->value->Visibility_E;?>
-" data-localite="<?php echo $_smarty_tpl->tpl_vars['item']->value->Localite;?>
-" data-TrustRate="<?php echo $_smarty_tpl->tpl_vars['item']->value->TrustRate_E;?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value->Name_E;?>
-</option>
-<?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-      </select>
-    </div>
     
     <div class="form-group col-md-6">
-    <label for="ID">IDE</label>
-    <input type="text" class="form-control" id="ID" placeholder="ID" name="ID" readonly>
-  </div>
+      <label for="Nom">Nom</label>
+      <input type="text" class="form-control" id="Nom" placeholder="Nom" name="Nom">
+    </div>
 
     <div class="form-group col-md-6">
       <label for="inputSecteurActivite4">Secteur d'activité</label>
@@ -76,7 +52,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 
     <div class="form-group col-md-6">
-      <label for="inputDescriptiond4">Description_E</label>
+      <label for="inputDescriptiond4">Description</label>
       <input type="text" class="form-control" id="inputDescription4" placeholder="description" name="description">
     </div>
   
@@ -89,7 +65,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <div class="form-group col-md-6">
         <label for="inputLocalite">Localite</label>
         <select id="inputLocalite" class="form-control" name="citys[]" multiple >
-
+        
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');
 $_smarty_tpl->tpl_vars['item']->do_else = true;
@@ -135,7 +111,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
     <br></br>
-    <button type="submit" name="validation" class="btn btn-primary" id="submitButton">Modifier</button>
+    <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
   </form>
 
 

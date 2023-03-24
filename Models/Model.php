@@ -12,6 +12,8 @@ class Model extends Db
     protected $table;
     protected $IdCollumName;
 
+    protected $Collumdeux;
+
     //Instance de Db
     private $db;
 
@@ -55,7 +57,7 @@ class Model extends Db
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        if($valeur !== null  && $champ != 'IdCollumName' && $champ != 'table' && $champ != 'db'){
+        if($valeur !== null  && $champ != 'IdCollumName'  && $champ != 'Collumdeux' && $champ != 'table' && $champ != 'db'){
         $champs[] = $champ;
         $inter[] = "?";
         $valeurs[]= $valeur;
@@ -79,10 +81,15 @@ class Model extends Db
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        
-        if($valeur !== null && $champ != 'table' && $champ != 'IdCollumName' && $champ != 'db'){
-        $champs[] = "$champ = ?";
-        $valeurs[]= $valeur;
+        if($valeur !== null && $champ != 'table' && $champ != 'IdCollumName' && $champ != 'Collumdeux' && $champ != 'db'){
+            $champs[] = "$champ = ?";
+
+            // Convertir les booléens en entiers
+            if (is_bool($valeur)) {
+                $valeur = (int) $valeur;
+            }
+
+            $valeurs[]= $valeur;
         }
     }
     $valeurs[] = $id;
@@ -99,7 +106,11 @@ class Model extends Db
     // DELETE FROM offers WHERE id = ?
     return $this->requete("DELETE FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id]);
     }
-    
+
+    public function deletePrecis(int $id, $Param)
+    {
+        return $this->requete("DELETE FROM {$this->table} WHERE {$this->IdCollumName} = ? and {$this->Collumdeux} = ?", [$id,$Param]);
+    }
 
     /**
     * Méthode qui exécutera les requêtes

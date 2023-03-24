@@ -13,7 +13,7 @@ class WishlistController extends Controller
         $wishlistModel = new WishlistModel;
 
         //On recupere les annonces de la bdd 
-        $wishlist = $wishlistModel->findAll();
+        $wishlist = $wishlistModel->find();
         $this -> render('wishlist/index', ['wishlist' => $wishlist]);
 
     }

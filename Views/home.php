@@ -20,9 +20,6 @@
     </div>
     <div class="text-center">
         <a href="index.php?p=offers">Annonces</a>
-        <a href="index.php?p=enterprises">Enterprises</a>
-        <a href="index.php?p=students">Students</a>
-        <a href="index.php?p=teachers">Teachers</a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>

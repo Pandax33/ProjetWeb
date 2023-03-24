@@ -1,7 +1,6 @@
 <?php 
 // PERMET DE CONSULTER LA LISTE DES ANNONCES
 namespace App\Controllers;
-use App\Models\EnterpriseModel;
 use App\Models\OffersModel;
 
 class OffersController extends Controller
@@ -11,37 +10,13 @@ class OffersController extends Controller
     {
         //On instancie le modele coresspondant a la table offers
         $offersModel = new OffersModel;
-        $enterpriseModel = new EnterpriseModel;
 
         //On recupere les annonces de la bdd 
         $offers = $offersModel->findBy(['state' => 1]);
-        $enterprises = $enterpriseModel->findAll();
 
-        $new_offers = array();
-
-foreach ($offers as $offer) {
-    $new_offer = clone $offer; // Cloner l'objet pour éviter de modifier l'original
-    $id_e = $offer->ID_E;
-    
-    // Trouver l'entreprise correspondante
-    $enterprise_name = "";
-    foreach ($enterprises as $enterprise) {
-        if ($enterprise->ID_E == $id_e) {
-            $enterprise_name = $enterprise->Name_E;
-            break;
-        }
-    }
-    
-    $new_offer->ent = $enterprise_name;
-    $new_offers[] = $new_offer;
-}
-
-
-        
-        $this->smarty->assign('role', $_SESSION['role']);
-        $this->smarty->assign('myArray', $new_offers);
+        $this->smarty->assign('myArray', $offers);
         $this->smarty->assign('Nom','Liste des offres');
-        $this->smarty->display('offers.tpl');
+        $this->smarty->display('ma_template.tpl');
 
     }
 

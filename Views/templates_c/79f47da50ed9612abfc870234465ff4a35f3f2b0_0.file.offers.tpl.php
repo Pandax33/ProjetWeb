@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-24 10:37:02
+/* Smarty version 4.3.0, created on 2023-03-24 14:38:48
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641d6f3ed6dbf3_97123283',
+  'unifunc' => 'content_641da7e8abdb49_47271467',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679650621,
+      1 => 1679665128,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641d6f3ed6dbf3_97123283 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641da7e8abdb49_47271467 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -29,8 +29,34 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
   <title>Liste des offres</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
+  <link rel="stylesheet" href="../../Views/css/navbar.css">
 </head>
 <body>
+<nav class="navbar">
+    <div class="navbar-brand">
+      <span>Héraclès</span>
+      <span class="divider">|</span>
+    </div>
+    <ul class="nav-list" id="navList">
+      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Offres</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Entreprises</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Wishlist</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Compare</a></li>
+      
+      <li class="nav-item profile-item mobile-only"><a href="#" class="nav-link">Profile</a></li>
+      <li class="nav-item sign-item mobile-only"><a href="#" class="nav-link1">Sign Out</a></li>
+      <li class="nav-item search-item mobile-only"><input type="text" class="search-input" placeholder="Search..."></li>
+    </ul>
+    <input type="text" class="search-input desktop-only" placeholder="Search...">
+    <div class="profile-section"><a href="#" class="nav-link">Profile</a></div>
+    <div class="sign-section"><a href="#" class="nav-link1">Sign Out</a></div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+  <?php echo '<script'; ?>
+ src="./css/navbar.js"><?php echo '</script'; ?>
+>
+
   <div class="container">
 
     <div class="card card-top">
@@ -82,6 +108,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <p>Aucune donnée trouvée.</p>
     <?php }?>
   </div>
+  
 </body>
 </html><?php }
 }

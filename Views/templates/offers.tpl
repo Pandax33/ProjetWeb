@@ -4,6 +4,7 @@
   <title>Liste des offres</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
+  <link rel="stylesheet" href="../../Views/css/navbar.css">
 </head>
 <body>
   <div class="container">
@@ -46,5 +47,6 @@
       <p>Aucune donnée trouvée.</p>
     {/if}
   </div>
+  
 </body>
 </html>

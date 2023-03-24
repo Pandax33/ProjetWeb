@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 html {
   position: relative;
@@ -69,8 +70,9 @@ h5 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   word-wrap: normal;
-    margin-right: 2%; 
-    margin-left: 2%;
+    
+    margin: 0 auto;
+    
 }
 
 .card img {
@@ -191,18 +193,20 @@ ul {list-style: none;
   }
   
   .btn-orange {
-  background-color: orange;
+  background-color: #639B6D;
   color: white;
+  /* centrer le bouton */
+  margin: 0 auto;
+  width: 50%;
+  height: 30%;
+  /*Réduire la hauteur du bouton*/
+  padding: 2%;
+  font-size: 80%;
+  margin-top: 1%;
+
   }
-  
-  .btn-green {
-  background-color: green;
-  color: white;
-  /* ajouter un espace a droite  et a gauche */
-  margin-right: 2%;
-  margin-left: 2%;
-  }
-  
+
+
 /*aligner le contenu des classes d-flex au centre de l'écran meme l'écran réduit*/
 .d-flex {
     justify-content: center;
@@ -213,4 +217,38 @@ section{
     /*ajouter un espace a droite  et a gauche*/
     margin-right: 10%;
     margin-left: 10%;
+}
+
+.truncate-text {
+  width: 100%;         /* Largeur maximale pour le texte */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne suivante */
+  overflow: hidden;    /* Cache le texte qui dépasse de la largeur maximale */
+  text-overflow: ellipsis; /* Ajoute les points de suspension à la fin du texte coupé */
+}
+
+@media (min-width: 576px){
+  .container {
+    max-width: auto;
+  }
+}
+
+.ecart
+{
+  margin-top: 2%;
+  padding: 0;
+}
+
+.sector{
+  color: #535353;
+}
+
+.texte{
+  font-family: Poppins, sans-serif;
+  /*Police en semi gras*/
+  font-weight: 600;
+}
+
+span{
+  display: inline-block;
+  margin-right: 5px;
 }

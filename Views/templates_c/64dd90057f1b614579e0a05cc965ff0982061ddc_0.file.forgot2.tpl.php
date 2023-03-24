@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-23 17:41:11
+/* Smarty version 4.3.0, created on 2023-03-23 22:52:12
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\forgot2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641c81277b8c76_81367146',
+  'unifunc' => 'content_641cca0c8cccc2_47487103',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '64dd90057f1b614579e0a05cc965ff0982061ddc' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\forgot2.tpl',
-      1 => 1679589670,
+      1 => 1679590316,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641c81277b8c76_81367146 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641cca0c8cccc2_47487103 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +40,7 @@ function content_641c81277b8c76_81367146 (Smarty_Internal_Template $_smarty_tpl)
             <h1>Verifiez votre boîte mail 📫</h1>
                 <p >Vous recevrez un lien de réinitialisation pour changer de mot de passe.</p>
             <div class="forgot-password">
-                <a href="index.php?p=main">Retour à la page d'accueil</a>
+                <a href="index.php?p=login">Retour à la page d'accueil</a>
             </div>
 
     </div>

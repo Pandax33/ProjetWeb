@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-23 12:20:03
+/* Smarty version 4.3.0, created on 2023-03-24 10:37:02
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641c35e3088aa0_27183051',
+  'unifunc' => 'content_641d6f3ed6dbf3_97123283',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679570326,
+      1 => 1679650621,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641c35e3088aa0_27183051 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d6f3ed6dbf3_97123283 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -35,7 +35,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Offres |</span> <span><a href="index.php?p=enterprises" >Entreprises</a></span>
+        <span>Offres |</span><span><a href="index.php?p=enterprises">Entreprises</a></span>
       </div>
     </div>
 
@@ -46,6 +46,8 @@ $_smarty_tpl->tpl_vars['object']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['object']->value) {
 $_smarty_tpl->tpl_vars['object']->do_else = false;
 ?>
+
+
           <li>
             <div class="card mb-3" style="max-width: 900px;">
               <div class="row g-0">

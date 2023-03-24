@@ -10,12 +10,13 @@ class EnterprisesController extends Controller
     {
         //On instancie le modele coresspondant a la table enterprises
         $enterpriseModel = new EnterpriseModel;
-
+        $array = array(0, 1, 2);
         //On recupere les entreprises de la bdd 
         $enterprises = $enterpriseModel->findAll();
         
         $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $enterprises);
+        $this->smarty->assign('array', $array);
         $this->smarty->assign('Nom','Liste des entreprises');
         $this->smarty->display('enterprises.tpl');
 

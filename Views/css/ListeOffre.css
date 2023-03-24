@@ -119,7 +119,7 @@ h5 {
 
 .card-top .card-body span:first-child {
   color: black; /* "Offres" en noir */
-  margin-right: 2%; /* Ajouter une marge à droite pour séparer les deux éléments */
+  margin-right: 1%; /* Ajouter une marge à droite pour séparer les deux éléments */
 }
 
 .card-top .card-body span:last-child {
@@ -197,4 +197,5 @@ ul {list-style: none;
   margin-right: 2%;
   margin-left: 2%;
   }
-  
+
+

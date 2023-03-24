@@ -10,7 +10,7 @@
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Offres |</span> <span><a href="index.php?p=enterprises" >Entreprises</a></span>
+        <span>Offres |</span><span><a href="index.php?p=enterprises">Entreprises</a></span>
       </div>
     </div>
 

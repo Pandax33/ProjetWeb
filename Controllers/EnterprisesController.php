@@ -102,6 +102,9 @@ class EnterprisesController extends Controller
 
             if (!$found) {
                 echo "Ville sélectionnée non trouvée ou IDE différent: " . htmlspecialchars($city) . "<br>";
+                $locateModel->setIdE($idE);
+                $locateModel->setNameLocate($city);
+                $locateModel->create($locateModel);
             } else {
                 echo "Ville sélectionnée trouvée et IDE correspondant: " . htmlspecialchars($city) . "<br>";
             }
@@ -113,6 +116,7 @@ class EnterprisesController extends Controller
         // Affichez les villes manquantes
         foreach ($missingCitys as $missingCity) {
             echo "Ville présente dans locate mais pas dans le retour de city : " . htmlspecialchars($missingCity) . "<br>";
+            $locateModel->deletePrecis($idE, $missingCity);
         }
         echo "Modification effectuée";
         

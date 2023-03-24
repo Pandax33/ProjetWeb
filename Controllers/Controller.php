@@ -27,8 +27,8 @@ class Controller
 
      }
      public function __construct(){
-         
          $this->smarty = new Smarty();
+        
          $this->smarty->setTemplateDir(ROOT . '/Views/templates');
          $this->smarty->setCompileDir(ROOT . '/Views/templates_c');
          $this->smarty->setCacheDir(ROOT . '/Views/cache');

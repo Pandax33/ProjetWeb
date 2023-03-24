@@ -202,8 +202,6 @@ class EnterprisesController extends Controller
             $locateModel->setIdE($selected_id);
             $locateModel->setNameLocate($city);
             $locateModel->create($locateModel);
-            echo "Creation faite";
-            var_dump($_FILES['image']);
             
             }
 

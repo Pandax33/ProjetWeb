@@ -18,6 +18,7 @@
        <div class="containter"> 
         <?= $contenu ?>
     </div>
+    <h1>Bienvenue {$role}</h1>
     <div class="text-center">
         <a href="index.php?p=offers">Annonces</a>
         <a href="index.php?p=enterprises">Enterprises</a>

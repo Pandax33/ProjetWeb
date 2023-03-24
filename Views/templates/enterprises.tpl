@@ -5,7 +5,9 @@
   <title>Liste des Entreprises</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
-</head>
+  <meta name="description" content="Liste des entreprises proposées avec leurs informations principales telle que leurs adresses, leur nom, leur activité...">
+  <meta name="viewport" content="width=device-width">
+  </head>
 
 <body>
   <div class="container">

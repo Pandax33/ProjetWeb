@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-23 17:44:54
+/* Smarty version 4.3.0, created on 2023-03-24 10:51:19
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641c82066d1c95_09055938',
+  'unifunc' => 'content_641d72979ca372_01960099',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1679589857,
+      1 => 1679651478,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641c82066d1c95_09055938 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d72979ca372_01960099 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -43,6 +43,8 @@ function content_641c82066d1c95_09055938 (Smarty_Internal_Template $_smarty_tpl)
 = $contenu <?php echo '?>'; ?>
 
     </div>
+    <h1>Bienvenue <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
+</h1>
     <div class="text-center">
         <a href="index.php?p=offers">Annonces</a>
         <a href="index.php?p=enterprises">Enterprises</a>

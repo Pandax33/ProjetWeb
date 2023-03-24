@@ -14,7 +14,7 @@
     <br><br>
     <div class="container">
             <h1>Connexion</h1>
-            <form method="POST" action="index.php?p=accueil">
+            <form method="POST" action="index.php?p=login/redirect">
                 <label for="exampleInputEmail1">Adresse email</label>
                 <input type="email" class="form-control" placeholder="Entrez votre email" name="email">
                 <label for="exampleInputPassword1">Mot de passe</label>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-24 10:35:48
+/* Smarty version 4.3.0, created on 2023-03-24 11:09:23
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641d6ef417fe52_88066093',
+  'unifunc' => 'content_641d76d3e6df09_60694988',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1679650546,
+      1 => 1679652315,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641d6ef417fe52_88066093 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d76d3e6df09_60694988 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -30,7 +30,9 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
   <title>Liste des Entreprises</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
-</head>
+  <meta name="description" content="Liste des entreprises proposées avec leurs informations principales telle que leurs adresses, leur nom, leur activité...">
+  <meta name="viewport" content="width=device-width">
+  </head>
 
 <body>
   <div class="container">

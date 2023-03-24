@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const activity = selectedOption.getAttribute('data-activity');
     const description = selectedOption.getAttribute('data-description');
     const nbStagiaire = selectedOption.getAttribute('data-Intership');
-    const ID = parseInt(selectedOption.getAttribute('data-ID'), 10);;
+    const ID = parseInt(selectedOption.getAttribute('data-ID'), 10);
     const trustRate = parseInt(selectedOption.getAttribute('data-TrustRate'), 10);
     const visibility = parseInt(selectedOption.getAttribute('data-visibility'), 10);
     const localiteArray = selectedOption.getAttribute('data-localite').split(',').map(function(item) {

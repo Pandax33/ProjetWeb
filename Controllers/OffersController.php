@@ -33,8 +33,25 @@ class OffersController extends Controller
     }
 
     // Afficher le formulaire de création d'une annonce
+<<<<<<< Updated upstream
     public function create(){
         // On affiche la vue
         $this->render('offers/create');
+=======
+    public function cree(){
+        $enterpriseModel= New EnterpriseModel;
+        $enterprise=$enterpriseModel->findAll();
+        $cityModel= new CityModel;
+        $city=$cityModel->findAll();
+        $this->smarty->assign('enterprise',$enterprise);
+        $this->smarty->assign('city', $city);
+        $this->smarty->display('TemplateCreateOffers.tpl');
+>>>>>>> Stashed changes
+    }
+
+    public function create(){
+        $offersModel = new OffersModel;
+        $offersModel->create($_POST);
+        $this->index();
     }
 }

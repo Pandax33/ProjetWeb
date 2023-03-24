@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\EnterpriseModel;
 use App\Models\OffersModel;
+use App\Models\CityModel;
 
 class OffersController extends Controller
 {
@@ -58,8 +59,11 @@ foreach ($offers as $offer) {
     }
 
     // Afficher le formulaire de création d'une annonce
-    public function create(){
+    public function cree(){
         // On affiche la vue
-        $this->render('offers/create');
+        $cityModel= new CityModel;
+        $city=$cityModel->findAll();
+        $this->smarty->assign('city', $city);
+        $this->smarty->display('TemplateCreateOffers.tpl');
     }
 }

@@ -3,13 +3,16 @@
 namespace App\Models;
 
 // On importe la classe Db
-use App\Db\Db;
+use App\Core\Db;
 
 // On crée la classe Model qui hérite de Db
 class Model extends Db
 {
     // Table de la base de données
     protected $table;
+    protected $IdCollumName;
+
+    protected $Collumdeux;
 
     //Instance de Db
     private $db;
@@ -38,9 +41,9 @@ class Model extends Db
     return $this->requete("SELECT * FROM {$this->table} WHERE $liste_champs", $valeurs)->fetchAll();
     }
 
-    public function find(int $id)
+    public function find($id)
     {
-        return $this->requete("SELECT * FROM {$this->table} WHERE id = ?", [$id])->fetch();
+        return $this->requete("SELECT * FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id])->fetch();
     }
 
 //CREATE
@@ -54,7 +57,7 @@ class Model extends Db
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        if($valeur !== null && $champ != 'table' && $champ != 'db'){
+        if($valeur !== null  && $champ != 'IdCollumName'  && $champ != 'Collumdeux' && $champ != 'table' && $champ != 'db'){
         $champs[] = $champ;
         $inter[] = "?";
         $valeurs[]= $valeur;
@@ -69,7 +72,7 @@ class Model extends Db
     }
 
 //UPDATE
-    public function update(int $id, Model $model)
+    public function update($id, Model $model)
     {
         //update offers set entitled = ?, duration = ?, date_publish = ?, salary = ?, space_available = ?, state = ?, description = ? where id = ?
         $champs = [];
@@ -78,9 +81,15 @@ class Model extends Db
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        if($valeur !== null && $champ != 'table' && $champ != 'db'){
-        $champs[] = "$champ = ?";
-        $valeurs[]= $valeur;
+        if($valeur !== null && $champ != 'table' && $champ != 'IdCollumName' && $champ != 'Collumdeux' && $champ != 'db'){
+            $champs[] = "$champ = ?";
+
+            // Convertir les booléens en entiers
+            if (is_bool($valeur)) {
+                $valeur = (int) $valeur;
+            }
+
+            $valeurs[]= $valeur;
         }
     }
     $valeurs[] = $id;
@@ -88,16 +97,20 @@ class Model extends Db
 
     
     // On exécute la requête
-    return $this->requete("UPDATE {$this->table} SET $liste_champs WHERE id = ?", $valeurs );
+    return $this->requete("UPDATE {$this->table} SET $liste_champs WHERE {$this->IdCollumName} = ?", $valeurs );
     } 
 
 //DELETE
     public function delete(int $id)
     {
     // DELETE FROM offers WHERE id = ?
-    return $this->requete("DELETE FROM {$this->table} WHERE id = ?", [$id]);
+    return $this->requete("DELETE FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id]);
     }
-    
+
+    public function deletePrecis(int $id, $Param)
+    {
+        return $this->requete("DELETE FROM {$this->table} WHERE {$this->IdCollumName} = ? and {$this->Collumdeux} = ?", [$id,$Param]);
+    }
 
     /**
     * Méthode qui exécutera les requêtes

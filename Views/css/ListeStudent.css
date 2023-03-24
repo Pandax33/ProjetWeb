@@ -123,7 +123,7 @@ h5 {
 }
 
 .card-top .card-body span:last-child {
-  color: gray; /* "| Entreprises" en gris */
+  color: black; /* "| Entreprises" en gris */
 }
 
 /* Centrer les cartes */
@@ -186,16 +186,33 @@ ul {list-style: none;
   }
   
   .btn-orange {
-  background-color: orange;
-  color: white;
-  }
+    background-color: #cacc51;
+    color: white;
+    /* centrer le bouton */
+    margin: 0 auto;
+    width: 50%;
+    height: 30%;
+    /*Réduire la hauteur du bouton*/
+    padding: 2%;
+    font-size: 80%;
+    margin-top: 1%;
+
+    margin-right: 2%;
+  
+    }
   
   .btn-green {
-  background-color: green;
+  background-color: #639B6D;
   color: white;
-  /* ajouter un espace a droite  et a gauche */
-  margin-right: 2%;
-  margin-left: 2%;
+  /* centrer le bouton */
+  margin: 0 auto;
+  width: 50%;
+  height: 30%;
+  /*Réduire la hauteur du bouton*/
+  padding: 2%;
+  font-size: 80%;
+  margin-top: 1%;
+
   }
 
 

@@ -3,7 +3,7 @@ namespace App\Models;
 
 class OffersModel extends Model
 {
-    protected $id;
+    protected $ID_O;
     protected $Entitled_O;
     protected $Duration_O;
     protected $Salary_O;
@@ -149,7 +149,7 @@ class OffersModel extends Model
      */ 
     public function getId()
     {
-        return $this->id;
+        return $this->ID_O;
     }
 
     /**
@@ -159,7 +159,7 @@ class OffersModel extends Model
      */ 
     public function setId($id)
     {
-        $this->id = $id;
+        $this->ID_O = $id;
 
         return $this;
     }

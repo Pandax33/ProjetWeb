@@ -106,4 +106,55 @@ foreach ($offers as $offer) {
         
         
     }
+
+    public function modifier(){
+        $enterpriseModel= New EnterpriseModel;
+        $enterprise=$enterpriseModel->findAll();
+        $cityModel= new CityModel;
+        $city=$cityModel->findAll();
+        $offersModel = new OffersModel;
+        $offers=$offersModel->findAll();
+        $this->smarty->assign('enterprise',$enterprise);
+        $this->smarty->assign('city', $city);
+        $this->smarty->assign('offers',$offers);
+        $this->smarty->display('TemplateEditOffers.tpl');
+    }
+
+    public function update(){
+         $offersModel = new OffersModel;
+
+        if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+            $test="non";
+            $target_dir = "../Views/image/";
+            $target_file = $target_dir . basename($_FILES["image"]["name"]);
+            $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        
+            // Vous pouvez ajouter des vérifications supplémentaires, par exemple vérifier la taille du fichier ou le type de fichier
+        
+            // Tentez de déplacer le fichier téléchargé vers le dossier de destination
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                echo "L'image ". htmlspecialchars(basename($_FILES["image"]["name"])). " a été téléchargée.";
+            } else {
+                echo "Erreur lors du téléchargement de l'image.";
+            }
+        }
+        $offersModel->setId($_POST['IDO']);
+        echo $offersModel->getId();
+        $offersModel->setEntitled_O($_POST['Intitule']);
+        $offersModel->setDuration_O($_POST['Duree']);
+        $offersModel->setSalary_O($_POST['Salaire']);
+        $offersModel->setDescription($_POST['description']);
+        $offersModel->setLinkPicture(basename($_FILES["image"]["name"]));
+        $offersModel->setSpace_O($_POST['nbStagiaire']);
+        $offersModel->setIde($_POST['ID']);
+        $offersModel->setName($_POST['Lieux']);
+        if($_POST['visible']== "visible"){
+            $offersModel->setState(1);}
+        else{
+            $offersModel->setState(0);
+        }
+
+        $offersModel->update($offersModel->getId(), $offersModel);
+
+    }
 }

@@ -3,8 +3,10 @@ namespace App\Models;
 
 class OwnModel extends Model
 {
-    protected $Name_Competence;
+    
     protected $ID_P;
+
+    protected $Name_Competence;
 
     
     public function __construct()

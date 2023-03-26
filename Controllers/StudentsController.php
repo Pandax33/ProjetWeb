@@ -162,6 +162,85 @@ foreach ($selectedCompetences as $competence) {
         
     }
 
+    public function cree(){
+        $CenterModel=new CenterModel; 
+
+        $centers=$CenterModel->findAll();
+        $PromotionModel=new PromotionModel;	
+        $promotions=$PromotionModel->findAll();
+        $CompetenceModel=new CompetenceModel;
+        $competences=$CompetenceModel->findAll();
+
+        $this->smarty->assign('center', $centers);
+        $this->smarty->assign('promotion', $promotions);
+        $this->smarty->assign('competence', $competences);
+        $this->smarty->display('TemplateCreateStudent.tpl');
+
+       
+        
+    }
+
+    public function create(){
+        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+        $charactersLength = strlen($characters);
+        $randomPassword = '';
+    
+        for ($i = 0; $i < 10; $i++) {
+            $randomPassword .= $characters[rand(0, $charactersLength - 1)];
+        }
+    
+        
+        $personModel = new PersonModel;
+        $personModel->setFirstname_P($_POST['Prenom']);
+        $personModel->setLastname_P($_POST['Nom']);
+        $personModel->setMail($_POST['Mail']);
+        $personModel->setRole_P('Student');
+        $personModel->setPassword($randomPassword);
+        $personModel->setLinkPicture(basename($_FILES["image"]["name"]));
+        $personModel->setName_Center($_POST['Centre']);
+
+        $personModel->create($personModel);
+
+
+        $foundId = null;
+
+// Récupérer les valeurs de getFirstName et getLastName
+$firstNameToCompare = $personModel->getFirstname_P();
+$lastNameToCompare = $personModel->getLastname_P();
+
+// Parcourir le tableau des résultats à partir de la fin
+for ($i = count($personModel->findAll()) - 1; $i >= 0; $i--) {
+    $person = $personModel->findAll()[$i];
+
+    // Comparer les FirstName et LastName avec les valeurs de getFirstName et getLastName
+    if ($person->Firstname_P === $firstNameToCompare && $person->Lastname_P === $lastNameToCompare) {
+        $foundId = $person->ID_P;
+        break;
+    }
+}
+
+
+        $IsModel=new _IsModel;
+        $IsModel->setIdP($foundId);
+        $IsModel->setNamePromotion($_POST['Promotion']);
+        $IsModel->create($IsModel);
+
+        
+
+        $OwnModel=new OwnModel;
+        $Own=$_POST['competence'];
+        foreach ($Own as $own) {
+            
+            $OwnModel->setIdP($foundId);
+            $OwnModel->setNameCompetence($own);
+            echo $OwnModel->getIdP();
+            echo $OwnModel->getNameCompetence();
+            $OwnModel->create($OwnModel);
+            echo '</br>';
+        }
+
+    }
+
 
 }
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 21:31:58
-  from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateEditStudent.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-26 21:32:24
+  from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateStudent.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6420b9ce399242_82543977',
+  'unifunc' => 'content_6420b9e8eb5022_11167606',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ff0e1feb848b9c409c617e520976353f435a45f9' => 
+    '1fbcfea64da5b33db66febefeead48c8458217b4' => 
     array (
-      0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateEditStudent.tpl',
-      1 => 1679866307,
+      0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateStudent.tpl',
+      1 => 1679866342,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6420b9ce399242_82543977 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6420b9e8eb5022_11167606 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
@@ -37,57 +37,11 @@ function content_6420b9ce399242_82543977 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body>
 
-<form method="POST" action="index.php?p=students/update" enctype="multipart/form-data">
+<form method="POST" action="index.php?p=students/create" enctype="multipart/form-data">
 
   
 
     
-<div class="form-group col-md-6">
-<label for="Etudiant">Etudiant</label>
-<select id="Etudiant" class="form-control" name="Etudiant">
-
-
-<?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['students']->value, 'student');
-$_smarty_tpl->tpl_vars['student']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['student']->value) {
-$_smarty_tpl->tpl_vars['student']->do_else = false;
-?>
-    <option data-id-p="<?php echo $_smarty_tpl->tpl_vars['student']->value->ID_P;?>
-"
-    data-firstname="<?php echo $_smarty_tpl->tpl_vars['student']->value->Firstname_P;?>
-"
-    data-lastname="<?php echo $_smarty_tpl->tpl_vars['student']->value->Lastname_P;?>
-"
-    data-role="<?php echo $_smarty_tpl->tpl_vars['student']->value->Role_P;?>
-"
-    data-mail="<?php echo $_smarty_tpl->tpl_vars['student']->value->mail;?>
-"
-    data-password="<?php echo $_smarty_tpl->tpl_vars['student']->value->password;?>
-"
-    data-name-center="<?php echo $_smarty_tpl->tpl_vars['student']->value->Name_Center;?>
-"
-    data-linkpicture="<?php echo $_smarty_tpl->tpl_vars['student']->value->LinkPicture;?>
-"
-    data-promotions="<?php echo $_smarty_tpl->tpl_vars['student']->value->Promotions;?>
-"
-    data-competences="<?php echo $_smarty_tpl->tpl_vars['student']->value->Competences;?>
-">
-<?php echo $_smarty_tpl->tpl_vars['student']->value->Firstname_P;?>
- <?php echo $_smarty_tpl->tpl_vars['student']->value->Lastname_P;?>
-
-</option>
-<?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-
-</select>
-</div>
-
-<div class="form-group col-md-6">
-    <label for="ID">ID</label>
-    <input type="text" class="form-control" id="ID" placeholder="ID" name="ID" readonly>
-  </div>
 
     <div class="form-group col-md-6">
       <label for="Prenom">Prenom</label>
@@ -186,7 +140,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </body>
 <?php echo '<script'; ?>
- src="../../Views/javascript/TemplateEditstudent.js"><?php echo '</script'; ?>
+ src="../../Views/javascript/TemplateCreateStudent.js"><?php echo '</script'; ?>
 >
 </html><?php }
 }

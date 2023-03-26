@@ -4,11 +4,11 @@
       <span class="divider"> |</span>
     </div>
     <ul class="nav-list" id="navList">
-      <li class="nav-item"><a href="index.php?p=accueil" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="index.php?p=offers" class="nav-link">Offres</a></li>
-      <li class="nav-item"><a href="index.php?p=enterprises" class="nav-link">Entreprises</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Wishlist</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Compare</a></li>
+      <li class="nav-item profile-item mobile-only"><a href="index.php?p=accueil" class="nav-link">Home</a></li>
+      <li class="nav-item profile-item mobile-only"><a href="index.php?p=offers" class="nav-link">Offres</a></li>
+      <li class="nav-item profile-item mobile-only"><a href="index.php?p=enterprises" class="nav-link">Entreprises</a></li>
+      <li class="nav-item profile-item mobile-only"><a href="#" class="nav-link">Wishlist</a></li>
+      <li class="nav-item profile-item mobile-only"><a href="#" class="nav-link">Compare</a></li>
       
       <li class="nav-item profile-item mobile-only"><a href="#" class="nav-link">Profile</a></li>
       <li class="nav-item sign-item mobile-only"><a href="#" class="nav-link1">Sign Out</a></li>

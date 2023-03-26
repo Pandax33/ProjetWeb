@@ -27,6 +27,15 @@
         <?= $contenu ?>
     </div>
     <h1>Bienvenue {$role}</h1>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('navList');
+  
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('nav-list-active');
+    });
+  });
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
 </body>

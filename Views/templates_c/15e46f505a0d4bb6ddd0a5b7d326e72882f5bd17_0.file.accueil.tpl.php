@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 18:38:12
+/* Smarty version 4.3.0, created on 2023-03-26 19:03:04
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642074f4bf23a7_06906918',
+  'unifunc' => 'content_64207ac82d8b08_77549993',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1679848640,
+      1 => 1679850183,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_642074f4bf23a7_06906918 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64207ac82d8b08_77549993 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -59,6 +59,17 @@ function content_642074f4bf23a7_06906918 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <h1>Bienvenue <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
 </h1>
+    <?php echo '<script'; ?>
+>document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('navList');
+  
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('nav-list-active');
+    });
+  });
+  <?php echo '</script'; ?>
+>
     <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     <?php echo '</script'; ?>

@@ -26,7 +26,8 @@
     </div>
      <!--Si le role est admin, inclure le fichier createoffer.tpl-->
     {if $role == "admin"}
-      {include file="createoffer.tpl"}
+      <span>{include file="c_offer_b.tpl"}
+      {include file="m_offer_b.tpl"}</span>
     {/if}
 
     {if $myArray|@count > 0}

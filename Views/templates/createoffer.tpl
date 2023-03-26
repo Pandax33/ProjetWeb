@@ -1,1 +1,0 @@
-<button class="btn btn-green">Ajouter à la Wishlist</button>

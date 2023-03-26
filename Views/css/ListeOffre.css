@@ -49,7 +49,6 @@ body {
   /*Aligner a droite le texte et le span*/
   text-align: right;
   align-items: right;
-  margin-right: 10%;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 22px;
@@ -92,7 +91,7 @@ h5 {
 
 @media only screen and (max-width: 768px) {
   .container {
-    margin: 100px;
+
     padding: 20px;
   }
   h2 {

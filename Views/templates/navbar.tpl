@@ -1,7 +1,7 @@
-<nav class="navbar">
+<nav class="navbar sticky-top bg-body-tertiary">
     <div class="navbar-brand">
-      <span>Héraclès</span>
-      <span class="divider">|</span>
+      <span>Héraclès </span>
+      <span class="divider"> |</span>
     </div>
     <ul class="nav-list" id="navList">
       <li class="nav-item"><a href="#" class="nav-link">Home</a></li>

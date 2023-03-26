@@ -1,26 +1,29 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-24 12:08:23
+/* Smarty version 4.3.0, created on 2023-03-26 18:38:06
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\teachers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641d84a75d3bf2_00012264',
+  'unifunc' => 'content_642074ee403b24_77915981',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a37c21f257cdb2279ecb8cf412a103499cb61fd' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\teachers.tpl',
-      1 => 1679656102,
+      1 => 1679848681,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:navbar_a.tpl' => 1,
+    'file:navbar_t.tpl' => 1,
+    'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_641d84a75d3bf2_00012264 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642074ee403b24_77915981 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -29,8 +32,17 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
   <title>Liste des pilotes</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeTeachers.css" type="text/css">
+  <link rel="stylesheet" href="../../Views/css/navbar.css">
+
 </head>
 <body>
+<?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+  <?php $_smarty_tpl->_subTemplateRender("file:navbar_a.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+} elseif ($_smarty_tpl->tpl_vars['role']->value == "teacher") {?>
+  <?php $_smarty_tpl->_subTemplateRender("file:navbar_t.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+} elseif ($_smarty_tpl->tpl_vars['role']->value == "student") {?>
+  <?php $_smarty_tpl->_subTemplateRender("file:navbar_s.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}?>
   <div class="container">
 
     <div class="card card-top">
@@ -80,6 +92,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <p>Aucune donnée trouvée.</p>
     <?php }?>
   </div>
+  <?php echo '<script'; ?>
+>document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('navList');
+  
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('nav-list-active');
+    });
+  });
+  <?php echo '</script'; ?>
+>
+  
+  <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"><?php echo '</script'; ?>
+>
+  
 </body>
 </html><?php }
 }

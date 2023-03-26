@@ -150,3 +150,28 @@
       display: none;
     }
   }
+
+  ul {list-style: none;
+    padding: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    }
+    
+    li {
+    display: flex;
+
+    align-items: center;
+    width: 70%; 
+    margin: 0 auto;
+   
+    }
+
+    .container {
+      margin-top: 50px;
+    
+    }
+
+    body{
+      padding-top:0px;
+    }

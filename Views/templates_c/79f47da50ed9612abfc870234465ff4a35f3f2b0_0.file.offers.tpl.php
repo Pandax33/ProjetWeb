@@ -1,28 +1,30 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 14:34:13
+/* Smarty version 4.3.0, created on 2023-03-26 18:26:48
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64203bc5261353_78588091',
+  'unifunc' => 'content_642072483b8e07_15846403',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679834051,
+      1 => 1679848007,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:navbar.tpl' => 1,
+    'file:navbar_a.tpl' => 1,
+    'file:navbar_t.tpl' => 1,
+    'file:navbar_s.tpl' => 1,
     'file:createoffer.tpl' => 1,
   ),
 ),false)) {
-function content_64203bc5261353_78588091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642072483b8e07_15846403 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -35,8 +37,17 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
   <link rel="stylesheet" href="../../Views/css/navbar.css">
 </head>
 <body>
-  <?php $_smarty_tpl->_subTemplateRender("file:navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<!--Si le role dans la session = admin, alors inclure navbar_s.tpl, de meme pour les roles teacher et student-->
+  <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+    <?php $_smarty_tpl->_subTemplateRender("file:navbar_a.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+  <?php } elseif ($_smarty_tpl->tpl_vars['role']->value == "teacher") {?>
+    <?php $_smarty_tpl->_subTemplateRender("file:navbar_t.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  <?php } elseif ($_smarty_tpl->tpl_vars['role']->value == "student") {?>
+    <?php $_smarty_tpl->_subTemplateRender("file:navbar_s.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  <?php }?>
 
   <div class="container"> 
 

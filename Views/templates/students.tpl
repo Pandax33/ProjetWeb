@@ -4,8 +4,16 @@
   <title>Liste des étudiants</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeStudent.css" type="text/css">
-</head>
+  <link rel="stylesheet" href="../../Views/css/navbar.css">
+  </head>
 <body>
+{if $role == "admin"}
+  {include file="navbar_a.tpl"}
+{elseif $role == "teacher"}
+  {include file="navbar_t.tpl"}
+{elseif $role == "student"}
+  {include file="navbar_s.tpl"}
+{/if}
   <div class="container">
 
     <div class="card card-top">
@@ -45,5 +53,17 @@
       <p>Aucune donnée trouvée.</p>
     {/if}
   </div>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('navList');
+  
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('nav-list-active');
+    });
+  });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  
 </body>
 </html>

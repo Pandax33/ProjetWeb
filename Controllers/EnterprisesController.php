@@ -15,7 +15,7 @@ class EnterprisesController extends Controller
         $enterpriseModel = new EnterpriseModel;
         $array = array(0, 1, 2);
         //On recupere les entreprises de la bdd 
-        $enterprises = $enterpriseModel->findAll();
+        $enterprises = $enterpriseModel->findBy(['Visibility_E' => 1]);;
         
         $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $enterprises);

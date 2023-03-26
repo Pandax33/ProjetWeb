@@ -12,6 +12,7 @@ class OwnModel extends Model
 
         $this->table = "own";  
         $this->IdCollumName= "Id_P"; 
+        $this->Collumdeux= "Name_Competence";
     }
 
     public function getIdP()

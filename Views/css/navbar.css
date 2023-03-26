@@ -103,6 +103,18 @@
   
   /* Update the existing media query */
   @media (max-width: 1445px) {
+
+    .btn-c{
+      width: 100%;
+      display: block;
+
+      }
+    
+    .btn-m{
+      width:100%;
+      display: block;
+    
+    }
     .nav-list {
       position: absolute;
       top: 100%;
@@ -184,12 +196,13 @@
 
 .btn-c{
   background-color: #ffffff;
-  width: 49%;
+
   }
 
 .btn-m{
     background-color: #ffffff;
-    width:49%;
+
+
 
 }
 

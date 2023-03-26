@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 18:26:48
+/* Smarty version 4.3.0, created on 2023-03-26 19:43:56
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\navbar_s.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642072484c2449_63759331',
+  'unifunc' => 'content_6420845c6a4f23_56866276',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4514aa911a82d1d27778a1d90f40d4ce081b7a36' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\navbar_s.tpl',
-      1 => 1679848007,
+      1 => 1679852636,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_642072484c2449_63759331 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6420845c6a4f23_56866276 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="navbar sticky-top bg-body-tertiary">
     <div class="navbar-brand">
       <span>Héraclès </span>

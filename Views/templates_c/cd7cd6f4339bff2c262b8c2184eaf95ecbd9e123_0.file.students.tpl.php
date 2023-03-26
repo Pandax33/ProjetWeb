@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 18:38:03
+/* Smarty version 4.3.0, created on 2023-03-26 19:28:21
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\students.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642074ebdeb774_39595443',
+  'unifunc' => 'content_642080b51f13e7_32393475',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd7cd6f4339bff2c262b8c2184eaf95ecbd9e123' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\students.tpl',
-      1 => 1679848681,
+      1 => 1679851699,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_a.tpl' => 1,
     'file:navbar_t.tpl' => 1,
     'file:navbar_s.tpl' => 1,
+    'file:buttons/c_student_b.tpl' => 1,
+    'file:buttons/m_student_b.tpl' => 1,
   ),
 ),false)) {
-function content_642074ebdeb774_39595443 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642080b51f13e7_32393475 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -50,6 +52,12 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
       </div>
     </div>
 
+    <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+      <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_student_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+      <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_student_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?></span>
+    <?php }?>
     <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['myArray']->value) > 0) {?>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['myArray']->value, 'object');

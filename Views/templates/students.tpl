@@ -22,6 +22,10 @@
       </div>
     </div>
 
+    {if $role == "admin"}
+      <span>{include file="buttons/c_student_b.tpl"}
+      {include file="buttons/m_student_b.tpl"}</span>
+    {/if}
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
 

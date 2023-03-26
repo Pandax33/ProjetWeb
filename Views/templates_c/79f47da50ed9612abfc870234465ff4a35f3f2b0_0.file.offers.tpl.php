@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 19:09:23
+/* Smarty version 4.3.0, created on 2023-03-26 19:24:02
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64207c43591924_51220062',
+  'unifunc' => 'content_64207fb2e2dae1_92650851',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679850561,
+      1 => 1679851442,
       2 => 'file',
     ),
   ),
@@ -21,11 +21,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_a.tpl' => 1,
     'file:navbar_t.tpl' => 1,
     'file:navbar_s.tpl' => 1,
-    'file:c_offer_b.tpl' => 1,
-    'file:m_offer_b.tpl' => 1,
+    'file:buttons/c_offer_b.tpl' => 1,
+    'file:buttons/m_offer_b.tpl' => 1,
   ),
 ),false)) {
-function content_64207c43591924_51220062 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64207fb2e2dae1_92650851 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -59,9 +59,9 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
     </div>
      <!--Si le role est admin, inclure le fichier createoffer.tpl-->
     <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
-      <span><?php $_smarty_tpl->_subTemplateRender("file:c_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+      <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-      <?php $_smarty_tpl->_subTemplateRender("file:m_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+      <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?></span>
     <?php }?>
 

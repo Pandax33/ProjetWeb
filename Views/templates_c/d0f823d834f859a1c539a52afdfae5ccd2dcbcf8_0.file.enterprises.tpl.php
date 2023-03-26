@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 18:31:55
+/* Smarty version 4.3.0, created on 2023-03-26 19:42:57
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6420737b3a20d8_41598110',
+  'unifunc' => 'content_64208421db30d4_48041864',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1679848315,
+      1 => 1679852577,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_a.tpl' => 1,
     'file:navbar_t.tpl' => 1,
     'file:navbar_s.tpl' => 1,
+    'file:buttons/c_enterprise_b.tpl' => 1,
+    'file:buttons/m_enterprise_b.tpl' => 1,
   ),
 ),false)) {
-function content_6420737b3a20d8_41598110 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64208421db30d4_48041864 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -54,11 +56,15 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
         <span>Entreprises |</span><span><a href="index.php?p=offers">Offres</a></span>
       </div>
     </div>
-  </div>
-
-  <div class="container">
+    <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+      <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_enterprise_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+      <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_enterprise_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?></span>
+    <?php }?>
+  
+  
         <div class="row">
-
         <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['myArray']->value) > 0) {?>
           <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['myArray']->value, 'object');

@@ -26,11 +26,13 @@
         <span>Entreprises |</span><span><a href="index.php?p=offers">Offres</a></span>
       </div>
     </div>
-  </div>
-
-  <div class="container">
+    {if $role == "admin"}
+      <span>{include file="buttons/c_enterprise_b.tpl"}
+      {include file="buttons/m_enterprise_b.tpl"}</span>
+    {/if}
+  
+  
         <div class="row">
-
         {if $myArray|@count > 0}
           {foreach from=$myArray item=object}
             <div class="col-lg-4 col-md-6 col-sm-12 ecart">

@@ -206,3 +206,25 @@
 
 }
 
+.back-b{
+  /*modifie le texte pour en faire un bouton jaune avec des bords circulaires et un texte blanc*/
+  background-color: orange;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  /*Centrer la class*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: block;
+
+  
+}

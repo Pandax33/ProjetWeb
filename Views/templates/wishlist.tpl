@@ -21,7 +21,7 @@
 
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
-          <!--Afficher uniquement si l'ID_P corespond a l'identifiant de la session-->
+  
             {if $object->ID_P == $identifiant}
               {if $object ->state == "1" }
 
@@ -40,7 +40,7 @@
                     </div>
                     <div class="button-group">
                     <a href="index.php?p=offers/detail/{$object->ID_O}" class="btn btn-orange">En savoir plus</a>
-                    <a href="index.php?p=offers/detail/{$object->ID_O}"><button class="btn btn-green">Ajouter à la Wishlist</a></button>
+                    <a href="index.php?p=wishlist/removeWishlist/{$object->ID_O}"><button class="btn btn-red">Retirer de la Wishlist</a></button>
 
                   </div>
                 </div>
@@ -56,6 +56,8 @@
     {else}
       <p>Aucune donnée trouvée.</p>
     {/if}
+    <p style="text-align: center;"><a href="index.php?p=offers" >Ajoutez des offres à votre liste de souhaits depuis la page d'offres</a></p>
+    <a href="index.php?p=offers" class="back-b">Aller aux offres</a>
   </div>
   <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

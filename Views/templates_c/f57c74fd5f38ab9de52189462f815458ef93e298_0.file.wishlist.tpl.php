@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 11:55:05
+/* Smarty version 4.3.0, created on 2023-03-27 12:39:28
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\wishlist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642167f921f244_21984697',
+  'unifunc' => 'content_642172605eb7d0_45629128',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f57c74fd5f38ab9de52189462f815458ef93e298' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\wishlist.tpl',
-      1 => 1679910904,
+      1 => 1679913566,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_642167f921f244_21984697 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642172605eb7d0_45629128 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -57,7 +57,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['object']->value) {
 $_smarty_tpl->tpl_vars['object']->do_else = false;
 ?>
-          <!--Afficher uniquement si l'ID_P corespond a l'identifiant de la session-->
+  
             <?php if ($_smarty_tpl->tpl_vars['object']->value->ID_P == $_smarty_tpl->tpl_vars['identifiant']->value) {?>
               <?php if ($_smarty_tpl->tpl_vars['object']->value->state == "1") {?>
 
@@ -81,8 +81,8 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
                     <div class="button-group">
                     <a href="index.php?p=offers/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
 " class="btn btn-orange">En savoir plus</a>
-                    <a href="index.php?p=offers/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
-"><button class="btn btn-green">Ajouter à la Wishlist</a></button>
+                    <a href="index.php?p=wishlist/removeWishlist/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
+"><button class="btn btn-red">Retirer de la Wishlist</a></button>
 
                   </div>
                 </div>
@@ -100,6 +100,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php } else { ?>
       <p>Aucune donnée trouvée.</p>
     <?php }?>
+    <p style="text-align: center;"><a href="index.php?p=offers" >Ajoutez des offres à votre liste de souhaits depuis la page d'offres</a></p>
+    <a href="index.php?p=offers" class="back-b">Aller aux offres</a>
   </div>
   <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {

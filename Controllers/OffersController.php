@@ -125,6 +125,7 @@ foreach ($offers as $offer) {
             header('Location: /public/index.php?p=offers');
             
         }else{
+            // Actualiser la page
             header('Location: /public/index.php?p=offers');
         }
 

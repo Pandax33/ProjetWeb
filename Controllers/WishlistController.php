@@ -103,6 +103,26 @@ foreach ($offers as $offer) {
         $this->render('offers/detail', ['offer' => $offer]);
     }
 
+    public function removeWishlist(int $id){
+        // On instancie le modèle
+        $wishlistModel = new WishlistModel;
+        $wishlist = $wishlistModel->findBy(['ID_O' => $id, 'ID_P' => $_SESSION['identifiant']]);
+        //Si l'offre est dans la wishlist, on la supprime
+        if(!empty($wishlist)){
+            $wishlistModel = new WishlistModel;
+
+            
+            $wishlistModel -> deletePrecis($_SESSION['identifiant'], $id );
+            header('Location: /public/index.php?p=wishlist');
+            
+        }else{
+            // Actualiser la page
+            header('Location: /public/index.php?p=wishlist');
+        }
+
+       
+    }
+
     
 
 

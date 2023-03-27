@@ -194,7 +194,9 @@ foreach ($selectedCompetences as $competence) {
         $personModel->setFirstname_P($_POST['Prenom']);
         $personModel->setLastname_P($_POST['Nom']);
         $personModel->setMail($_POST['Mail']);
-        $personModel->setRole_P('Student');
+
+        $personModel->setRole_P('student');
+
         $personModel->setPassword($randomPassword);
         $personModel->setLinkPicture(basename($_FILES["image"]["name"]));
         $personModel->setName_Center($_POST['Centre']);

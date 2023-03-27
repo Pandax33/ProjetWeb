@@ -176,5 +176,18 @@ p{
     margin-left: 2%;
     }
   
+    .button-group {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
 
+        margin: 0 auto;
+        flex-wrap: wrap;
+        align-content: center;  
+        /* ajouter un espace a droite */
+        margin-right: 10%;
+        margin-left: 10%;
+      }
+   
 
+      

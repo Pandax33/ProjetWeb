@@ -21,6 +21,13 @@ a:hover {
   color: inherit;
 }
 
+.btn:hover
+{
+  text-decoration: none;
+  color: black;
+}
+
+
 #enter{
   /* Change text color to grey*/
   margin-top: 0;

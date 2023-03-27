@@ -1,9 +1,11 @@
 <?php 
 // PERMET DE CONSULTER LA LISTE DES ANNONCES
 namespace App\Controllers;
+use App\Models\ConcernModel;
 use App\Models\EnterpriseModel;
 use App\Models\OffersModel;
 use App\Models\CityModel;
+use App\Models\RequestModel;
 use App\Models\WishlistModel;
 
 class OffersController extends Controller
@@ -74,12 +76,32 @@ foreach ($offers as $offer) {
     public function detail(int $id){
         // On instancie le modèle
         $offersModel = new OffersModel;
+        $enterpriseModel = new EnterpriseModel;
+        $wishlistModel = new WishlistModel;
 
         // On récupère l'annonce
         $offer = $offersModel->find($id);
 
+        //On recupere l'entreprise correspondante et on l'ajoute à l'objet $offer
+        //On verifie si il existe une association entre l'offre et l'id de la personne connectée
+        //Si oui, on ajoute un attribut "wish" à l'objet $offer pour pouvoir afficher le bouton "Ajouter à la wishlist"
+        $enterprise = $enterpriseModel->find($offer->ID_E);
+        $offer->ent = $enterprise->Name_E;
+        $wishlist = $wishlistModel->findBy(['ID_O' => $id, 'ID_P' => $_SESSION['identifiant']]);
+        if(empty($wishlist)){
+            $offer->wish = 0;
+        }else{
+            $offer->wish = 1;
+        }
+
+        
+
         // On affiche la vue
-        $this->render('offers/detail', ['offer' => $offer]);
+        $this->smarty->assign('offer', $offer);
+        $this->smarty->assign('role', $_SESSION['role']);
+        $this->smarty->assign('Nom',"Détails de l'offre");
+        $this->smarty->display('details/offre.tpl');
+        header('Location: /public/index.php?p=offers/suppr/'.$id);
     }
 
     // Afficher le formulaire de création d'une annonce
@@ -131,5 +153,31 @@ foreach ($offers as $offer) {
 
        
     }
+
+    public function postuler(int $id){
+        $offersModel = new OffersModel;
+        $enterpriseModel = new EnterpriseModel;
+        $wishlistModel = new WishlistModel;
+
+        // On récupère l'annonce
+        $offer = $offersModel->find($id);
+
+        //On recupere l'entreprise correspondante et on l'ajoute à l'objet $offer
+        //On verifie si il existe une association entre l'offre et l'id de la personne connectée
+        //Si oui, on ajoute un attribut "wish" à l'objet $offer pour pouvoir afficher le bouton "Ajouter à la wishlist"
+        $enterprise = $enterpriseModel->find($offer->ID_E);
+        $offer->ent = $enterprise->Name_E;
+        $wishlist = $wishlistModel->findBy(['ID_O' => $id, 'ID_P' => $_SESSION['identifiant']]);
+        if(empty($wishlist)){
+            $offer->wish = 0;
+        }else{
+            $offer->wish = 1;
+        }
+
+        $this->smarty->assign('offer', $offer);
+        $this->smarty->assign('role', $_SESSION['role']);
+        $this->smarty->display('postuler.tpl');
+    }
+
 
 }

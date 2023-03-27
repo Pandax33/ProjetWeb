@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 12:39:28
+/* Smarty version 4.3.0, created on 2023-03-27 15:41:03
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\wishlist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642172605eb7d0_45629128',
+  'unifunc' => 'content_64219cef4715f3_95104473',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f57c74fd5f38ab9de52189462f815458ef93e298' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\wishlist.tpl',
-      1 => 1679913566,
+      1 => 1679916230,
       2 => 'file',
     ),
   ),
@@ -23,14 +23,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_642172605eb7d0_45629128 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64219cef4715f3_95104473 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liste de souhaits</title>
+  <title>Héraclès | Liste de souhaits</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">

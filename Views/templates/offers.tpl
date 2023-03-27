@@ -49,9 +49,9 @@
                     </div>
                     <div class="button-group">
                     <a href="index.php?p=offers/detail/{$object->ID_O}" class="btn btn-orange">En savoir plus</a>
-                    {if $object->wish == 0}
+                    {if $object->wish == 0 && $role == "student"}
                       <a href="index.php?p=offers/addWishlist/{$object->ID_O}"><button class="btn btn-green">Ajouter à la Wishlist</a></button>
-                    {else}
+                    {elseif $object->wish == 1 && $role == "student"}
                       <a href="index.php?p=offers/removeWishlist/{$object->ID_O}"><button class="btn btn-red">Retirer de la Wishlist</a></button>
                     {/if}
 

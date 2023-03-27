@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 11:55:11
+/* Smarty version 4.3.0, created on 2023-03-27 12:48:59
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642167ff8abda8_87325466',
+  'unifunc' => 'content_6421749b866a99_93952745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679910781,
+      1 => 1679914138,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_offer_b.tpl' => 1,
   ),
 ),false)) {
-function content_642167ff8abda8_87325466 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6421749b866a99_93952745 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -94,10 +94,10 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
                     <div class="button-group">
                     <a href="index.php?p=offers/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
 " class="btn btn-orange">En savoir plus</a>
-                    <?php if ($_smarty_tpl->tpl_vars['object']->value->wish == 0) {?>
+                    <?php if ($_smarty_tpl->tpl_vars['object']->value->wish == 0 && $_smarty_tpl->tpl_vars['role']->value == "student") {?>
                       <a href="index.php?p=offers/addWishlist/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
 "><button class="btn btn-green">Ajouter à la Wishlist</a></button>
-                    <?php } else { ?>
+                    <?php } elseif ($_smarty_tpl->tpl_vars['object']->value->wish == 1 && $_smarty_tpl->tpl_vars['role']->value == "student") {?>
                       <a href="index.php?p=offers/removeWishlist/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
 "><button class="btn btn-red">Retirer de la Wishlist</a></button>
                     <?php }?>

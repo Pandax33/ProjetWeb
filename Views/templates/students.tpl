@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des étudiants</title>
+  <title>Héraclès | Etudiants</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeStudent.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -18,7 +18,7 @@
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Etudiants |</span>
+        <span class="sel">Etudiants |</span>
       </div>
     </div>
 

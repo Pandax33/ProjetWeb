@@ -60,35 +60,19 @@ class WishlistController extends Controller
             $new_offers[] = $new_wish;
         }
 
-
-/*
-        $new_offers = array();
-
-// On ajoute l'entreprise correspondante à chaque offre
-foreach ($offers as $offer) {
-    $new_offer = clone $offer; // Cloner l'objet pour éviter de modifier l'original
-    $id_e = $offer->ID_E;
-    
-    // Trouver l'entreprise correspondante
-    $enterprise_name = "";
-    foreach ($enterprises as $enterprise) {
-        if ($enterprise->ID_E == $id_e) {
-            $enterprise_name = $enterprise->Name_E;
-            break;
-        }
-    }
-    
-    $new_offer->ent = $enterprise_name;
-    $new_offers[] = $new_offer;
-}
-*/
-
-
+        //On affiche la vue que si le role est student
+        if($_SESSION['role'] == 'student'){
         $this->smarty->assign('role', $_SESSION['role']);
         $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
         $this->smarty->assign('myArray', $new_offers);
         $this->smarty->assign('Nom','Liste de souhaits');
         $this->smarty->display('wishlist.tpl');
+        }elseif ($_SESSION['role'] == 'teacher') {
+            $this->smarty->assign('role', $_SESSION['role']);
+            $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
+            $this->smarty->display('error403.tpl');
+        }
+        
     }
 
     // Afficher une annonce

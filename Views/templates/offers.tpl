@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liste des offres</title>
+  <title>Héraclès | Offres</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -21,7 +21,7 @@
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Offres |</span><span><a href="index.php?p=enterprises">Entreprises</a></span>
+        <span class="sel">Offres |</span><span class="sel"><a href="index.php?p=enterprises">Entreprises</a></span>
       </div>
     </div>
      <!--Si le role est admin, inclure le fichier createoffer.tpl-->

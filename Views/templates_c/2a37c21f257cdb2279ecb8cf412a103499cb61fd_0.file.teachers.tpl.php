@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 19:28:57
+/* Smarty version 4.3.0, created on 2023-03-27 13:51:19
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\teachers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642080d98cda69_95333803',
+  'unifunc' => 'content_64218337d85495_55686341',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a37c21f257cdb2279ecb8cf412a103499cb61fd' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\teachers.tpl',
-      1 => 1679851734,
+      1 => 1679917870,
       2 => 'file',
     ),
   ),
@@ -25,13 +25,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_teacher_b.tpl' => 1,
   ),
 ),false)) {
-function content_642080d98cda69_95333803 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64218337d85495_55686341 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des pilotes</title>
+  <title>Héraclès | Pilotes</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeTeachers.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -49,7 +49,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Pilotes |</span>
+        <span class="sel">Pilotes |</span>
       </div>
     </div>
     <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>

@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des pilotes</title>
+  <title>Héraclès | Pilotes</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeTeachers.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -19,7 +19,7 @@
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Pilotes |</span>
+        <span class="sel">Pilotes |</span>
       </div>
     </div>
     {if $role == "admin"}

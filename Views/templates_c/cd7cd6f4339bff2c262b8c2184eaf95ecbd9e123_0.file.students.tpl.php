@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 09:35:50
+/* Smarty version 4.3.0, created on 2023-03-27 13:51:12
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\students.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421475618d579_49110328',
+  'unifunc' => 'content_6421833024b668_50086779',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd7cd6f4339bff2c262b8c2184eaf95ecbd9e123' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\students.tpl',
-      1 => 1679902541,
+      1 => 1679917870,
       2 => 'file',
     ),
   ),
@@ -25,13 +25,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_student_b.tpl' => 1,
   ),
 ),false)) {
-function content_6421475618d579_49110328 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6421833024b668_50086779 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des étudiants</title>
+  <title>Héraclès | Etudiants</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeStudent.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -48,7 +48,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Etudiants |</span>
+        <span class="sel">Etudiants |</span>
       </div>
     </div>
 

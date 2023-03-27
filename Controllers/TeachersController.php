@@ -15,19 +15,18 @@ class TeachersController extends Controller
         $teacherModel = new PersonModel;
 
         //On recupere les annonces de la bdd 
-        $teachers = $teacherModel->findBy(['Role_P' => 'Teacher']);
+        $teachers = $teacherModel->findBy(['Role_P' => 'teacher']);
         $this ->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $teachers);
         $this->smarty->display('teachers.tpl');
-  
         }
         else{
             // On redirige vers la page de connexion
-            header('Location: /public/index.php?p=accueil');
+            $this->smarty->assign('role', $_SESSION['role']);
+            $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
+            $this->smarty->display('error403.tpl');
            
         }
-
-
     }
 
     // Afficher une annonce

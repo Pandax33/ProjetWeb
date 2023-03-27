@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 09:34:39
+/* Smarty version 4.3.0, created on 2023-03-27 13:51:13
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421470f273b81_33644432',
+  'unifunc' => 'content_642183310ce670_74440629',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1679902476,
+      1 => 1679917870,
       2 => 'file',
     ),
   ),
@@ -25,14 +25,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_enterprise_b.tpl' => 1,
   ),
 ),false)) {
-function content_6421470f273b81_33644432 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642183310ce670_74440629 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <title>Liste des Entreprises</title>
+  <title>Héraclès | Entreprises</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -53,7 +53,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Entreprises |</span><span><a href="index.php?p=offers">Offres</a></span>
+        <span class="sel">Entreprises |</span><span class="sel"><a href="index.php?p=offers">Offres</a></span>
       </div>
     </div>
     <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>

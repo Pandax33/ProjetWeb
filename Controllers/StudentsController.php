@@ -13,15 +13,21 @@ class StudentsController extends Controller
         $studentModel = new PersonModel;
 
         //On récupère les étudiants de la bdd 
+
+            
+       
         $students = $studentModel->findBy(['Role_P' => 'Student']);
         $this ->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $students);
         $this->smarty->display('students.tpl');
-    }else{
+        }
+        else{
         // On redirige vers la page d'accueil
-        header('Location: /public/index.php?p=accueil');
-
-    }}
+        $this->smarty->assign('role', $_SESSION['role']);
+            $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
+            $this->smarty->display('error403.tpl');
+    }
+}
     public function detail(int $id){
         // On instancie le modèle
         $studentModel = new PersonModel;

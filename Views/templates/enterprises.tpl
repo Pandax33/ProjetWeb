@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Liste des Entreprises</title>
+  <title>Héraclès | Entreprises</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -23,7 +23,7 @@
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Entreprises |</span><span><a href="index.php?p=offers">Offres</a></span>
+        <span class="sel">Entreprises |</span><span class="sel"><a href="index.php?p=offers">Offres</a></span>
       </div>
     </div>
     {if $role == "admin"}

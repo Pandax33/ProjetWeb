@@ -11,7 +11,8 @@ class ConcernModel extends Model
     {
 
         $this->table = "concern";  
-        $this->IdCollumName= "ID_O"; 
+        $this->Collumdeux= "Name_Promotion";
+        $this->IdCollumName = "ID_O"; 
     }
 
     public function getNamePromotion()

@@ -94,7 +94,7 @@ class teachersController extends Controller
         $this->smarty->assign('competence', $competences);
 
         $this->smarty->display('TemplateEditteacher.tpl');
-        var_dump($teachers);
+      
     }
 
     public function update(){
@@ -110,7 +110,7 @@ class teachersController extends Controller
         $IsModel=new _IsModel;
         $Is=$IsModel->findAll();
         $selectedPromotions = $_POST['Promotion'];
-        var_dump($selectedPromotions);
+        
         $idP = $personModel->getID_P();
         
         // Créez un tableau des noms de promotions dans Is pour l'ID_P spécifié

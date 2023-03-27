@@ -94,7 +94,7 @@ class StudentsController extends Controller
         $this->smarty->assign('competence', $competences);
 
         $this->smarty->display('TemplateEditStudent.tpl');
-        var_dump($students);
+        
     }
 
     public function update(){
@@ -241,6 +241,11 @@ for ($i = count($personModel->findAll()) - 1; $i >= 0; $i--) {
             echo '</br>';
         }
 
+    }
+
+    public function delete(){
+        $personModel = new PersonModel;
+        $person= $personModel->find();
     }
 
 

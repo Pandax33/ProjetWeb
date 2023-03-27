@@ -1,4 +1,11 @@
+
 document.addEventListener('DOMContentLoaded', function () {
+    
+    const competenceSelect = document.getElementById('Competence');
+    const promotionSelect = document.getElementById('Promotion');
+    
+    $(competenceSelect).select2();
+    $(promotionSelect).select2();
     
     const form = document.querySelector('form');
     form.addEventListener('submit', function (event) {

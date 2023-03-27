@@ -4,7 +4,7 @@
   <title>Liste des articles</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../../Views/css/TemplateCreateOffers.css" type="text/css">
+  <link rel="stylesheet" href="../../Views/css/createOffers.css" type="text/css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
@@ -13,13 +13,19 @@
 <form method="POST" action="index.php?p=offers/create" enctype="multipart/form-data">
 
   
-
-    
+    <div class="container">
+    <div class="create-off-border">
+        <label>Create Offres</label></div>
+        <div class="row mb-3">
     <div class="form-group col-md-6">
       <label for="Intitule">Intitulé</label>
       <input type="text" class="form-control" id="Intitule" placeholder="Intitule" name="Intitule">
     </div>
-
+    <div class="form-group col-md-6">
+        <label for="ID">IDE</label>
+        <input type="text" class="form-control" id="ID" placeholder="ID" name="ID" readonly>
+      </div></div>
+      <div class="row mb-3">
     <div class="form-group col-md-6">
       <label for="Duree">Durée</label>
       <input type="Secteur d'activité" class="form-control" id="Duree" placeholder="Durée" name="Duree">
@@ -28,24 +34,26 @@
     <div class="form-group col-md-6">
       <label for="Duree">Salaire</label>
       <input type="Secteur d'activité" class="form-control" id="Salaire" placeholder="Salaire" name="Salaire">
-    </div>
+    </div></div>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <label for="inputDescriptiond4">Description</label>
       <input type="text" class="form-control" id="inputDescription4" placeholder="description" name="description">
     </div>
+
+    <div class="row mb-3">
+        <div class="form-group col-md-6">
+          <label for="inputNbStagiaire">Nombre de stagiaire</label>
+          <input type="number" class="form-control" id="inputNbStagiaire" name="nbStagiaire" >
+        </div>
 
     <div class="form-group col-md-6">
   <label for="inputImage">Image</label>
   <input type="file" class="form-control-file" id="inputImage" name="image">
 </div>
-  
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputNbStagiaire">Nombre de stagiaire</label>
-        <input type="number" class="form-control" id="inputNbStagiaire" name="nbStagiaire" >
-      </div>
-      
+  </div>
+   
+  <div class="row mb-3">
       <div class="form-group col-md-6">
         <label for="Entreprise">Entreprise</label>
         <select id="Entreprise" class="form-control" name="Entreprise">
@@ -65,12 +73,30 @@
         {/foreach}
         
       </select>
+      </div></div>
+      <div class="row mb-3">
+      <div class="form-group col-md-6">
+        <label for="Competence">Competence</label>
+        <select id="Competence" class="form-control" name="competence[]" multiple >
+      
+        {foreach $competence as $item}
+          <option>{$item->Name_Competence}</option>
+        {/foreach}
+      
+      </select>
       </div>
-    </div>
-    <div class="form-group col-md-6">
-    <label for="ID">IDE</label>
-    <input type="text" class="form-control" id="ID" placeholder="ID" name="ID" readonly>
-  </div>
+      
+      <div class="form-group col-md-6">
+        <label for="Promotion">Promotion</label>
+        <select id="Promotion" class="form-control" name="Promotion[]" multiple>
+        {foreach $promotion as $item}
+          <option >{$item->Name_Promotion}</option>
+        {/foreach}
+      
+      </select>
+      </div></div>
+
+  
   
   <div class="form-check">
   <input class="form-check-input" type="radio" name="visible" id="Visible" value="visible">
@@ -93,7 +119,7 @@
 
 
     <br></br>
-    <button type="submit" name="submitBtn" id="submitBtn" class="btn btn-primary">Sign in</button>
+    <button type="submit" name="submitBtn" id="submitBtn" class="btn btn_primary">Create</button>
 
   </form>
 

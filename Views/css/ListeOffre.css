@@ -189,7 +189,7 @@ ul {list-style: none;
   }
   
   .btn-green {
-  background-color: green;
+  background-color: rgb(55, 164, 55);
   color: white;
   /* ajouter un espace a droite  et a gauche */
   margin-right: 2%;
@@ -197,7 +197,7 @@ ul {list-style: none;
   }
 
   .btn-red {
-    background-color: red;
+    background-color: rgb(240, 112, 112);
     color: white;
     /* ajouter un espace a droite  et a gauche */
     margin-right: 2%;

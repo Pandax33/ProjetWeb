@@ -37,6 +37,7 @@ class WishlistController extends Controller
                     $offer_duration = $offer->Duration_O;
                     $offer_publish = $offer->DatePublish_O;
                     $offer_Enterprise = $offer->ID_E;
+                    $offer_state= $offer->State;
                     break;
                 }
             }
@@ -49,6 +50,7 @@ class WishlistController extends Controller
                 }
             }
 
+            $new_wish->state = $offer_state;
             $new_wish->ent = $enterprise_name;
             $new_wish->off = $offer_name;
             $new_wish->duration = $offer_duration;

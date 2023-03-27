@@ -32,7 +32,7 @@
 
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
-
+          
 
           <li>
             <div class="card mb-3" style="max-width: 900px;">

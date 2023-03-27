@@ -23,6 +23,7 @@
         {foreach from=$myArray item=object}
           <!--Afficher uniquement si l'ID_P corespond a l'identifiant de la session-->
             {if $object->ID_P == $identifiant}
+              {if $object ->state == "1" }
 
           <li>
             <div class="card mb-3" style="max-width: 900px;">
@@ -46,6 +47,8 @@
               </div>
             </div>
           </li>
+          {/if}
+          
           {/if}
           
         {/foreach}

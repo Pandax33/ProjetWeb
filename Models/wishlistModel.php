@@ -12,6 +12,8 @@ class WishlistModel extends Model
 
         $this->table = "wishlist";  
         $this->IdCollumName= "ID_P"; 
+        $this->Collumdeux = "ID_O";
+           
     }
 
     public function getIdO()

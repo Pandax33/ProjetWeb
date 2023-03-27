@@ -21,7 +21,8 @@
 
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
-
+          <!--Afficher uniquement si l'ID_P corespond a l'identifiant de la session-->
+            {if $object->ID_P == $identifiant}
 
           <li>
             <div class="card mb-3" style="max-width: 900px;">
@@ -31,10 +32,10 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">{$object->Entitled_O} /</h5>
+                    <h5 class="card-title">{$object->off} /</h5>
                     <h5 id="enter"> {$object->ent} </h5>
-                    <p class="card-text">Durée du stage : {$object->Duration_O}</p> 
-                    <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
+                    <p class="card-text">Durée du stage : {$object->duration}</p> 
+                    <p class="card-text"><small class="text-muted">{$object->publish}</small></p>
                     </div>
                     <div class="button-group">
                     <a href="index.php?p=offers/detail/{$object->ID_O}" class="btn btn-orange">En savoir plus</a>
@@ -45,6 +46,8 @@
               </div>
             </div>
           </li>
+          {/if}
+          
         {/foreach}
       
     {else}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 19:28:21
+/* Smarty version 4.3.0, created on 2023-03-27 09:35:50
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\students.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642080b51f13e7_32393475',
+  'unifunc' => 'content_6421475618d579_49110328',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd7cd6f4339bff2c262b8c2184eaf95ecbd9e123' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\students.tpl',
-      1 => 1679851699,
+      1 => 1679902541,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_student_b.tpl' => 1,
   ),
 ),false)) {
-function content_642080b51f13e7_32393475 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6421475618d579_49110328 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -84,7 +84,8 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 </small></p>
                     </div>
                     <div class="button-group">
-                      <button class="btn btn-orange">Voir les statistiques</button>
+                      <a href="index.php?p=students/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_P;?>
+" class="btn btn-orange">Voir les statistiques</a>
                       <button class="btn btn-green">Modifier</button>
 
                   </div>

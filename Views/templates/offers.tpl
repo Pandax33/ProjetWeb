@@ -48,8 +48,8 @@
                     <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
                     </div>
                     <div class="button-group">
-                      <button class="btn btn-orange">En savoir plus</button>
-                      <button class="btn btn-green">Ajouter à la Wishlist</button>
+                    <a href="index.php?p=offers/detail/{$object->ID_O}" class="btn btn-orange">En savoir plus</a>
+                    <a href="index.php?p=offers/detail/{$object->ID_O}"><button class="btn btn-green">Ajouter à la Wishlist</a></button>
 
                   </div>
                 </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 19:42:57
+/* Smarty version 4.3.0, created on 2023-03-27 09:34:39
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64208421db30d4_48041864',
+  'unifunc' => 'content_6421470f273b81_33644432',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1679852577,
+      1 => 1679902476,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_enterprise_b.tpl' => 1,
   ),
 ),false)) {
-function content_64208421db30d4_48041864 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6421470f273b81_33644432 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -84,7 +84,8 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 </p>
                     <p class="card-text texte"><small class="text-muted">Niveau de confiance : <?php echo $_smarty_tpl->tpl_vars['object']->value->TrustRate_E;?>
  / 5</small></p>
-                    <button class="btn btn-orange">En savoir plus</button>
+                    <a href="index.php?p=enterprises/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_E;?>
+" class="btn btn-orange">En savoir plus</a>
   
                   </div>
                 </div>

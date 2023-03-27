@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-26 19:03:04
+/* Smarty version 4.3.0, created on 2023-03-27 09:51:44
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64207ac82d8b08_77549993',
+  'unifunc' => 'content_64214b10113310_40866073',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1679850183,
+      1 => 1679903503,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_64207ac82d8b08_77549993 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64214b10113310_40866073 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -58,6 +58,7 @@ function content_64207ac82d8b08_77549993 (Smarty_Internal_Template $_smarty_tpl)
 
     </div>
     <h1>Bienvenue <?php echo $_smarty_tpl->tpl_vars['role']->value;?>
+ n°<?php echo $_smarty_tpl->tpl_vars['identifiant']->value;?>
 </h1>
     <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {

@@ -43,7 +43,7 @@
                     <p class="card-text sector">{$object->Activity_E}</p>
                     <p class="card-text texte">Stagiaires embauchés : {$object->Intership_E}</p>
                     <p class="card-text texte"><small class="text-muted">Niveau de confiance : {$object->TrustRate_E} / 5</small></p>
-                    <button class="btn btn-orange">En savoir plus</button>
+                    <a href="index.php?p=enterprises/detail/{$object->ID_E}" class="btn btn-orange">En savoir plus</a>
   
                   </div>
                 </div>

@@ -26,7 +26,7 @@
        <div class="containter"> 
         <?= $contenu ?>
     </div>
-    <h1>Bienvenue {$role}</h1>
+    <h1>Bienvenue {$role} n°{$identifiant}</h1>
     <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 09:24:10
-  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-27 09:57:41
+  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\wishlist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421449a5b0da4_56063994',
+  'unifunc' => 'content_64214c75d47819_06621664',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
+    'f57c74fd5f38ab9de52189462f815458ef93e298' => 
     array (
-      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679901849,
+      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\wishlist.tpl',
+      1 => 1679903860,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_a.tpl' => 1,
     'file:navbar_t.tpl' => 1,
     'file:navbar_s.tpl' => 1,
-    'file:buttons/c_offer_b.tpl' => 1,
-    'file:buttons/m_offer_b.tpl' => 1,
   ),
 ),false)) {
-function content_6421449a5b0da4_56063994 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64214c75d47819_06621664 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liste des offres</title>
+  <title>Liste de souhaits</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -51,19 +49,6 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
   <?php }?>
 
   <div class="container"> 
-
-    <div class="card card-top">
-      <div class="card-body">
-        <span>Offres |</span><span><a href="index.php?p=enterprises">Entreprises</a></span>
-      </div>
-    </div>
-     <!--Si le role est admin, inclure le fichier createoffer.tpl-->
-    <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
-      <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-      <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?></span>
-    <?php }?>
 
     <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['myArray']->value) > 0) {?>
         <?php

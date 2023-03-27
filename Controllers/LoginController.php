@@ -11,7 +11,8 @@ class LoginController extends Controller
     
         //on instancie le modele coresspondant a la table person
         $personModel = new PersonModel;
-
+        //vider la session active si il y en a une
+        session_destroy();
 
         $this->smarty->display('login.tpl');
 
@@ -52,6 +53,7 @@ class LoginController extends Controller
             $role = $user[0]->Role_P;
             $identifiant = $user[0]->ID_P;
             $_SESSION['role'] = $role;
+            $_SESSION['identifiant'] = $identifiant;
             echo '<p> Vous êtes connecté en tant que : '.$role. ' '.$identifiant.'</p>';
             header('Location: /public/index.php?p=accueil');
          }else{

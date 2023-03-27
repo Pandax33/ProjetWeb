@@ -12,6 +12,8 @@ class AccueilController extends Controller
         
         //On récupère les étudiants de la bdd 
         $this ->smarty->assign('role', $_SESSION['role']);
+        $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
         $this->smarty->display('accueil.tpl');
+        
     }
 }

@@ -1,31 +1,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des étudiants</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste de souhaits</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../Views/css/ListeStudent.css" type="text/css">
+  <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
-  </head>
+</head>
 <body>
-{if $role == "admin"}
-  {include file="navbar_a.tpl"}
-{elseif $role == "teacher"}
-  {include file="navbar_t.tpl"}
-{elseif $role == "student"}
-  {include file="navbar_s.tpl"}
-{/if}
-  <div class="container">
+<!--Si le role dans la session = admin, alors inclure navbar_s.tpl, de meme pour les roles teacher et student-->
+  {if $role == "admin"}
+    {include file="navbar_a.tpl"}
+  {elseif $role == "teacher"}
+    {include file="navbar_t.tpl"}
+  {elseif $role == "student"}
+    {include file="navbar_s.tpl"}
+  {/if}
 
-    <div class="card card-top">
-      <div class="card-body">
-        <span>Etudiants |</span>
-      </div>
-    </div>
+  <div class="container"> 
 
-    {if $role == "admin"}
-      <span>{include file="buttons/c_student_b.tpl"}
-      {include file="buttons/m_student_b.tpl"}</span>
-    {/if}
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
 
@@ -34,17 +27,18 @@
             <div class="card mb-3" style="max-width: 900px;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="../Views/css/pp.png" class="img-fluid rounded-start" alt="illustration d'entreprise">
+                  <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="illustration d'entreprise">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">{$object->Firstname_P} {$object->Lastname_P}</h5>
-                    <p class="card-text">{$object->mail}</p> 
-                    <p class="card-text"><small class="text-muted">Centre : {$object->Name_Center}</small></p>
+                    <h5 class="card-title">{$object->Entitled_O} /</h5>
+                    <h5 id="enter"> {$object->ent} </h5>
+                    <p class="card-text">Durée du stage : {$object->Duration_O}</p> 
+                    <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
                     </div>
                     <div class="button-group">
-                      <a href="index.php?p=students/detail/{$object->ID_P}" class="btn btn-orange">Voir les statistiques</a>
-                      <button class="btn btn-green">Modifier</button>
+                    <a href="index.php?p=offers/detail/{$object->ID_O}" class="btn btn-orange">En savoir plus</a>
+                    <a href="index.php?p=offers/detail/{$object->ID_O}"><button class="btn btn-green">Ajouter à la Wishlist</a></button>
 
                   </div>
                 </div>

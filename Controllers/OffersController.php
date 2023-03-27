@@ -101,7 +101,6 @@ foreach ($offers as $offer) {
         $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('Nom',"Détails de l'offre");
         $this->smarty->display('details/offre.tpl');
-        header('Location: /public/index.php?p=offers/suppr/'.$id);
     }
 
     // Afficher le formulaire de création d'une annonce

@@ -251,7 +251,7 @@ for ($i = count($personModel->findAll()) - 1; $i >= 0; $i--) {
 
     public function delete(){
         $personModel = new PersonModel;
-        $person= $personModel->find();
+        
     }
 
 

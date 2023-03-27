@@ -1,1 +1,1 @@
-<button class="btn btn-c">Créer une entreprise</button>
+<button class="btn btn-c" style="background-color: green;color:white;font-family: Poppins ExtraBold, sans-serif;">Créer une entreprise</button>

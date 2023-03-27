@@ -102,7 +102,7 @@
   }
   
   /* Update the existing media query */
-  @media (max-width: 1445px) {
+  @media (max-width: 1230px) {
 
     .btn-c{
       width: 100%;
@@ -173,10 +173,10 @@
     
     li {
     display: flex;
-
+    justify-content: center;
     align-items: center;
-    width: 70%; 
     margin: 0 auto;
+    align-items: center;
    
     }
 

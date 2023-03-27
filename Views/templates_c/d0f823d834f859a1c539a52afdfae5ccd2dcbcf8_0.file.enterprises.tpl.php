@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 13:51:13
+/* Smarty version 4.3.0, created on 2023-03-27 20:47:28
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642183310ce670_74440629',
+  'unifunc' => 'content_6421e4c0846208_60831584',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1679917870,
+      1 => 1679942768,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_enterprise_b.tpl' => 1,
   ),
 ),false)) {
-function content_642183310ce670_74440629 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6421e4c0846208_60831584 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -63,7 +63,6 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 ?></span>
     <?php }?>
   
-  
         <div class="row">
         <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['myArray']->value) > 0) {?>
           <?php
@@ -73,7 +72,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['object']->value)
 $_smarty_tpl->tpl_vars['object']->do_else = false;
 ?>
             <div class="col-lg-4 col-md-6 col-sm-12 ecart">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;background-color:rgba(255, 255, 255, 0.606)">
                   <img src="../Views/css/enterprise.png" class="card-img-top" alt="Image 1">
                   <div class="card-body">
                     <h5 class="card-title truncate-text" ><?php echo $_smarty_tpl->tpl_vars['object']->value->Name_E;?>
@@ -96,7 +95,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           <?php } else { ?>
           <p>Aucune donnée trouvée.</p>
           <?php }?>
-
+          </div>
         </div>
     </div>
  

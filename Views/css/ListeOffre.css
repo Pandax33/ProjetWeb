@@ -141,9 +141,7 @@ ul {list-style: none;
   
   li {
   display: flex;
-
   align-items: center;
-  width: 70%; 
   margin: 0 auto;
  
   }
@@ -185,7 +183,7 @@ ul {list-style: none;
     border-radius: 100px;
     border: none;
     cursor: pointer;
-    font-family: Poppins, sans-serif;
+    font-family: Poppins ExtraBold, sans-serif;
 
   }
   
@@ -213,5 +211,4 @@ ul {list-style: none;
 
 .container {
   margin-top: 50px;
-
 }

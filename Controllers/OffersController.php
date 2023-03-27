@@ -75,12 +75,75 @@ foreach ($offers as $offer) {
 
     }
 
+    public function list(int $id)
+    {
+         //On instancie le modele coresspondant a la table offers
+         $offersModel = new OffersModel;
+         $enterpriseModel = new EnterpriseModel;
+         $wishlistModel = new WishlistModel;
+ 
+         //On recupere les annonces de la bdd 
+ //Si le role est student, on affiche seulement les offres publiées avec un FindBy
+ //Si le role est admin ou teacher, on affiche toutes les offres avec un FindAll
+ if($_SESSION['role'] == 'student'){
+    $offers = $offersModel->findBy(['state' => 1,'ID_E' => $id]);
+}else{
+    $offers = $offersModel->findBy(['ID_E' => $id]);
+}
+    
+ 
+         $enterprises = $enterpriseModel->findAll();
+         $wishlist = $wishlistModel->findAll();
+ 
+         $new_offers = array();
+ 
+ foreach ($offers as $offer) {
+     $new_offer = clone $offer; // Cloner l'objet pour éviter de modifier l'original
+     $id_e = $offer->ID_E;
+     $id_o = $offer->ID_O;
+     
+     // Trouver l'entreprise correspondante
+     $enterprise_name = "";
+  // On verifie si il existe une association entre l'offre et l'id de la personne connectée
+  // Si oui, on ajoute un attribut "wish" à l'objet $new_offer pour pouvoir afficher le bouton "Ajouter à la wishlist"
+     foreach ($wishlist as $wish) {
+         if ($wish->ID_O == $id_o && $wish->ID_P == $_SESSION['identifiant']) {
+             $new_offer->wish = 1;
+             break;
+         }else{
+             $new_offer->wish = 0;
+         }
+     }
+     foreach ($enterprises as $enterprise) {
+         if ($enterprise->ID_E == $id_e) {
+             $enterprise_name = $enterprise->Name_E;
+             break;
+         }
+     }
+ 
+     
+ 
+     $new_offer->ent = $enterprise_name;
+     $new_offers[] = $new_offer;
+ 
+ }
+ 
+ 
+         
+         $this->smarty->assign('role', $_SESSION['role']);
+         $this->smarty->assign('myArray', $new_offers);
+         $this->smarty->assign('Nom','Liste des offres');
+         $this->smarty->display('offers.tpl');
+
+    }
+
     // Afficher une annonce
     public function detail(int $id){
         // On instancie le modèle
         $offersModel = new OffersModel;
         $enterpriseModel = new EnterpriseModel;
         $wishlistModel = new WishlistModel;
+        $requestModel = new RequestModel;
 
         // On récupère l'annonce
         $offer = $offersModel->find($id);
@@ -91,6 +154,18 @@ foreach ($offers as $offer) {
         $enterprise = $enterpriseModel->find($offer->ID_E);
         $offer->ent = $enterprise->Name_E;
         $wishlist = $wishlistModel->findBy(['ID_O' => $id, 'ID_P' => $_SESSION['identifiant']]);
+        // Parcourir la table request contenant les compétences requise a une offre pour ajouter un ou plusieurs attribut à l'objet $offer
+        $request = $requestModel->findBy(['ID_O' => $id]);
+        foreach ($request as $req) {
+            // On ajoute une seule liste d'attributs à l'objet $offer avec chaque compétence requise 
+            $offer->req[] = $req->Name_Competence;
+        }
+
+        
+
+
+
+
         if(empty($wishlist)){
             $offer->wish = 0;
         }else{
@@ -487,5 +562,128 @@ foreach ($selectedCompetences as $competence) {
         $this->smarty->display('postuler.tpl');
     }
 
+    public function apply(int $id){
+        $offersModel = new OffersModel;
+        $enterpriseModel = new EnterpriseModel;
+        $wishlistModel = new WishlistModel;
+
+        // On récupère l'annonce
+        $offer = $offersModel->find($id);
+
+        //On recupere l'entreprise correspondante et on l'ajoute à l'objet $offer
+        //On verifie si il existe une association entre l'offre et l'id de la personne connectée
+        //Si oui, on ajoute un attribut "wish" à l'objet $offer pour pouvoir afficher le bouton "Ajouter à la wishlist"
+        $enterprise = $enterpriseModel->find($offer->ID_E);
+        $offer->ent = $enterprise->Name_E;
+        $wishlist = $wishlistModel->findBy(['ID_O' => $id, 'ID_P' => $_SESSION['identifiant']]);
+        if(empty($wishlist)){
+            $offer->wish = 0;
+        }else{
+            $offer->wish = 1;
+        }
+
+        $this->smarty->assign('offer', $offer);
+        $this->smarty->assign('role', $_SESSION['role']);
+        $this->smarty->display('apply.tpl');
+
+    }
+
+    public function suppr(int $id){
+        $offersModel = new OffersModel;
+        $requestModel = new RequestModel;
+        $wishlistModel = new WishlistModel;
+        $concernModel = new ConcernModel;
+        
+
+        $concern = $concernModel->findBy(['ID_O' => $id]);
+        //Parcourir les elements de la table Concern ayant $id comme ID_O
+        foreach($concern as $con){
+            //Supprimer les elements dans la table Concern ayant $con->ID_C comme ID_C
+            $concernModel->deletePrecis($id, $con);
+        }
+
+        $wishlist = $wishlistModel->findBy(['ID_O' => $id]);
+        //Parcourir les elements de la table Wishlist ayant $id comme ID_O
+        foreach($wishlist as $wish){
+            //Supprimer les elements dans la table Concern ayant $wish->ID_W comme ID_W
+            $concernModel->deletePrecis($id, $wish);
+        }
+
+        $request = $requestModel->findBy(['ID_O' => $id]);
+        //Parcourir les elements de la table Request ayant $id comme ID_O
+        foreach($request as $req){
+            //Supprimer les elements dans la table Concern ayant $req->ID_R comme ID_R
+            $concernModel->deletePrecis($id, $req);
+        }
+
+
+        //Supprimer les elements dans la table Offers ayant $id comme ID_O
+        $offersModel->delete($id);
+
+
+        header('Location: /public/index.php?p=offers');
+        
+    }
+
+    public function ville(string $ville)
+    {
+         //On instancie le modele coresspondant a la table offers
+         $offersModel = new OffersModel;
+         $enterpriseModel = new EnterpriseModel;
+         $wishlistModel = new WishlistModel;
+ 
+         //On recupere les annonces de la bdd 
+ //Si le role est student, on affiche seulement les offres publiées avec un FindBy
+ //Si le role est admin ou teacher, on affiche toutes les offres avec un FindAll
+ if($_SESSION['role'] == 'student'){
+    $offers = $offersModel->findBy(['state' => 1, 'Name' => $ville]);
+}else{
+    $offers = $offersModel->findBy(['Name' => $ville]);
+}
+ 
+         $enterprises = $enterpriseModel->findAll();
+         $wishlist = $wishlistModel->findAll();
+ 
+         $new_offers = array();
+ 
+ foreach ($offers as $offer) {
+     $new_offer = clone $offer; // Cloner l'objet pour éviter de modifier l'original
+     $id_e = $offer->ID_E;
+     $id_o = $offer->ID_O;
+     
+     // Trouver l'entreprise correspondante
+     $enterprise_name = "";
+  // On verifie si il existe une association entre l'offre et l'id de la personne connectée
+  // Si oui, on ajoute un attribut "wish" à l'objet $new_offer pour pouvoir afficher le bouton "Ajouter à la wishlist"
+     foreach ($wishlist as $wish) {
+         if ($wish->ID_O == $id_o && $wish->ID_P == $_SESSION['identifiant']) {
+             $new_offer->wish = 1;
+             break;
+         }else{
+             $new_offer->wish = 0;
+         }
+     }
+     foreach ($enterprises as $enterprise) {
+         if ($enterprise->ID_E == $id_e) {
+             $enterprise_name = $enterprise->Name_E;
+             break;
+         }
+     }
+ 
+     
+ 
+     $new_offer->ent = $enterprise_name;
+     $new_offers[] = $new_offer;
+ 
+ }
+ 
+ 
+         
+         $this->smarty->assign('role', $_SESSION['role']);
+         $this->smarty->assign('myArray', $new_offers);
+         $this->smarty->assign('Nom','Liste des offres');
+         $this->smarty->display('offers.tpl');
+
+    }
 
 }

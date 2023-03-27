@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 15:10:17
+/* Smarty version 4.3.0, created on 2023-03-28 01:10:25
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642195b91e7a65_70015937',
+  'unifunc' => 'content_64222261869c48_64909816',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1679922616,
+      1 => 1679958625,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_642195b91e7a65_70015937 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64222261869c48_64909816 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -52,40 +52,42 @@ function content_642195b91e7a65_70015937 (Smarty_Internal_Template $_smarty_tpl)
        <div class="container-fluid text-center">
         <div class="card-body  welcome-card text-center mx-auto" >
           <div class="card d-flex align-items-center justify-content-center">
-          <h1 class="card-title">Welcome to <span style="color: rgb(222, 115, 8);">Heraclès</span></h1>
+          <h1 class="card-title">Bienvenue sur <span style="color: rgb(222, 115, 8);">Heraclès</span><span style="">, <?php echo $_smarty_tpl->tpl_vars['titre']->value;?>
+.</span></h1>
           </div>
         </div> 
       </div>
     
       
       <div class="row justify-content-center mt-5">
+      <h1 style="text-align: center; margin-bottom:20px">Les entreprises du moment</h1>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
-            <img src="img3.jpg" class="card-img-top" alt="ent1">
+            <img src="../../../Views/css/orange.jpg" class="card-img" alt="Orange logo">
             <div class="card-body">
-              <h5 class="card-title">ENT 1</h5>
-              <p class="card-text">This is a card with some text.</p>
-              <a href="#" class="btn btn-success">Learn More</a>
+              <h5 class="card-title">Orange</h5>
+              <p class="card-text" style="color:gray">Géant de la télecommunication, compte plus de 266 millions de clients dans le monde...</p>
+              <a href="#" class="btn btn-success" style="justify-content:center">En savoir plus</a>
             </div>
           </div>
         </div>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
-            <img src="img3.jpg" class="card-img-top" alt="ent2">
+            <img src="../../../Views/css/sanofi.jpg" class="card-img-top" alt="Sanofi logo">
             <div class="card-body">
-                <h5 class="card-title">ENT 2</h5>
-                <p class="card-text">This is another card with some text.</p>
-                <a href="#" class="btn btn-success">Learn More</a>
+                <h5 class="card-title">Sanofi</h5>
+                <p class="card-text" style="color:gray">Sanofi est une entreprise transnationale française dont les activités incluent la pharmacie et les vaccins.</p>
+                <a href="#" class="btn btn-success">En savoir plus</a>
               </div>
             </div>
           </div>
           <div class="col-md-4" style="width: 20rem;">
             <div class="card">
-                <img src="img3.jpg" class="card-img-top" alt="ent3">
+                <img src="../../../Views/css/toto.png" class="card-img-top" alt="Total logo">
               <div class="card-body">
-                <h5 class="card-title">ENT 3</h5>
-                <p class="card-text">This is a third card with some text.</p>
-                <a href="#" class="btn btn-success">Learn More</a>
+                <h5 class="card-title">Total</h5>
+                <p class="card-text" style="color:gray">TotalEnergies SE est une compagnie mondiale de production d’hydrocarbures et d’autres sources d’énergies.</p>
+                <a href="#" class="btn btn-success">En savoir plus</a>
               </div>
             </div>
           </div>

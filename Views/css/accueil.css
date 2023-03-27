@@ -13,9 +13,6 @@ body {
   }
   
   
-  .card-body {
-    margin-top: 100px;
-  }
   
   .carousel-container {
     margin-top: 50px;
@@ -113,9 +110,6 @@ body {
   
   @media (min-width: 768px) {
     /* Center the card body for larger devices */
-    .card-body {
-      margin-top: 100px;
-    }
     
     /* Adjust the size of the cards for larger devices */
     .col-md-4 {
@@ -185,3 +179,4 @@ body {
     margin-bottom: 10% ;
 
 }
+

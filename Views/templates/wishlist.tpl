@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../../Views/css/navbar.css">
 </head>
 <body>
+
 <!--Si le role dans la session = admin, alors inclure navbar_s.tpl, de meme pour les roles teacher et student-->
   {if $role == "admin"}
     {include file="navbar_a.tpl"}
@@ -18,7 +19,6 @@
   {/if}
 
   <div class="container"> 
-
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
   

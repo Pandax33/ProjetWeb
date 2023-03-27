@@ -1,1 +1,1 @@
-<button class="btn btn-m">Modifier une entreprise</button>
+<button class="btn btn-m" style="background-color: orange;color:white;font-family: Poppins ExtraBold, sans-serif;">Modifier une entreprise</button>

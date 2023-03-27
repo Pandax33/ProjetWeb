@@ -13,7 +13,7 @@
 <body>
     <br><br>
     <div class="container">
-
+        <form action="index.php?p=offers/apply/{$offer->ID_O}" method="POST">
             <h1>À deux clics du stage parfait 😊</h1>
                 <h5 style="text-align: center;">Déposez un CV et une lettre de motivation pour candidater à l'offre:</h5>
                 <p>{$offer->Entitled_O}
@@ -23,7 +23,8 @@
                 
                 <button class="btn btn-orange"><input type="file" accept="image/*,.pdf"/></button>
                 </div>
-                <button type="submit" class="btn btn-primary" name="validate">Candidater !</button>
+                <button type="submit" class="btn btn-primary" >Candidater !</button>
+            </form>
             <div class="forgot-password">
                 <a href="index.php?p=offers/detail/{$offer->ID_O}">Je préfère postuler plus tard</a>
             </div>

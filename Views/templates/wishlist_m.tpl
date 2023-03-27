@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Héraclès | Offres</title>
+  <title>Héraclès | Liste de souhaits</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
@@ -18,59 +18,40 @@
   {/if}
 
   <div class="container"> 
-
-    <div class="card card-top">
-      <div class="card-body">
-        <span class="sel">Offres |</span><span class="sel"><a href="index.php?p=enterprises">Entreprises</a></span>
-      </div>
-    </div>
-     <!--Si le role est admin, inclure le fichier createoffer.tpl-->
-    {if $role == "admin"}
-      <span>{include file="buttons/c_offer_b.tpl"}
-      {include file="buttons/m_offer_b.tpl"}</span>
-    {/if}
-
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
-          
-
-          <li style="width: 70%; ">
-            <div class="card mb-3" style="max-width: 900px;background-color:rgba(255, 255, 255, 0.625)">
+  
+            {if $object->ID_P == $identifiant}
+              
+          <li>
+            <div class="card mb-3" style="max-width: 900px;">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="illustration d'entreprise">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                  {if $object->State == 1}
-                    <h5 class="card-title">{$object->Entitled_O} /</h5>
-                  {else}
-                    <h5 class="card-title">❌{$object->Entitled_O} /</h5>
-                  {/if}
-          
-                    <h5 id="enter"><a href="index.php?p=offers/list/{$object->ID_E}">{$object->ent} </a><span> à <a href="index.php?p=offers/ville/{$object->Name}">{$object->Name} </a></span></h5>
-                    <p class="card-text">Durée du stage : {$object->Duration_O}</p> 
-                    <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
+                    <h5 class="card-title">{$object->off} /</h5>
+                    <h5 id="enter"> {$object->ent} </h5>
+                    <p class="card-text">Durée du stage : {$object->duration}</p> 
+                    <p class="card-text"><small class="text-muted">{$object->publish}</small></p>
                     </div>
                     <div class="button-group">
                     <a href="index.php?p=offers/detail/{$object->ID_O}" class="btn btn-orange">En savoir plus</a>
-                    {if $object->wish == 0 && $role == "student"}
-                      <a href="index.php?p=offers/addWishlist/{$object->ID_O}"><button class="btn btn-green">Ajouter à la Wishlist</a></button>
-                    {elseif $object->wish == 1 && $role == "student"}
-                      <a href="index.php?p=offers/removeWishlist/{$object->ID_O}"><button class="btn btn-red">Retirer de la Wishlist</a></button>
-                    {/if}
-
                   </div>
                 </div>
               </div>
             </div>
           </li>
-    
+          
+          {/if}
+          
         {/foreach}
       
     {else}
       <p>Aucune donnée trouvée.</p>
     {/if}
+    <p style="text-align: center;"><a href="index.php?p=offers" >Il n'y a pas d'autres offres à afficher</a></p>
   </div>
   <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

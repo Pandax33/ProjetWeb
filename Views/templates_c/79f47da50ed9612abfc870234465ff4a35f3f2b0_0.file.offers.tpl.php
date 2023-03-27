@@ -1,69 +1,69 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-24 14:38:48
+/* Smarty version 4.3.0, created on 2023-03-27 13:49:18
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_641da7e8abdb49_47271467',
+  'unifunc' => 'content_642182bee05e54_20521933',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679665128,
+      1 => 1679917745,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:navbar_a.tpl' => 1,
+    'file:navbar_t.tpl' => 1,
+    'file:navbar_s.tpl' => 1,
+    'file:buttons/c_offer_b.tpl' => 1,
+    'file:buttons/m_offer_b.tpl' => 1,
   ),
 ),false)) {
-function content_641da7e8abdb49_47271467 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642182bee05e54_20521933 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des offres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Héraclès | Offres</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="navbar-brand">
-      <span>Héraclès</span>
-      <span class="divider">|</span>
-    </div>
-    <ul class="nav-list" id="navList">
-      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Offres</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Entreprises</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Wishlist</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Compare</a></li>
-      
-      <li class="nav-item profile-item mobile-only"><a href="#" class="nav-link">Profile</a></li>
-      <li class="nav-item sign-item mobile-only"><a href="#" class="nav-link1">Sign Out</a></li>
-      <li class="nav-item search-item mobile-only"><input type="text" class="search-input" placeholder="Search..."></li>
-    </ul>
-    <input type="text" class="search-input desktop-only" placeholder="Search...">
-    <div class="profile-section"><a href="#" class="nav-link">Profile</a></div>
-    <div class="sign-section"><a href="#" class="nav-link1">Sign Out</a></div>
-    <button class="hamburger" id="hamburger">&#9776;</button>
-  </nav>
-  <?php echo '<script'; ?>
- src="./css/navbar.js"><?php echo '</script'; ?>
->
+<!--Si le role dans la session = admin, alors inclure navbar_s.tpl, de meme pour les roles teacher et student-->
+  <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+    <?php $_smarty_tpl->_subTemplateRender("file:navbar_a.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  <?php } elseif ($_smarty_tpl->tpl_vars['role']->value == "teacher") {?>
+    <?php $_smarty_tpl->_subTemplateRender("file:navbar_t.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  <?php } elseif ($_smarty_tpl->tpl_vars['role']->value == "student") {?>
+    <?php $_smarty_tpl->_subTemplateRender("file:navbar_s.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  <?php }?>
 
-  <div class="container">
+  <div class="container"> 
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Offres |</span><span><a href="index.php?p=enterprises">Entreprises</a></span>
+        <span class="sel">Offres |</span><span class="sel"><a href="index.php?p=enterprises">Entreprises</a></span>
       </div>
     </div>
+     <!--Si le role est admin, inclure le fichier createoffer.tpl-->
+    <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+      <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+      <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?></span>
+    <?php }?>
 
     <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['myArray']->value) > 0) {?>
         <?php
@@ -72,7 +72,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['object']->value) {
 $_smarty_tpl->tpl_vars['object']->do_else = false;
 ?>
-
+          
 
           <li>
             <div class="card mb-3" style="max-width: 900px;">
@@ -92,8 +92,15 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 </small></p>
                     </div>
                     <div class="button-group">
-                      <button class="btn btn-orange">En savoir plus</button>
-                      <button class="btn btn-green">Ajouter à la Wishlist</button>
+                    <a href="index.php?p=offers/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
+" class="btn btn-orange">En savoir plus</a>
+                    <?php if ($_smarty_tpl->tpl_vars['object']->value->wish == 0 && $_smarty_tpl->tpl_vars['role']->value == "student") {?>
+                      <a href="index.php?p=offers/addWishlist/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
+"><button class="btn btn-green">Ajouter à la Wishlist</a></button>
+                    <?php } elseif ($_smarty_tpl->tpl_vars['object']->value->wish == 1 && $_smarty_tpl->tpl_vars['role']->value == "student") {?>
+                      <a href="index.php?p=offers/removeWishlist/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
+"><button class="btn btn-red">Retirer de la Wishlist</a></button>
+                    <?php }?>
 
                   </div>
                 </div>
@@ -108,6 +115,21 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <p>Aucune donnée trouvée.</p>
     <?php }?>
   </div>
+  <?php echo '<script'; ?>
+>document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('navList');
+  
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('nav-list-active');
+    });
+  });
+  <?php echo '</script'; ?>
+>
+  
+  <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"><?php echo '</script'; ?>
+>
   
 </body>
 </html><?php }

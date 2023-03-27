@@ -1,19 +1,31 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des étudiants</title>
+  <title>Héraclès | Etudiants</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeStudent.css" type="text/css">
-</head>
+  <link rel="stylesheet" href="../../Views/css/navbar.css">
+  </head>
 <body>
+{if $role == "admin"}
+  {include file="navbar_a.tpl"}
+{elseif $role == "teacher"}
+  {include file="navbar_t.tpl"}
+{elseif $role == "student"}
+  {include file="navbar_s.tpl"}
+{/if}
   <div class="container">
 
     <div class="card card-top">
       <div class="card-body">
-        <span>Etudiants |</span>
+        <span class="sel">Etudiants |</span>
       </div>
     </div>
 
+    {if $role == "admin"}
+      <span>{include file="buttons/c_student_b.tpl"}
+      {include file="buttons/m_student_b.tpl"}</span>
+    {/if}
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
 
@@ -31,7 +43,7 @@
                     <p class="card-text"><small class="text-muted">Centre : {$object->Name_Center}</small></p>
                     </div>
                     <div class="button-group">
-                      <button class="btn btn-orange">Voir les statistiques</button>
+                      <a href="index.php?p=students/detail/{$object->ID_P}" class="btn btn-orange">Voir les statistiques</a>
                       <button class="btn btn-green">Modifier</button>
 
                   </div>
@@ -45,5 +57,17 @@
       <p>Aucune donnée trouvée.</p>
     {/if}
   </div>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('navList');
+  
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('nav-list-active');
+    });
+  });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  
 </body>
 </html>

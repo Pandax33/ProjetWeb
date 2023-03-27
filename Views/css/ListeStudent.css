@@ -58,7 +58,6 @@ body {
 
 span{
   font-family: Dela Gothic One, sans-serif;
-  font-size: 1.5em;
 }
 
 h5 {
@@ -216,3 +215,8 @@ ul {list-style: none;
   }
 
 
+
+  .container {
+    margin-top: 50px;
+  
+  }

@@ -18,16 +18,24 @@ class teachersController extends Controller
         //On instancie le modèle correspondant à la table teachers
         $teacherModel = new PersonModel;
 
-        //On récupère les étudiants de la bdd 
+
         $teachers = $teacherModel->findBy(['Role_P' => 'teacher']);
         $this ->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $teachers);
         $this->smarty->display('teachers.tpl');
-    }else{
-        // On redirige vers la page d'accueil
-        header('Location: /public/index.php?p=accueil');
 
-    }}
+        }
+        else{
+            // On redirige vers la page de connexion
+            $this->smarty->assign('role', $_SESSION['role']);
+            $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
+            $this->smarty->display('error403.tpl');
+           
+        }
+    }
+
+    // Afficher une annonce
+
     public function detail(int $id){
         // On instancie le modèle
         $teacherModel = new PersonModel;

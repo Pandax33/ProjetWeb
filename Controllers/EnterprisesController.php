@@ -36,6 +36,7 @@ class EnterprisesController extends Controller
         // On affiche la vue
         $this->render('enterprises/detail', ['enterprise' => $enterprise]);
     }
+
     public function modifier(){
         $enterpriseModel = new EnterpriseModel;
         $locateModel= new LocateModel;
@@ -202,11 +203,11 @@ class EnterprisesController extends Controller
             $locateModel->setIdE($selected_id);
             $locateModel->setNameLocate($city);
             $locateModel->create($locateModel);
+
             
             }
 
     }
-    
-    
+
 }
 

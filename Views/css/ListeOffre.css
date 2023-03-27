@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 html {
   position: relative;
@@ -20,6 +21,13 @@ a:hover {
   color: inherit;
 }
 
+.btn:hover
+{
+  text-decoration: none;
+  color: black;
+}
+
+
 #enter{
   /* Change text color to grey*/
   margin-top: 0;
@@ -31,7 +39,7 @@ body {
   margin: 0;
   min-height: 100px;
   /*Laisser de l'espace vide en haut */
-  padding-top: 150px;
+  padding-top: 0px;
   font-family: Poppins ExtraBold, sans-serif;
   background-image: url('img1.png');
   background-size: cover;
@@ -48,8 +56,6 @@ body {
   /*Aligner a droite le texte et le span*/
   text-align: right;
   align-items: right;
-  margin-right: 10%;
-  margin-top: 0;
   margin-bottom: 0;
   font-size: 22px;
   
@@ -58,8 +64,8 @@ body {
 
 span{
   font-family: Dela Gothic One, sans-serif;
-  font-size: 1.5em;
 }
+
 
 h5 {
   font-family: Dela Gothic One, sans-serif;
@@ -91,7 +97,7 @@ h5 {
 
 @media only screen and (max-width: 768px) {
   .container {
-    margin: 100px auto 0;
+
     padding: 20px;
   }
   h2 {
@@ -131,17 +137,15 @@ ul {list-style: none;
   padding: auto;
   margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Centrer les éléments horizontalement */
   }
   
   li {
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   width: 70%; 
   margin: 0 auto;
-  margin-bottom: 20px;    
+ 
   }
   
   .card.mb-3 {
@@ -191,11 +195,23 @@ ul {list-style: none;
   }
   
   .btn-green {
-  background-color: green;
+  background-color: rgb(55, 164, 55);
   color: white;
   /* ajouter un espace a droite  et a gauche */
   margin-right: 2%;
   margin-left: 2%;
   }
 
+  .btn-red {
+    background-color: rgb(240, 112, 112);
+    color: white;
+    /* ajouter un espace a droite  et a gauche */
+    margin-right: 2%;
+    margin-left: 2%;
+    }
+  
 
+.container {
+  margin-top: 50px;
+
+}

@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("img1.png");
+    background-size: cover;
+    backdrop-filter: blur(5px);
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-top: -3rem;
+    color: #dd4f13;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; 
+  }
+  
+  .buttons button {
+    margin: 0 1rem;
+    padding: 12px 24px; 
+  font-size: 1.2rem; 
+  border: none;
+  border-radius:  6px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease;
+  background-color: black;
+  color: white;
+  }
+  .buttons button:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Add a deeper shadow on hover */
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; 
+  }
+  
+  .card {
+    width: 150px;
+    margin: 0 1rem;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .separator {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .buttons {
+      flex-direction: column;
+    }
+  
+    .buttons button {
+      margin: 1rem;
+    }
+  
+    .cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      margin: 1rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    .description {
+      font-size: 0.8rem;
+    }
+  }
+  

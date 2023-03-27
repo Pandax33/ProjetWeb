@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 11:43:31
+/* Smarty version 4.3.0, created on 2023-03-27 11:46:20
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64216543b88939_75275827',
+  'unifunc' => 'content_642165ec17bc29_04494696',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679910211,
+      1 => 1679910380,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_offer_b.tpl' => 1,
   ),
 ),false)) {
-function content_64216543b88939_75275827 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642165ec17bc29_04494696 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -99,7 +99,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 "><button class="btn btn-green">Ajouter à la Wishlist</a></button>
                     <?php } else { ?>
                       <a href="index.php?p=offers/removeWishlist/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
-"><button class="btn btn-green">Retirer de la Wishlist</a></button>
+"><button class="btn btn-red">Retirer de la Wishlist</a></button>
                     <?php }?>
 
                   </div>

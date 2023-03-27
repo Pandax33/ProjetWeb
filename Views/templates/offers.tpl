@@ -52,7 +52,7 @@
                     {if $object->wish == 0}
                       <a href="index.php?p=offers/addWishlist/{$object->ID_O}"><button class="btn btn-green">Ajouter à la Wishlist</a></button>
                     {else}
-                      <a href="index.php?p=offers/removeWishlist/{$object->ID_O}"><button class="btn btn-green">Retirer de la Wishlist</a></button>
+                      <a href="index.php?p=offers/removeWishlist/{$object->ID_O}"><button class="btn btn-red">Retirer de la Wishlist</a></button>
                     {/if}
 
                   </div>

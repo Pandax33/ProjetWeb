@@ -196,6 +196,15 @@ ul {list-style: none;
   margin-left: 2%;
   }
 
+  .btn-red {
+    background-color: red;
+    color: white;
+    /* ajouter un espace a droite  et a gauche */
+    margin-right: 2%;
+    margin-left: 2%;
+    }
+  
+
 
 
 .container {

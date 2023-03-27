@@ -3,15 +3,18 @@ namespace App\Models;
 
 class OffersModel extends Model
 {
-    protected $id;
-    protected $entitled;
-    protected $duration;
-    protected $salary;
+    protected $ID_O;
+    protected $Entitled_O;
+    protected $Duration_O;
+    protected $Salary_O;
     protected $date_publish;
-    protected $space_available;
-    protected $state;
-    protected $description;
+    protected $Space_O;
+    protected $State;
+    protected $Description;
     protected $LinkPicture;
+
+    protected $Name;
+    protected $ID_E;
     
     public function __construct()
     {
@@ -22,61 +25,61 @@ class OffersModel extends Model
 
 
     /**
-     * Get the value of description
+     * Get the value of Description
      */ 
     public function getDescription()
     {
-        return $this->description;
+        return $this->Description;
     }
 
     /**
-     * Set the value of description
+     * Set the value of Description
      *
      * @return  self
      */ 
-    public function setDescription($description)
+    public function setDescription($Description)
     {
-        $this->description = $description;
+        $this->Description = $Description;
 
         return $this;
     }
 
     /**
-     * Get the value of state
+     * Get the value of State
      */ 
     public function getState()
     {
-        return $this->state;
+        return $this->State;
     }
 
     /**
-     * Set the value of state
+     * Set the value of State
      *
      * @return  self
      */ 
-    public function setState($state)
+    public function setState($State)
     {
-        $this->state = $state;
+        $this->State = $State;
 
         return $this;
     }
 
     /**
-     * Get the value of space_available
+     * Get the value of Space_O
      */ 
-    public function getSpace_available()
+    public function getSpace_O()
     {
-        return $this->space_available;
+        return $this->Space_O;
     }
 
     /**
-     * Set the value of space_available
+     * Set the value of Space_O
      *
      * @return  self
      */ 
-    public function setSpace_available($space_available)
+    public function setSpace_O($Space_O)
     {
-        $this->space_available = $space_available;
+        $this->Space_O = $Space_O;
 
         return $this;
     }
@@ -102,41 +105,41 @@ class OffersModel extends Model
     }
 
     /**
-     * Get the value of salary
+     * Get the value of Salary_O
      */ 
-    public function getSalary()
+    public function getSalary_O()
     {
-        return $this->salary;
+        return $this->Salary_O;
     }
 
     /**
-     * Set the value of salary
+     * Set the value of Salary_O
      *
      * @return  self
      */ 
-    public function setSalary($salary)
+    public function setSalary_O($Salary_O)
     {
-        $this->salary = $salary;
+        $this->Salary_O = $Salary_O;
 
         return $this;
     }
 
     /**
-     * Get the value of duration
+     * Get the value of Duration_O
      */ 
-    public function getDuration()
+    public function getDuration_O()
     {
-        return $this->duration;
+        return $this->Duration_O;
     }
 
     /**
-     * Set the value of duration
+     * Set the value of Duration_O
      *
      * @return  self
      */ 
-    public function setDuration($duration)
+    public function setDuration_O($Duration_O)
     {
-        $this->duration = $duration;
+        $this->Duration_O = $Duration_O;
 
         return $this;
     }
@@ -146,7 +149,7 @@ class OffersModel extends Model
      */ 
     public function getId()
     {
-        return $this->id;
+        return $this->ID_O;
     }
 
     /**
@@ -156,27 +159,27 @@ class OffersModel extends Model
      */ 
     public function setId($id)
     {
-        $this->id = $id;
+        $this->ID_O = $id;
 
         return $this;
     }
 
     /**
-     * Get the value of entitled
+     * Get the value of Entitled_O
      */ 
-    public function getEntitled()
+    public function getEntitled_O()
     {
-        return $this->entitled;
+        return $this->Entitled_O;
     }
 
     /**
-     * Set the value of entitled
+     * Set the value of Entitled_O
      *
      * @return  self
      */ 
-    public function setEntitled($entitled)
+    public function setEntitled_O($Entitled_O)
     {
-        $this->entitled = $entitled;
+        $this->Entitled_O = $Entitled_O;
 
         return $this;
     }
@@ -189,6 +192,28 @@ class OffersModel extends Model
     public function setLinkPicture($LinkPicture)
     {
         $this->LinkPicture = $LinkPicture;
+        return $this;
+    }
+
+    public function getName()
+    {
+        return $this->Name;
+    }
+
+    public function setName($Name)
+    {
+        $this->Name = $Name;
+        return $this;
+    }
+
+    public function getIde()
+    {
+        return $this->ID_E;
+    }
+
+    public function setIde($ID_E)
+    {
+        $this->ID_E = $ID_E;
         return $this;
     }
 }

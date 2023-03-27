@@ -12,6 +12,7 @@ class RequestModel extends Model
 
         $this->table = "request";  
         $this->IdCollumName= "ID_O"; 
+        $this->Collumdeux= "Name_Competence";
     }
 
     public function getIdO()

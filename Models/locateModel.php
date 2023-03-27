@@ -12,7 +12,6 @@ class LocateModel extends Model
 
         $this->table = "locate";  
         $this->IdCollumName= "ID_E"; 
-        $this->Collumdeux= "Name";
     }
 
     public function getNameLocate()

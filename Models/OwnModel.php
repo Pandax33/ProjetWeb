@@ -3,8 +3,10 @@ namespace App\Models;
 
 class OwnModel extends Model
 {
-    protected $Name_Competence;
+    
     protected $ID_P;
+
+    protected $Name_Competence;
 
     
     public function __construct()
@@ -12,6 +14,7 @@ class OwnModel extends Model
 
         $this->table = "own";  
         $this->IdCollumName= "Id_P"; 
+        $this->Collumdeux= "Name_Competence";
     }
 
     public function getIdP()

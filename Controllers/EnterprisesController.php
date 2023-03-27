@@ -5,6 +5,7 @@ use App\Models\EnterpriseModel;
 use App\Models\LocateModel;
 use App\Models\CityModel;
 
+
 class EnterprisesController extends Controller
 {
     //lister les entreprises de la bdd
@@ -14,7 +15,7 @@ class EnterprisesController extends Controller
         $enterpriseModel = new EnterpriseModel;
         $array = array(0, 1, 2);
         //On recupere les entreprises de la bdd 
-        $enterprises = $enterpriseModel->findAll();
+        $enterprises = $enterpriseModel->findBy(['Visibility_E' => 1]);;
         
         $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $enterprises);
@@ -35,7 +36,6 @@ class EnterprisesController extends Controller
         // On affiche la vue
         $this->render('enterprises/detail', ['enterprise' => $enterprise]);
     }
-
 
     public function modifier(){
         $enterpriseModel = new EnterpriseModel;
@@ -203,10 +203,11 @@ class EnterprisesController extends Controller
             $locateModel->setIdE($selected_id);
             $locateModel->setNameLocate($city);
             $locateModel->create($locateModel);
-            echo "Creation faite";
-            var_dump($_FILES['image']);
+
             
             }
 
     }
+
 }
+

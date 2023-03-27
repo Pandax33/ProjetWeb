@@ -1,0 +1,121 @@
+body {
+   background-image: url('img1.png');
+   background-size: cover;
+   backdrop-filter: blur(5px);
+   margin: 0;
+   padding: 0;
+   min-height: 100vh;
+   background-repeat: no-repeat;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+  
+  }
+  
+  .container {
+   max-width: 700px;
+   background-color: rgba(255, 255, 255, 0.7);
+   padding: 50px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   margin: 0 auto;
+  }
+  
+  .create-off-border {
+  
+   font-size: 2.5rem;
+   text-align: center;
+   margin-bottom: 20px;
+   font-family: 'Poppins', sans-serif;
+  }
+
+  form {
+   display: grid;
+   gap: 10px;
+  }
+  
+
+  
+  .btn_primary {
+   background-color: #d99240;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   font-size: 1rem;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+  }
+  
+  .btn_primary:hover {
+   background-color: #fa8a00;
+  }
+  
+  /*footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   padding: 10px 0;
+  }*/
+  
+  hr {
+   margin: 0;
+   border: none;
+   border-top: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  div {
+    margin-bottom: 1em;
+  }
+  
+  button {
+    display: block;
+    margin: 0 auto;
+  
+  }
+  legend {
+    font-size: smaller;
+  }
+  @media screen and (max-width: 767px) {
+    /* styles for small screens */
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* styles for extra small screens */
+    .create-enterprise-border {
+      font-size: 2rem;
+    }
+    
+    .container {
+      padding: 40px;
+    }
+    
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    /* styles for smaller extra small screens */
+    .create-enterprise-border {
+      font-size: 1.5rem;
+    }
+    
+    .container {
+      padding: 30px;
+    }
+    
+    
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  

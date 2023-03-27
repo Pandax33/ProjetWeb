@@ -68,6 +68,7 @@ class Model extends Db
 
     
     // On exécute la requête
+    echo "INSERT INTO {$this->table} ($liste_champs) VALUES ($liste_inter)";
     return $this->requete("INSERT INTO {$this->table} ($liste_champs) VALUES ($liste_inter)", $valeurs);
     }
 

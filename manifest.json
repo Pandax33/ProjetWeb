@@ -1,7 +1,7 @@
 {
     "name": "Heracles",
     "short_name": "Heracles",
-    "start_url": "http://127.10.10.100/public/index.php?p=accueil",
+    "start_url": "/public/index.php?p=accueil",
     "display": "standalone",
     "background_color": "white",
     "theme_color": "white",

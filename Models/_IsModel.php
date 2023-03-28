@@ -3,8 +3,9 @@ namespace App\Models;
 
 class _IsModel extends Model
 {
-    protected $Name_Promotion;
     protected $ID_P;
+    protected $Name_Promotion;
+    
 
     
     public function __construct()
@@ -12,6 +13,7 @@ class _IsModel extends Model
 
         $this->table = "_is";  
         $this->IdCollumName= "ID_P"; 
+        $this->Collumdeux= "Name_Promotion";
     }
 
     public function getNamePromotion()

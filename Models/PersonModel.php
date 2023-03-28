@@ -11,6 +11,8 @@ class PersonModel extends Model
     protected $mail;
     protected $password;
     protected $LinkPicture;
+
+    protected $Name_Center;
     
 
 
@@ -19,6 +21,7 @@ class PersonModel extends Model
         $class =str_replace( __NAMESPACE__.'\\', '', __CLASS__ );
         $this->table = "Person";
         $this->IdCollumName= "ID_P";
+        
     }
 
     /**
@@ -56,7 +59,7 @@ class PersonModel extends Model
      */ 
     public function setFirstname_P($FirstName)
     {
-        $this->Firstname_P = $Firstname;
+        $this->Firstname_P = $FirstName;
 
         return $this;
     }
@@ -149,6 +152,17 @@ class PersonModel extends Model
     public function setLinkPicture($LinkPicture)
     {
         $this->LinkPicture = $LinkPicture;
+        return $this;
+    }
+
+    public function getName_Center()
+    {
+        return $this->Name_Center;
+    }
+
+    public function setName_Center($Name_Center)
+    {
+        $this->Name_Center = $Name_Center;
         return $this;
     }
 }

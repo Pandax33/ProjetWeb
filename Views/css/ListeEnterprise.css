@@ -37,12 +37,10 @@ body {
   background-image: url('img1.png');
   background-size: cover;
   background-repeat: repeat;
-  flex-direction: column;
   justify-content: center;
   align-items: center; 
   background-attachment: fixed;
 
-  height: 100%; /* occuper 80% de la page */
 }
 
 .create{
@@ -59,7 +57,6 @@ body {
 
 span{
   font-family: Dela Gothic One, sans-serif;
-  font-size: 1.5em;
 }
 
 h5 {
@@ -249,6 +246,5 @@ section{
 }
 
 span{
-  display: inline-block;
   margin-right: 5px;
 }

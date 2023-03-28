@@ -41,7 +41,7 @@ body {
   align-items: center; 
   background-attachment: fixed;
 
-  height: 100%; /* occuper 80% de la page */
+
 }
 
 .create{
@@ -58,7 +58,6 @@ body {
 
 span{
   font-family: Dela Gothic One, sans-serif;
-  font-size: 1.5em;
 }
 
 h5 {
@@ -217,4 +216,7 @@ ul {list-style: none;
  
   }
 
-
+  .container {
+    margin-top: 50px;
+  
+  }

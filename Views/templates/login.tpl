@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
+    <title>Héraclès | Connexion</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Views/css/login.css" type="text/css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 
 <body>
     <br><br>
-    <div class="container">
+    <div class="container" style="padding-top: 10px;">
+        <a href="index.php?p=main"><img src="../../Views/css/images/logoH.png" alt="logo" style="align-items: center;width:100px;display: block; margin: auto;margin-bottom:15px"></a>
             <h1>Connexion</h1>
             <form method="POST" action="index.php?p=login/redirect">
                 <label for="exampleInputEmail1">Adresse email</label>
@@ -26,6 +28,7 @@
             </div>
 
     </div>
+    
 </body>
 
 </html>

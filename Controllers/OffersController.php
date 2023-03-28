@@ -218,9 +218,8 @@ $city=$cityModel->findAll();
         
             // Tentez de déplacer le fichier téléchargé vers le dossier de destination
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                echo "L'image ". htmlspecialchars(basename($_FILES["image"]["name"])). " a été téléchargée.";
+
             } else {
-                echo "Erreur lors du téléchargement de l'image.";
             }
         }
 
@@ -272,10 +271,7 @@ for ($i = count($offersModel->findAll()) - 1; $i >= 0; $i--) {
             
             $OwnModel->setIdO($foundId);
             $OwnModel->setNameCompetence($own);
-            echo $OwnModel->getIdO();
-            echo $OwnModel->getNameCompetence();
             $OwnModel->create($OwnModel);
-            echo '</br>';
         }
         
         
@@ -386,13 +382,10 @@ foreach ($offers as &$offer) {
         
             // Tentez de déplacer le fichier téléchargé vers le dossier de destination
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                echo "L'image ". htmlspecialchars(basename($_FILES["image"]["name"])). " a été téléchargée.";
             } else {
-                echo "Erreur lors du téléchargement de l'image.";
             }
         }
         $offersModel->setId($_POST['IDO']);
-        echo $offersModel->getId();
         $offersModel->setEntitled_O($_POST['Intitule']);
         $offersModel->setDuration_O($_POST['Duree']);
         $offersModel->setSalary_O($_POST['Salaire']);
@@ -434,12 +427,10 @@ foreach ($offers as &$offer) {
             }
         
             if (!$found) {
-                echo "Promotion sélectionnée non trouvée ou ID_P différent: " . htmlspecialchars($promotion) . "<br>";
                 $IsModel->setIdO($idP);
                 $IsModel->setNamePromotion($promotion);
                 $IsModel->create($IsModel);
             } else {
-                echo "Promotion sélectionnée trouvée et ID_P correspondant: " . htmlspecialchars($promotion) . "<br>";
             }
         }
         
@@ -448,7 +439,6 @@ foreach ($offers as &$offer) {
         
         // Affichez les promotions manquantes
         foreach ($missingPromotions as $missingPromotion) {
-            echo "Promotion présente dans Is mais pas dans le retour de promotions : " . htmlspecialchars($missingPromotion) . "<br>";
             $IsModel->deletePrecis($idP,$missingPromotion);
         }
 
@@ -478,12 +468,11 @@ foreach ($selectedCompetences as $competence) {
     }
 
     if (!$found) {
-        echo "Compétence sélectionnée non trouvée ou ID_P différent: " . htmlspecialchars($competence) . "<br>";
+
         $OwnModel->setIdO($idP);
         $OwnModel->setNameCompetence($competence);
         $OwnModel->create($OwnModel);
     } else {
-        echo "Compétence sélectionnée trouvée et ID_P correspondant: " . htmlspecialchars($competence) . "<br>";
     }
     }
     
@@ -492,7 +481,6 @@ foreach ($selectedCompetences as $competence) {
     
     // Affichez les compétences manquantes
     foreach ($missingCompetences as $missingCompetence) {
-    echo "Compétence présente dans Own mais pas dans le retour de compétences : " . htmlspecialchars($missingCompetence) . "<br>";
     $OwnModel->deletePrecis($idP, $missingCompetence);
     }
 
@@ -602,7 +590,6 @@ function filter() {
 
         // Envoyer les offres filtrées sous forme d'objets JSON
         header('Content-Type: application/json');
-        echo json_encode($filteredOffers);
         } else {
         // Gestion des erreurs si la méthode n'est pas POST
         http_response_code(405);

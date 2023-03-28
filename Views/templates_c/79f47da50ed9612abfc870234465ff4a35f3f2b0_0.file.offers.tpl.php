@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 02:06:17
+/* Smarty version 4.3.0, created on 2023-03-28 11:06:09
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64222f7927f7f5_57824435',
+  'unifunc' => 'content_6422ae01431909_91072940',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679961975,
+      1 => 1679994369,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64222f7927f7f5_57824435 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422ae01431909_91072940 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -40,6 +40,8 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
   <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 <body>
+
+
 <!--Si le role dans la session = admin, alors inclure navbar_s.tpl, de meme pour les roles teacher et student-->
   <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
     <?php $_smarty_tpl->_subTemplateRender("file:navbar_a.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -58,11 +60,38 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
       <div class="card-body">
         <span class="sel">Offres |</span><span class="sel"><a href="index.php?p=enterprises">Entreprises</a></span>
       </div>
+
+      
     </div>
+
+    <div class="search-container">
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Rechercher une offre..." style="width: 150%;">
+    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
+  </form>
+  <div class="filter-container">
+    <label for="filter">Filtrer:</label>
+    <select id="filter">
+      <option value="all">Tous</option>
+      <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+        <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Name;?>
+</option>
+      <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+    </select>
+  </div>
+</div>
      <!--Si le role est admin, inclure le fichier createoffer.tpl-->
     <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
       <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+      
       <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_offer_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?></span>
     <?php }?>
@@ -84,6 +113,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
+
                   <?php if ($_smarty_tpl->tpl_vars['object']->value->State == 1) {?>
                     <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['object']->value->Entitled_O;?>
  /</h5>
@@ -97,6 +127,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
  </a><span> à <a href="index.php?p=offers/ville/<?php echo $_smarty_tpl->tpl_vars['object']->value->Name;?>
 "><?php echo $_smarty_tpl->tpl_vars['object']->value->Name;?>
  </a></span></h5>
+
                     <p class="card-text">Durée du stage : <?php echo $_smarty_tpl->tpl_vars['object']->value->Duration_O;?>
 </p> 
                     <p class="card-text"><small class="text-muted"><?php echo $_smarty_tpl->tpl_vars['object']->value->DatePublish_O;?>
@@ -144,7 +175,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-  
+  <?php echo '<script'; ?>
+ src='../../Views/javascript/offers.js'><?php echo '</script'; ?>
+>
 </body>
 </html><?php }
 }

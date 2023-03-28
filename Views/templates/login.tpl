@@ -13,7 +13,8 @@
 
 <body>
     <br><br>
-    <div class="container">
+    <div class="container" style="padding-top: 10px;">
+        <a href="index.php?p=main"><img src="../../Views/css/images/logoH.png" alt="logo" style="align-items: center;width:100px;display: block; margin: auto;margin-bottom:15px"></a>
             <h1>Connexion</h1>
             <form method="POST" action="index.php?p=login/redirect">
                 <label for="exampleInputEmail1">Adresse email</label>

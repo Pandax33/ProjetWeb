@@ -11,7 +11,7 @@
 
       
       <li class="nav-item profile-item mobile-only"><a href="#" class="nav-link">Profile</a></li>
-      <li class="nav-item sign-item mobile-only"><a href="index.php?p=login" class="nav-link1">Sign Out</a></li>
+      <li class="nav-item sign-item mobile-only"><a href="index.php?p=main" class="nav-link1">Sign Out</a></li>
     </ul>
     <div class="profile-section"><a href="#" class="nav-link">Profile</a></div>
     <div class="sign-section"><a href="index.php?p=login" class="nav-link1">Sign Out</a></div>

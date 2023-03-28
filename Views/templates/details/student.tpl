@@ -26,6 +26,9 @@
     <p>email : {$etudiant->mail}</p>
     <p>{$pro->Name_Promotion}</p>
     <p style="color: rgb(210, 71, 71);"><a href="index.php?p=wishlist/monitor/{$etudiant->ID_P}">Wishlist de l'étudiant.e</a></p>
+    {if $role == "admin" || $role == "teacher"}
+      <a href="index.php?p=students/suppr/{$etudiant->ID_P}"><button class="btn btn-red">Supprimer l'offre</a></button>
+      {/if}
     
       <p> <a href="index.php?p=students" style="color:black">Retour</a></p>
 </div>

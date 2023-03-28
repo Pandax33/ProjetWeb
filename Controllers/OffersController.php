@@ -279,7 +279,7 @@ for ($i = count($offersModel->findAll()) - 1; $i >= 0; $i--) {
         }
         
         
-        
+        $this ->smarty->display('details/c_o.tpl');
     }
 
     public function modifier(){
@@ -496,7 +496,7 @@ foreach ($selectedCompetences as $competence) {
     $OwnModel->deletePrecis($idP, $missingCompetence);
     }
 
-
+    $this ->smarty->display('details/m_o.tpl');
     }
 
 
@@ -637,38 +637,12 @@ function filter() {
 
     public function suppr(int $id){
         $offersModel = new OffersModel;
-        $requestModel = new RequestModel;
-        $wishlistModel = new WishlistModel;
-        $concernModel = new ConcernModel;
-        
-
-        $concern = $concernModel->findBy(['ID_O' => $id]);
-        //Parcourir les elements de la table Concern ayant $id comme ID_O
-        foreach($concern as $con){
-            //Supprimer les elements dans la table Concern ayant $con->ID_C comme ID_C
-            $concernModel->deletePrecis($id, $con);
-        }
-
-        $wishlist = $wishlistModel->findBy(['ID_O' => $id]);
-        //Parcourir les elements de la table Wishlist ayant $id comme ID_O
-        foreach($wishlist as $wish){
-            //Supprimer les elements dans la table Concern ayant $wish->ID_W comme ID_W
-            $concernModel->deletePrecis($id, $wish);
-        }
-
-        $request = $requestModel->findBy(['ID_O' => $id]);
-        //Parcourir les elements de la table Request ayant $id comme ID_O
-        foreach($request as $req){
-            //Supprimer les elements dans la table Concern ayant $req->ID_R comme ID_R
-            $concernModel->deletePrecis($id, $req);
-        }
-
 
         //Supprimer les elements dans la table Offers ayant $id comme ID_O
         $offersModel->delete($id);
 
 
-        header('Location: /public/index.php?p=offers');
+        $this->smarty->display('details/s_o.tpl');
         
     }
 

@@ -48,7 +48,15 @@ class EnterprisesController extends Controller
         $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('Nom',"Détails de l'offre");
         $this->smarty->display('details/enterprise.tpl');
+    }
 
+    public function suppr(int $id){
+        $enterpriseModel = new EnterpriseModel;
+
+        //Supprimer les elements dans la table Offers ayant $id comme ID_O
+        $enterpriseModel->delete($id);
+        $this->smarty->display('details/s_e.tpl');
+        
     }
 
     public function modifier(){
@@ -132,12 +140,13 @@ class EnterprisesController extends Controller
             }
 
             if (!$found) {
-                echo "Ville sélectionnée non trouvée ou IDE différent: " . htmlspecialchars($city) . "<br>";
+                
                 $locateModel->setIdE($idE);
                 $locateModel->setNameLocate($city);
                 $locateModel->create($locateModel);
             } else {
-                echo "Ville sélectionnée trouvée et IDE correspondant: " . htmlspecialchars($city) . "<br>";
+                
+                
             }
         }
 
@@ -146,11 +155,12 @@ class EnterprisesController extends Controller
 
         // Affichez les villes manquantes
         foreach ($missingCitys as $missingCity) {
-            echo "Ville présente dans locate mais pas dans le retour de city : " . htmlspecialchars($missingCity) . "<br>";
+            
             $locateModel->deletePrecis($idE, $missingCity);
         }
-        echo "Modification effectuée";
+        
         echo $_POST['visible']; 
+        $this ->smarty->display('details/m_e.tpl');
         
     }
 
@@ -176,9 +186,9 @@ class EnterprisesController extends Controller
         
             // Tentez de déplacer le fichier téléchargé vers le dossier de destination
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                echo "L'image ". htmlspecialchars(basename($_FILES["image"]["name"])). " a été téléchargée.";
+                
             } else {
-                echo "Erreur lors du téléchargement de l'image.";
+                
             }
         }
 
@@ -220,7 +230,8 @@ class EnterprisesController extends Controller
 
             
             }
-
+            
+            $this ->smarty->display('details/c_e.tpl');
     }
 
 }

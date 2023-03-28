@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\EnterpriseModel;
 use App\Models\LocateModel;
 use App\Models\CityModel;
+use App\Models\OffersModel;
 
 
 class EnterprisesController extends Controller
@@ -29,12 +30,25 @@ class EnterprisesController extends Controller
     public function detail(int $id){
         // On instancie le modèle
         $enterpriseModel = new EnterpriseModel;
+        $locateModel= new LocateModel;
+        $offersModel = new OffersModel;
 
         // On récupère l'entreprise
         $enterprise = $enterpriseModel->find($id);
+        $locate= $locateModel->findBy(['ID_E' => $id]);
+        $offers= $offersModel->findBy(['ID_E' => $id, 'state' => 1]);
 
-        // On affiche la vue
-        $this->render('enterprises/detail', ['enterprise' => $enterprise]);
+        foreach ($locate as $loc) {
+            $enterprise->loc[] = $loc->Name;
+        }
+
+        // On affiche la vu
+        $this->smarty->assign('offres', $offers);
+        $this->smarty->assign('entreprise', $enterprise);
+        $this->smarty->assign('role', $_SESSION['role']);
+        $this->smarty->assign('Nom',"Détails de l'offre");
+        $this->smarty->display('details/enterprise.tpl');
+
     }
 
     public function modifier(){

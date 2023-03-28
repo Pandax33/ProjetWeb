@@ -1,1 +1,1 @@
-<button class="btn btn-m">Modifier un.e pilote</button>
+<a href="index.php?p=teachers/modifier"><button class="btn btn-m" style="background-color: orange;color:white;font-family: Poppins ExtraBold, sans-serif;">Modifier un.e pilote</button></a>

@@ -49,7 +49,6 @@ body {
   align-items: center; 
   background-attachment: fixed;
 
-  height: 100%; /* occuper 80% de la page */
 }
 
 .create{
@@ -141,9 +140,7 @@ ul {list-style: none;
   
   li {
   display: flex;
-
   align-items: center;
-  width: 70%; 
   margin: 0 auto;
  
   }
@@ -235,7 +232,7 @@ ul {list-style: none;
     border-radius: 100px;
     border: none;
     cursor: pointer;
-    font-family: Poppins, sans-serif;
+    font-family: Poppins ExtraBold, sans-serif;
 
   }
   

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 18:56:12
-  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-28 15:22:27
+  from 'C:\Users\leanb\Documents\ProjetWeb-tesr\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64231c2c75ddb7_35186460',
+  'unifunc' => 'content_64230633c7ac08_70712896',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
+    '4abfe5e6fb4727e6eca21769c044269e1b064c35' => 
     array (
-      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
+      0 => 'C:\\Users\\leanb\\Documents\\ProjetWeb-tesr\\Views\\templates\\accueil.tpl',
       1 => 1680016936,
       2 => 'file',
     ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64231c2c75ddb7_35186460 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64230633c7ac08_70712896 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 17:46:59
+/* Smarty version 4.3.0, created on 2023-03-28 07:41:22
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421d693990596_85837279',
+  'unifunc' => 'content_64229a22df9723_50880451',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '119ee4728659016ed3515b0070ed553f38066699' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679939216,
+      1 => 1679989279,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:buttons/m_offer_b.tpl' => 1,
   ),
 ),false)) {
-function content_6421d693990596_85837279 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64229a22df9723_50880451 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -71,9 +71,17 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
     <label for="filter">Filtrer par :</label>
     <select id="filter">
       <option value="all">Tous</option>
-      <option value="filter1">Filtre 1</option>
-      <option value="filter2">Filtre 2</option>
-      <option value="filter3">Filtre 3</option>
+      <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+        <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Name;?>
+</option>
+      <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </select>
   </div>
 </div>

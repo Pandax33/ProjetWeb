@@ -38,9 +38,9 @@
     <label for="filter">Filtrer par :</label>
     <select id="filter">
       <option value="all">Tous</option>
-      <option value="filter1">Filtre 1</option>
-      <option value="filter2">Filtre 2</option>
-      <option value="filter3">Filtre 3</option>
+      {foreach $city as $item}
+        <option>{$item->Name}</option>
+      {/foreach}
     </select>
   </div>
 </div>

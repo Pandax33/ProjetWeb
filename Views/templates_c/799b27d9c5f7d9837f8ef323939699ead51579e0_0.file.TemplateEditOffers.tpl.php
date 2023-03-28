@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 13:58:13
+/* Smarty version 4.3.0, created on 2023-03-28 07:21:29
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateEditOffers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421a0f554ebf6_92005448',
+  'unifunc' => 'content_64229579e45e00_08844353',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '799b27d9c5f7d9837f8ef323939699ead51579e0' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateEditOffers.tpl',
-      1 => 1679925487,
+      1 => 1679987775,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6421a0f554ebf6_92005448 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64229579e45e00_08844353 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">

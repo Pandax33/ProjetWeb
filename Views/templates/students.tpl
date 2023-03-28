@@ -45,7 +45,7 @@
                     </div>
                     <div class="button-group">
                       <a href="index.php?p=students/detail/{$object->ID_P}" class="btn btn-orange">Voir les statistiques</a>
-                      <button class="btn btn-green">Modifier</button>
+                      
 
                   </div>
                 </div>

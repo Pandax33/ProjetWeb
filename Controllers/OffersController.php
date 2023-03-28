@@ -66,16 +66,18 @@ foreach ($offers as $offer) {
     $new_offers[] = $new_offer;
 
 }
+$cityModel= new CityModel;
+$city=$cityModel->findAll();
 
 
         
         $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $new_offers);
         $this->smarty->assign('Nom','Liste des offres');
+        $this->smarty->assign('city', $city);
         $this->smarty->display('offers.tpl');
 
-        var_dump($new_offers);
-
+    
     }
 
     public function list(int $id)
@@ -566,47 +568,11 @@ foreach ($selectedCompetences as $competence) {
     }
 
 
-    function getSampleOffers() {
-        return [
-            (object)[
-                'ID_O' => '1',
-                'Entitled_O' => 'Stage développement web',
-                'Duration_O' => '6 mois',
-                'Salary_O' => '1200€/mois',
-                'DatePublish_O' => '2022-01-01 10:00:00',
-                'Description' => 'Nous recherchons un développeur web pour rejoindre notre équipe de développement. Les tâches principales incluent la programmation, la maintenance et lamélioration de nos sites web.',
-                'Space_O' => '15',
-                'State' => '0',
-                'ID_E' => '1',
-                'LinkPicture' => '',
-                'Name' => 'Lyon',
-                'wish' => 0,
-                'ent' => 'Société Générale'
-            ],
-            (object)[
-                'ID_O' => '1',
-                'Entitled_O' => 'Stage développement web',
-                'Duration_O' => '6 mois',
-                'Salary_O' => '1200€/mois',
-                'DatePublish_O' => '2022-01-01 10:00:00',
-                'Description' => 'Nous recherchons un développeur web pour rejoindre notre équipe de développement. Les tâches principales incluent la programmation, la maintenance et lamélioration de nos sites web.',
-                'Space_O' => '15',
-                'State' => '0',
-                'ID_E' => '1',
-                'LinkPicture' => '',
-                'Name' => 'Lyon',
-                'wish' => 0,
-                'ent' => 'Société Générale'
-            ],
-            
-            // Ajoutez ici les autres offres en suivant le même format
-        ];
-    }
     
     function applySearchAndFilter($searchText, $filter) {
         // Récupérer toutes les offres (remplacez cette fonction par votre propre logique pour récupérer les offres)
         $ModelOffers= new OffersModel;
-        $allOffers = $ModelOffers->findAll();
+        $allOffers = $ModelOffers->findBy(['Name' => $filter]);
     
         // Filtrer les offres en fonction du texte de recherche
         $filteredOffers = array_filter($allOffers, function($offer) use ($searchText) {

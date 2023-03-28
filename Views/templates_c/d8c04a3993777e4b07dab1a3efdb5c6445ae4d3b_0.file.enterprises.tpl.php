@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 15:29:13
+/* Smarty version 4.3.0, created on 2023-03-28 08:11:19
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421b64913d587_43563774',
+  'unifunc' => 'content_6422a127826867_31128345',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd8c04a3993777e4b07dab1a3efdb5c6445ae4d3b' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1679930702,
+      1 => 1679991009,
       2 => 'file',
     ),
   ),
@@ -23,9 +23,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
     'file:buttons/c_enterprise_b.tpl' => 1,
     'file:buttons/m_enterprise_b.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6421b64913d587_43563774 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422a127826867_31128345 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -36,6 +37,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
   <meta name="description" content="Liste des entreprises proposées avec leurs informations principales telle que leurs adresses, leur nom, leur activité...">
   <meta name="viewport" content="width=device-width">
   </head>
@@ -49,7 +51,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
   <?php $_smarty_tpl->_subTemplateRender("file:navbar_s.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }?>
 
-  <div class="container">
+  <div class="container" style="min-height:90%">
 
     <div class="card card-top">
       <div class="card-body">
@@ -63,7 +65,6 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
 ?></span>
     <?php }?>
   
-  
         <div class="row">
         <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['myArray']->value) > 0) {?>
           <?php
@@ -73,7 +74,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['object']->value)
 $_smarty_tpl->tpl_vars['object']->do_else = false;
 ?>
             <div class="col-lg-4 col-md-6 col-sm-12 ecart">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;background-color:rgba(255, 255, 255, 0.606)">
                   <img src="../Views/css/enterprise.png" class="card-img-top" alt="Image 1">
                   <div class="card-body">
                     <h5 class="card-title truncate-text" ><?php echo $_smarty_tpl->tpl_vars['object']->value->Name_E;?>
@@ -96,12 +97,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
           <?php } else { ?>
           <p>Aucune donnée trouvée.</p>
           <?php }?>
-
+          </div>
         </div>
     </div>
  
     </div>
   </section>
+  <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
   <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

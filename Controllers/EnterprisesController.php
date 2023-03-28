@@ -17,10 +17,13 @@ class EnterprisesController extends Controller
         $array = array(0, 1, 2);
         //On recupere les entreprises de la bdd 
         $enterprises = $enterpriseModel->findBy(['Visibility_E' => 1]);;
+        $cityModel= new CityModel;
+        $city=$cityModel->findAll();
         
         $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $enterprises);
         $this->smarty->assign('array', $array);
+        $this->smarty->assign('city', $city);
         $this->smarty->assign('Nom','Liste des entreprises');
         $this->smarty->display('enterprises.tpl');
 
@@ -223,5 +226,46 @@ class EnterprisesController extends Controller
 
     }
 
-}
+    function applySearchAndFilter($searchText, $filter) {
+        // Récupérer toutes les offres (remplacez cette fonction par votre propre logique pour récupérer les offres)
+        $ModelOffers= new EnterpriseModel;
+        if($filter == "all" && $searchText == ""){
+            $allOffers=$ModelOffers->findAll();
+            
+        }elseif($filter != "all" && $searchText == ""){ $allOffers = $ModelOffers->findBy(['Activity_E' => $filter, 'Visibility_E' => 1]);}
+        elseif($filter == "all" && $searchText != ""){$allOffers = $ModelOffers->findBy(['Name_E' => $searchText]);}
+        elseif($filter != "all" && $searchText != ""){ $allOffers = $ModelOffers->findBy(['Name_E' => $searchText, 'Activity_E' => $filter, 'Visibility_E' => 1]);}
+        
+    
+        // Filtrer les offres en fonction du texte de recherche
+        $filteredOffers = $allOffers;
+    
+        // Appliquer le filtre (à remplacer par votre propre logique pour filtrer les offres en fonction de $filter)
+    // Exemple : Vous pouvez modifier cette partie en fonction de la logique de votre filtre
+    
 
+    return $filteredOffers;
+}
+function filter() {
+    // Vérifiez si les données ont été envoyées via POST
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Récupérez les données POST
+        $postData = json_decode(file_get_contents('php://input'), true);
+        $searchText = $postData['searchText'];
+        $filter = $postData['filter'];
+
+        // Appliquez la recherche et les filtres
+        // Vous devrez implémenter votre propre logique pour rechercher et filtrer les offres en fonction de $searchText et $filter
+        $filteredOffers = $this->applySearchAndFilter($searchText, $filter);
+
+        // Envoyer les offres filtrées sous forme d'objets JSON
+        header('Content-Type: application/json');
+        echo json_encode($filteredOffers);
+        } else {
+        // Gestion des erreurs si la méthode n'est pas POST
+        http_response_code(405);
+        echo json_encode(['error' => 'Method Not Allowed']);
+        }
+        }
+}
+?>

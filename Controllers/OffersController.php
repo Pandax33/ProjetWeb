@@ -572,7 +572,10 @@ foreach ($selectedCompetences as $competence) {
     function applySearchAndFilter($searchText, $filter) {
         // Récupérer toutes les offres (remplacez cette fonction par votre propre logique pour récupérer les offres)
         $ModelOffers= new OffersModel;
-        $allOffers = $ModelOffers->findBy(['Name' => $filter]);
+        if($filter == "all"){
+            $allOffers=$ModelOffers->findAll();
+        }else{ $allOffers = $ModelOffers->findBy(['Name' => $filter]);}
+        
     
         // Filtrer les offres en fonction du texte de recherche
         $filteredOffers = array_filter($allOffers, function($offer) use ($searchText) {

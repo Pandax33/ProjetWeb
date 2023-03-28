@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../Views/css/ListeTeachers.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
-
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
 </head>
 <body>
 {if $role == "admin"}

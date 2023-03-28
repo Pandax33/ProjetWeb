@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 18:56:12
+/* Smarty version 4.3.0, created on 2023-03-28 19:21:34
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64231c2c75ddb7_35186460',
+  'unifunc' => 'content_6423221ef00008_18480700',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1680016936,
+      1 => 1680024070,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64231c2c75ddb7_35186460 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423221ef00008_18480700 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -39,6 +39,7 @@ function content_64231c2c75ddb7_35186460 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="../../Views/css/footer.css">
     <link rel="manifest" href="../../manifest.json">
   <link rel="apple-touch-icon" href="../../assets/icons/icon-96x96.png">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <meta name="apple-mobile-web-app-status-bar" content="white">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="white">

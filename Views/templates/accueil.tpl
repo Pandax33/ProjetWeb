@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../Views/css/footer.css">
     <link rel="manifest" href="../../manifest.json">
   <link rel="apple-touch-icon" href="../../assets/icons/icon-96x96.png">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <meta name="apple-mobile-web-app-status-bar" content="white">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="white">

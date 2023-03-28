@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 15:51:51
+/* Smarty version 4.3.0, created on 2023-03-28 19:25:25
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422f0f761cbe5_58119072',
+  'unifunc' => 'content_6423230552e016_87000536',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1680011509,
+      1 => 1680024182,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6422f0f761cbe5_58119072 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423230552e016_87000536 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -38,6 +38,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <meta name="description" content="Liste des entreprises proposées avec leurs informations principales telle que leurs adresses, leur nom, leur activité...">
   <meta name="viewport" content="width=device-width">
   </head>

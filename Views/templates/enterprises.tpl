@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <meta name="description" content="Liste des entreprises proposées avec leurs informations principales telle que leurs adresses, leur nom, leur activité...">
   <meta name="viewport" content="width=device-width">
   </head>

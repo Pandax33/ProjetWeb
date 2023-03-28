@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 15:58:28
+/* Smarty version 4.3.0, created on 2023-03-28 22:55:58
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\student.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422f284b05560_73263899',
+  'unifunc' => 'content_6423545ee5b265_47200153',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fff6964c6408f2814c755cd9c7c6df34cd1b65b7' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\student.tpl',
-      1 => 1680010902,
+      1 => 1680030156,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_6422f284b05560_73263899 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423545ee5b265_47200153 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,7 +32,7 @@ function content_6422f284b05560_73263899 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Héraclès | </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
+    <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
     <link rel="stylesheet" href="../../../Views/css/detail_s.css" type="text/css">
     <link rel="stylesheet" href="../../../Views/css/navbar.css">
     <link rel="stylesheet" href="../../Views/css/footer.css">

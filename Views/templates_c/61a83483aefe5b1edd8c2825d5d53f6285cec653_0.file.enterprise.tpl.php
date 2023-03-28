@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 21:54:54
+/* Smarty version 4.3.0, created on 2023-03-28 22:47:54
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\enterprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6423460e7900c9_70403114',
+  'unifunc' => 'content_6423527a837a44_41232483',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61a83483aefe5b1edd8c2825d5d53f6285cec653' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\enterprise.tpl',
-      1 => 1680030156,
+      1 => 1680036473,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_6423460e7900c9_70403114 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423527a837a44_41232483 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -90,7 +90,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <p style="margin-bottom:0;color:rgb(36, 36, 36)">Confiance du pilote: <span style="color:rgba(70, 70, 70, 0.555)"> <?php echo $_smarty_tpl->tpl_vars['entreprise']->value->TrustRate_E;?>
  / 5</span></p>
     <p style="color:rgb(36, 36, 36);">Confiance des étudiants: <span style="color:rgba(70, 70, 70, 0.555)"> <?php echo $_smarty_tpl->tpl_vars['grade']->value->moy;?>
- / 5</span></p>
+ / 5   </span><span style="font-size: 80%;"> (<?php echo $_smarty_tpl->tpl_vars['nbenotes']->value->nb;?>
+)</span></p>
     <p><a href="index.php?p=enterprises/noter/<?php echo $_smarty_tpl->tpl_vars['entreprise']->value->ID_E;?>
 " style="color: orange">Noter cette entreprise</a></p>
 

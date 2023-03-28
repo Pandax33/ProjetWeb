@@ -29,6 +29,12 @@ class Model extends Db
         
     }
 
+    public function count($id)
+    {
+        return $this->requete("SELECT COUNT(*) AS nb FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id])->fetch();
+        
+    }
+
     public function findBy(array $criteres)
     {
     $champs = [];

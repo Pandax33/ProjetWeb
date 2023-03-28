@@ -127,7 +127,7 @@ body {
   body {
 
     margin: 0;
-    min-height: 100px;
+  
     /*Laisser de l'espace vide en haut */
     font-family: Poppins ExtraBold, sans-serif;
     background-image: url('img1.png');

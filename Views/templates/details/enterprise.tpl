@@ -46,7 +46,7 @@
 
     <p style="margin-bottom: 0; color:rgb(37, 37, 37)">Etudiants déjà en stage chez {$entreprise->Name_E} : <span style="color:rgba(70, 70, 70, 0.688)">{$entreprise->Intership_E}</span></p>
     <p style="margin-bottom:0;color:rgb(36, 36, 36)">Confiance du pilote: <span style="color:rgba(70, 70, 70, 0.555)"> {$entreprise->TrustRate_E} / 5</span></p>
-    <p style="color:rgb(36, 36, 36);">Confiance des étudiants: <span style="color:rgba(70, 70, 70, 0.555)"> {$grade->moy} / 5</span></p>
+    <p style="color:rgb(36, 36, 36);">Confiance des étudiants: <span style="color:rgba(70, 70, 70, 0.555)"> {$grade->moy} / 5   </span><span style="font-size: 80%;"> ({$nbenotes->nb})</span></p>
     <p><a href="index.php?p=enterprises/noter/{$entreprise->ID_E}" style="color: orange">Noter cette entreprise</a></p>
 
     {if $role == "admin"}

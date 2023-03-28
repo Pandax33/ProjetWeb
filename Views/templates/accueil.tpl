@@ -71,6 +71,7 @@
         </div>
       </div>
     </div>
+    {include file="trap.tpl"}
     {include file="footer.tpl"}
   <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

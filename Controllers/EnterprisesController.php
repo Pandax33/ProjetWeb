@@ -38,17 +38,20 @@ class EnterprisesController extends Controller
         $offersModel = new OffersModel;
         $gradeModel = new GradeModel;
 
+
         // On récupère l'entreprise
         $enterprise = $enterpriseModel->find($id);
         $locate= $locateModel->findBy(['ID_E' => $id]);
         $offers= $offersModel->findBy(['ID_E' => $id, 'state' => 1]);
         $grade= $gradeModel->moyenne($id);
+        $nbenotes = $gradeModel->count($id);
 
         foreach ($locate as $loc) {
             $enterprise->loc[] = $loc->Name;
         }
 
         // On affiche la vu
+        $this->smarty->assign('nbenotes', $nbenotes);
         $this->smarty->assign('grade', $grade);
         $this->smarty->assign('offres', $offers);
         $this->smarty->assign('entreprise', $enterprise);
@@ -289,9 +292,7 @@ function filter() {
             $gradeModel = new GradeModel;
             $enterpriseModel = new EnterpriseModel;
             $enterprise = $enterpriseModel->find($id);
-            $grade = $gradeModel->findBy(['ID_E' => $id]);
 
-            $this->smarty->assign('grade', $grade);
             $this->smarty->assign('enterprise', $enterprise);
             $this->smarty->display('details/noter.tpl');
 

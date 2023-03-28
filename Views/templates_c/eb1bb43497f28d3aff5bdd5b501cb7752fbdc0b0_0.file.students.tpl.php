@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 15:41:45
-  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\teachers.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-28 15:36:02
+  from 'C:\Users\leanb\Documents\ProjetWeb-tesr\Views\templates\students.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422ee9902ac48_91296260',
+  'unifunc' => 'content_64230962b62a28_86566671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '2a37c21f257cdb2279ecb8cf412a103499cb61fd' => 
+    'eb1bb43497f28d3aff5bdd5b501cb7752fbdc0b0' => 
     array (
-      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\teachers.tpl',
-      1 => 1680010902,
+      0 => 'C:\\Users\\leanb\\Documents\\ProjetWeb-tesr\\Views\\templates\\students.tpl',
+      1 => 1680015923,
       2 => 'file',
     ),
   ),
@@ -21,25 +21,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_a.tpl' => 1,
     'file:navbar_t.tpl' => 1,
     'file:navbar_s.tpl' => 1,
-    'file:buttons/c_teacher_b.tpl' => 1,
-    'file:buttons/m_teacher_b.tpl' => 1,
+    'file:buttons/c_student_b.tpl' => 1,
+    'file:buttons/m_student_b.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6422ee9902ac48_91296260 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
+function content_64230962b62a28_86566671 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\\ProjetWeb-tesr\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
-
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Héraclès | Pilotes</title>
+  <title>Héraclès | Etudiants</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../Views/css/ListeTeachers.css" type="text/css">
+  <link rel="stylesheet" href="../../Views/css/ListeStudent.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
-
-</head>
+  </head>
 <body>
 <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
   <?php $_smarty_tpl->_subTemplateRender("file:navbar_a.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -52,16 +50,16 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 
     <div class="card card-top">
       <div class="card-body">
-        <span class="sel">Pilotes |</span>
+        <span class="sel">Etudiants |</span>
       </div>
     </div>
+
     <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
-      <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_teacher_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+      <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_student_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-      <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_teacher_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+      <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_student_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?></span>
     <?php }?>
-
     <?php if (smarty_modifier_count($_smarty_tpl->tpl_vars['myArray']->value) > 0) {?>
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['myArray']->value, 'object');
@@ -88,11 +86,9 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 </small></p>
                     </div>
                     <div class="button-group">
-
-                      <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
-                        <a href="index.php?p=teachers/suppr/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_P;?>
-"><button class="btn btn-green" style="background-color:rgb(249, 97, 42)" >Supprimer le pilote</a></button>
-                        <?php }?>
+                      <a href="index.php?p=students/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_P;?>
+" class="btn btn-orange">Voir les statistiques</a>
+                      
 
                   </div>
                 </div>
@@ -126,6 +122,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 >
   
 </body>
-</html>
-<?php }
+</html><?php }
 }

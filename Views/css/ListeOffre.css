@@ -120,7 +120,18 @@ h5 {
   display: flex;
   justify-content: left; /* Centrer les éléments à l'intérieur */
   align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
+
+/*Si la taille de l'écran passe sous 370px*/
+@media only screen and (max-width: 370px) {
+  .card-top .card-body {
+    flex-direction: column;
+  }
+}
+
+
 
 .card-top .card-body span:first-child {
   color: black; /* "Offres" en noir */
@@ -286,6 +297,6 @@ ul {list-style: none;
     flex-wrap: wrap;
   }
   input {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }

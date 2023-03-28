@@ -119,7 +119,16 @@ h5 {
   display: flex;
   justify-content: left; /* Centrer les éléments à l'intérieur */
   align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
+
+@media only screen and (max-width: 370px) {
+  .card-top .card-body {
+    flex-direction: column;
+  }
+}
+
 
 .card-top .card-body span:first-child {
   color: black; /* "Offres" en noir */

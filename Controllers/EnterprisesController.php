@@ -2,6 +2,7 @@
 // PERMET DE CONSULTER LA LISTE DES Entreprises
 namespace App\Controllers;
 use App\Models\EnterpriseModel;
+use App\Models\GradeModel;
 use App\Models\LocateModel;
 use App\Models\CityModel;
 use App\Models\OffersModel;
@@ -35,17 +36,20 @@ class EnterprisesController extends Controller
         $enterpriseModel = new EnterpriseModel;
         $locateModel= new LocateModel;
         $offersModel = new OffersModel;
+        $gradeModel = new GradeModel;
 
         // On récupère l'entreprise
         $enterprise = $enterpriseModel->find($id);
         $locate= $locateModel->findBy(['ID_E' => $id]);
         $offers= $offersModel->findBy(['ID_E' => $id, 'state' => 1]);
+        $grade= $gradeModel->moyenne($id);
 
         foreach ($locate as $loc) {
             $enterprise->loc[] = $loc->Name;
         }
 
         // On affiche la vu
+        $this->smarty->assign('grade', $grade);
         $this->smarty->assign('offres', $offers);
         $this->smarty->assign('entreprise', $enterprise);
         $this->smarty->assign('role', $_SESSION['role']);
@@ -279,5 +283,46 @@ function filter() {
         echo json_encode(['error' => 'Method Not Allowed']);
         }
         }
+
+
+        public function noter($id){
+            $gradeModel = new GradeModel;
+            $enterpriseModel = new EnterpriseModel;
+            $enterprise = $enterpriseModel->find($id);
+            $grade = $gradeModel->findBy(['ID_E' => $id]);
+
+            $this->smarty->assign('grade', $grade);
+            $this->smarty->assign('enterprise', $enterprise);
+            $this->smarty->display('details/noter.tpl');
+
+
+        }
+
+        public function note($id){
+            $gradeModel = new GradeModel;
+            $enterpriseModel = new EnterpriseModel;
+            $enterprise = $enterpriseModel->find($id);
+            $rate = $_POST['rating'];
+
+            $grade = $gradeModel->findBy(['ID_P' => $_SESSION['identifiant'], 'ID_E' => $id]);
+            //recuperer la note saisie dans le POST
+            
+            // Verifier avec le findby si l'entreprise a deja ete noté par l'utilisateur
+            // Si oui, update la note
+            // Sinon, create la note
+            if($grade != null){
+                $gradeModel->setNote($rate);
+                $gradeModel->updateN($id, $_SESSION['identifiant'], $rate);
+            }else{
+                $gradeModel->setNote($rate);
+                $gradeModel->setIdE($id);
+                $gradeModel->setIdP($_SESSION['identifiant']);
+                $gradeModel->create($gradeModel);
+            }
+            header('Location: /public/index.php?p=enterprises/detail/'.$id.'');
+
+
+        }
+
 }
 ?>

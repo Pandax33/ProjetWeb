@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Héraclès | </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
+    <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
     <link rel="stylesheet" href="../../../Views/css/detail_s.css" type="text/css">
     <link rel="stylesheet" href="../../../Views/css/navbar.css">
     <link rel="stylesheet" href="../../Views/css/footer.css">

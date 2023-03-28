@@ -13,6 +13,7 @@ class GradeModel extends Model
 
         $this->table = "grade";  
         $this->IdCollumName= "ID_E"; 
+        $this->Collumdeux= "ID_P";
     }
 
     public function getIdE()
@@ -20,7 +21,7 @@ class GradeModel extends Model
         return $this->ID_E; 
     }
 
-    public function setNameCity($ID_E)
+    public function setIdE($ID_E)
     {
         $this->ID_E = $ID_E;
 

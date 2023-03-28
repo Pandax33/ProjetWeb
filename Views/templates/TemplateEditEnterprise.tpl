@@ -82,7 +82,7 @@
     <div class="form-group col-md-6">
       <div class="row mb-3">
         <fieldset class="rating">
-       <legend>Notez cet article :</legend>
+       <legend style="font-family: Dela Gothic One">Notez cette entreprise :</legend>
        <input type="radio" id="star5" name="rating" value="5"><label for="star5">☆</label>
        <input type="radio" id="star4" name="rating" value="4"><label for="star4">☆</label>
        <input type="radio" id="star3" name="rating" value="3"><label for="star3">☆</label>

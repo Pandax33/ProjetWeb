@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 09:43:12
+/* Smarty version 4.3.0, created on 2023-03-28 20:15:37
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateEnterprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64229a90366f70_53215639',
+  'unifunc' => 'content_64232ec91a4c23_61844439',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5834ed45edc3e9757d599f04752b74c10904e172' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateEnterprise.tpl',
-      1 => 1679989310,
+      1 => 1680024323,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64229a90366f70_53215639 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64232ec91a4c23_61844439 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
@@ -30,7 +30,7 @@ function content_64229a90366f70_53215639 (Smarty_Internal_Template $_smarty_tpl)
 
   <link rel="stylesheet" href="../../Views/css/editENT.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
-
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.6.0.min.js"><?php echo '</script'; ?>
 >

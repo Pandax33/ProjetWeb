@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Héraclès | {$entreprise->Name_E}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
+    <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
     <link rel="stylesheet" href="../../../Views/css/detail_o.css" type="text/css">
     <link rel="stylesheet" href="../../../Views/css/navbar.css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
+    <link rel="stylesheet" href="../../../Views/css/detail_e.css">
 </head>
 
 <body>
@@ -44,11 +45,15 @@
     </p>
 
     <p style="margin-bottom: 0; color:rgb(37, 37, 37)">Etudiants déjà en stage chez {$entreprise->Name_E} : <span style="color:rgba(70, 70, 70, 0.688)">{$entreprise->Intership_E}</span></p>
-    <p style="color:rgb(36, 36, 36)">Niveau de confiance: <span style="color:rgba(70, 70, 70, 0.555)"> {$entreprise->TrustRate_E} / 5</span></p>
+    <p style="margin-bottom:0;color:rgb(36, 36, 36)">Confiance du pilote: <span style="color:rgba(70, 70, 70, 0.555)"> {$entreprise->TrustRate_E} / 5</span></p>
+    <p style="color:rgb(36, 36, 36);">Confiance des étudiants: <span style="color:rgba(70, 70, 70, 0.555)"> {$grade->moy} / 5</span></p>
+    <p><a href="index.php?p=enterprises/noter/{$entreprise->ID_E}" style="color: orange">Noter cette entreprise</a></p>
+
     {if $role == "admin"}
       <a href="index.php?p=enterprises/suppr/{$entreprise->ID_E}"><button class="btn btn-red">Supprimer l'entreprise</a></button>
       {/if}
-      <p> <a href="index.php?p=enterprises" style="color:black">Retour</a></p>
+
+      <p><a href="index.php?p=enterprises" style="color:black">Retour</a></p>
 </div>
 
 <p style="text-align: center;"><a href="index.php?p=offers/list/{$entreprise->ID_E}" >Consultez les offres de {$entreprise->Name_E}</a></p>

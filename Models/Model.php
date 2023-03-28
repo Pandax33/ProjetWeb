@@ -23,6 +23,12 @@ class Model extends Db
         return $query->fetchAll();
     }
 
+    public function moyenne($id)
+    {
+        return $this->requete("SELECT ROUND(AVG(note),1) AS moy FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id])->fetch();
+        
+    }
+
     public function findBy(array $criteres)
     {
     $champs = [];
@@ -99,6 +105,13 @@ class Model extends Db
     
     // On exécute la requête
     return $this->requete("UPDATE {$this->table} SET $liste_champs WHERE {$this->IdCollumName} = ?", $valeurs );
+    } 
+
+    public function updateN(int $id1, int $id2, int $note)
+    {
+    
+    // On exécute la requête
+    return $this->requete("UPDATE grade SET Note = $note WHERE ID_E = $id1 AND ID_P = $id2");
     } 
 
 //DELETE

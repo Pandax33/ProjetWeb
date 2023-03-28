@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 13:09:20
+/* Smarty version 4.3.0, created on 2023-03-28 21:59:18
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422cae031b283_98777748',
+  'unifunc' => 'content_642347167e2786_45391798',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '72ed414f24550de6d880c4e6b926eee0b82d9ff2' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\main.tpl',
-      1 => 1680001628,
+      1 => 1680024323,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6422cae031b283_98777748 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642347167e2786_45391798 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../Views/css/main.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <title>Héraclès</title>
 </head>

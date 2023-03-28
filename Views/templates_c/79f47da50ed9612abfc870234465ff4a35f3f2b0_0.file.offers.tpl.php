@@ -1,24 +1,18 @@
 <?php
-
-/* Smarty version 4.3.0, created on 2023-03-28 10:16:22
-
+/* Smarty version 4.3.0, created on 2023-03-28 19:31:33
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-
-  'unifunc' => 'content_6422a256adca99_61577304',
-
+  'unifunc' => 'content_64232475e1f0d3_97083384',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-
-      1 => 1679991380,
-
+      1 => 1680024668,
       2 => 'file',
     ),
   ),
@@ -32,9 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-
-function content_6422a256adca99_61577304 (Smarty_Internal_Template $_smarty_tpl) {
-
+function content_64232475e1f0d3_97083384 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -46,6 +38,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
 </head>
 <body>
 
@@ -74,13 +67,11 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 
     <div class="search-container">
   <form id="search-form">
-
-    <input type="text" id="search-input" placeholder="Rechercher une offre...">
-    <button type="submit" class="btn btn-search">Rechercher</button>
+    <input type="text" id="search-input" placeholder="Rechercher une offre..." style="width: 150%;">
+    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
   </form>
   <div class="filter-container">
-    <label for="filter">Filtrer par :</label>
-
+    <label for="filter">Filtrer:</label>
     <select id="filter">
       <option value="all">Tous</option>
       <?php
@@ -145,7 +136,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
                     </div>
                     <div class="button-group">
                     <a href="index.php?p=offers/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
-" class="btn btn-orange">En savoir plus</a>
+" class="btn btn-orange" style="margin-right: 10px;">En savoir plus</a>
                     <?php if ($_smarty_tpl->tpl_vars['object']->value->wish == 0 && $_smarty_tpl->tpl_vars['role']->value == "student") {?>
                       <a href="index.php?p=offers/addWishlist/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
 "><button class="btn btn-green">Ajouter à la Wishlist</a></button>

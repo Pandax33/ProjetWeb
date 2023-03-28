@@ -4,7 +4,6 @@
   <title>Héraclès | Création Entreprise</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
   <link rel="stylesheet" href="../../Views/css/editENT.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
   <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
@@ -75,7 +74,7 @@
 <div class="form-group col-md-6">
       <div class="row mb-3">
      <fieldset class="rating">
-    <legend>Notez cet article :</legend>
+    <legend style="font-family: Dela Gothic One">Notez cette entreprise :</legend>
     <input type="radio" id="star5" name="rating" value="5"><label for="star5">☆</label>
     <input type="radio" id="star4" name="rating" value="4"><label for="star4">☆</label>
     <input type="radio" id="star3" name="rating" value="3"><label for="star3">☆</label>

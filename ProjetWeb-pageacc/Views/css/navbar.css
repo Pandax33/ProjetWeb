@@ -1,0 +1,153 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat/Static/Montserrat-SemiBold.ttf') format('woff2'),
+         url('Montserrat/Montserrat-VariableFont_wght.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    background-color: #edecec;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: rgb(222, 115, 8);
+    /*margin-left: 10px;*/
+  }
+  
+  .navbar-brand .divider {
+    margin: 0 10px;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: grey;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: black;
+  }
+    .nav-link1 {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .nav-link1:hover {
+    color: grey;
+  }
+  .search-input {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+  }
+  
+  /*.profile-section {
+    margin-right: 40px;
+  }
+  .sign-section {
+    margin-right: 10px;
+  }*/
+  
+  .hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Add this new rule 
+  .nav-item.search-item {
+    display: none;
+  }*/
+  
+  /* Add new rules */
+  .desktop-only {
+    display: block;
+  }
+  
+  .mobile-only {
+    display: none;
+  }
+  
+  /* Update the existing media query */
+  @media (max-width: 820px) {
+    .nav-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      display: none;
+    }
+  
+    .nav-list.nav-list-active {
+      display: flex;
+    }
+  
+    .nav-item {
+      margin: 10px;
+      text-align: center;
+    }
+  
+    .nav-item.search-item,
+    .nav-item.profile-item,
+    .nav-item.sign-item {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .search-input {
+      width: 100%;
+    }
+  
+    .desktop-only {
+      display: none;
+    }
+  
+    .mobile-only {
+      display: block;
+    }
+  
+    .profile-section,
+    .sign-section {
+      display: none;
+    }
+  }

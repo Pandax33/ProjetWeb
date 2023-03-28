@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img1.png");
+    background-size: cover;
+
+  }
+  
+  .container {
+    text-align: center;
+    min-height: 100vh; /* Add this line */
+  display: flex; /* Add this line */
+  flex-direction: column; /* Add this line */
+  justify-content: center; /* Add this line */
+  }
+  
+  h1 {
+    font-size: 5rem;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    margin-top: -4rem;
+    color: #dd4f13;
+  }
+  .description {
+    font-size: 1rem;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+  }
+    .description1 {
+    font-size: 2.8rem;
+    margin-top: 3rem;
+    margin-bottom: 1em;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; 
+  }
+  
+  .buttons button {
+    margin: 0 1rem;
+    padding: 12px 24px; 
+  font-size: 1.2rem; 
+  border: none;
+  border-radius:  6px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease;
+  background-color: black;
+  color: white;
+  }
+  .buttons button:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+  
+  .card {
+    width: 150px;
+    margin: 0 1rem;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .separator {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card.special {
+  width: 300px;
+  margin: 0 2rem;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: -2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .description1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5em;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    margin: 0.5rem;
+  }
+
+  .cards {
+    margin-top: 1.5rem;
+  }
+
+  .card {
+    width: 30%;
+    margin: 0 0 1.5rem;
+  }
+
+  .card.special {
+    width: 50%;
+    margin: 0 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: -1.5rem;
+  }
+    .description {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .description1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5em;
+  }
+
+  .buttons button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .cards {
+    margin-top: 1rem;
+  }
+
+  .card {
+    width: 30%;
+    margin: 0 0 1rem;
+  }
+
+  .card.special {
+    width: 50%;
+    margin: 0 0 1rem;
+  }
+
+  .separator {
+    margin: 1rem 0;
+  }
+}

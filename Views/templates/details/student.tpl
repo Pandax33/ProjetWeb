@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="../../../Views/css/detail_s.css" type="text/css">
     <link rel="stylesheet" href="../../../Views/css/navbar.css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 <body>
 {if $role == "admin"}
@@ -19,7 +20,7 @@
   {include file="navbar_s.tpl"}
 {/if}
 
-<div class="container" style="padding-bottom: 0; margin-bottom:50px">
+<div class="container" style="padding-bottom: 0; margin-bottom:50px ">
 <h1>{$etudiant->Firstname_P}
 <span>{$etudiant->Lastname_P}</span></h1>
     <p>email : {$etudiant->mail}</p>
@@ -28,7 +29,6 @@
     
       <p> <a href="index.php?p=students" style="color:black">Retour</a></p>
 </div>
-
     <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');

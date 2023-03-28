@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 23:44:19
+/* Smarty version 4.3.0, created on 2023-03-28 02:08:34
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\student.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64220e33bc7336_69055369',
+  'unifunc' => 'content_64223002e74937_30170389',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fff6964c6408f2814c755cd9c7c6df34cd1b65b7' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\student.tpl',
-      1 => 1679953459,
+      1 => 1679962114,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_64220e33bc7336_69055369 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64223002e74937_30170389 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -35,6 +35,7 @@ function content_64220e33bc7336_69055369 (Smarty_Internal_Template $_smarty_tpl)
     
     <link rel="stylesheet" href="../../../Views/css/detail_s.css" type="text/css">
     <link rel="stylesheet" href="../../../Views/css/navbar.css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 <body>
 <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
@@ -45,7 +46,7 @@ function content_64220e33bc7336_69055369 (Smarty_Internal_Template $_smarty_tpl)
   <?php $_smarty_tpl->_subTemplateRender("file:navbar_s.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }?>
 
-<div class="container" style="padding-bottom: 0; margin-bottom:50px">
+<div class="container" style="padding-bottom: 0; margin-bottom:50px ">
 <h1><?php echo $_smarty_tpl->tpl_vars['etudiant']->value->Firstname_P;?>
 
 <span><?php echo $_smarty_tpl->tpl_vars['etudiant']->value->Lastname_P;?>
@@ -59,7 +60,6 @@ function content_64220e33bc7336_69055369 (Smarty_Internal_Template $_smarty_tpl)
     
       <p> <a href="index.php?p=students" style="color:black">Retour</a></p>
 </div>
-
     <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 <body>
 <!--Si le role dans la session = admin, alors inclure navbar_s.tpl, de meme pour les roles teacher et student-->
@@ -17,7 +18,7 @@
     {include file="navbar_s.tpl"}
   {/if}
 
-  <div class="container"> 
+  <div class="container" style="min-height:90%"> 
     {if $myArray|@count > 0}
         {foreach from=$myArray item=object}
   
@@ -53,6 +54,7 @@
     {/if}
     <p style="text-align: center;"><a href="index.php?p=offers" >Il n'y a pas d'autres offres à afficher</a></p>
   </div>
+  {include file="footer.tpl"}
   <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');

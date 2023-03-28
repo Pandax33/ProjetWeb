@@ -8,6 +8,7 @@
     <title>Héraclès | Candidature envoyée !</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Views/css/login.css" type="text/css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 
 <body>
@@ -24,6 +25,7 @@
             </div>
 
     </div>
+    {include file="footer.tpl"}
 </body>
 
 </html>

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
   <meta name="description" content="Liste des entreprises proposées avec leurs informations principales telle que leurs adresses, leur nom, leur activité...">
   <meta name="viewport" content="width=device-width">
   </head>
@@ -19,7 +20,7 @@
   {include file="navbar_s.tpl"}
 {/if}
 
-  <div class="container">
+  <div class="container" style="min-height:90%">
 
     <div class="card card-top">
       <div class="card-body">
@@ -57,6 +58,7 @@
  
     </div>
   </section>
+  {include file="footer.tpl"}
   <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');

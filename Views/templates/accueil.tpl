@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../../Views/css/accueil.css">
     <link rel="stylesheet" href="../../Views/css/navbar.css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
     
 </head>
 
@@ -29,7 +30,7 @@
       </div>
     
       
-      <div class="row justify-content-center mt-5">
+      <div class="row justify-content-center mt-5" style="min-height:90%">
       <h1 style="text-align: center; margin-bottom:20px">Les entreprises du moment</h1>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
@@ -64,8 +65,7 @@
         </div>
       </div>
     </div>
-      
-  </script>
+    {include file="footer.tpl"}
   <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');

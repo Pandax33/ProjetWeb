@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 00:38:15
+/* Smarty version 4.3.0, created on 2023-03-28 01:58:47
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\enterprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64221ad71b2786_94539396',
+  'unifunc' => 'content_64222db7e09509_92106067',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61a83483aefe5b1edd8c2825d5d53f6285cec653' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\enterprise.tpl',
-      1 => 1679956694,
+      1 => 1679961522,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_64221ad71b2786_94539396 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64222db7e09509_92106067 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -38,6 +38,7 @@ function content_64221ad71b2786_94539396 (Smarty_Internal_Template $_smarty_tpl)
     
     <link rel="stylesheet" href="../../../Views/css/detail_o.css" type="text/css">
     <link rel="stylesheet" href="../../../Views/css/navbar.css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 
 <body>

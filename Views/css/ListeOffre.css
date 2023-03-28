@@ -49,7 +49,6 @@ body {
   align-items: center; 
   background-attachment: fixed;
 
-  height: 100%; /* occuper 80% de la page */
 }
 
 .create{

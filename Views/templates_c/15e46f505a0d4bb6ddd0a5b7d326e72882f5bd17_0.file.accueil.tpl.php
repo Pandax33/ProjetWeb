@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 01:10:25
+/* Smarty version 4.3.0, created on 2023-03-28 02:07:38
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64222261869c48_64909816',
+  'unifunc' => 'content_64222fca218484_53694998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1679958625,
+      1 => 1679962056,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_a.tpl' => 1,
     'file:navbar_t.tpl' => 1,
     'file:navbar_s.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64222261869c48_64909816 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64222fca218484_53694998 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -35,6 +36,7 @@ function content_64222261869c48_64909816 (Smarty_Internal_Template $_smarty_tpl)
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../../Views/css/accueil.css">
     <link rel="stylesheet" href="../../Views/css/navbar.css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
     
 </head>
 
@@ -59,7 +61,7 @@ function content_64222261869c48_64909816 (Smarty_Internal_Template $_smarty_tpl)
       </div>
     
       
-      <div class="row justify-content-center mt-5">
+      <div class="row justify-content-center mt-5" style="min-height:90%">
       <h1 style="text-align: center; margin-bottom:20px">Les entreprises du moment</h1>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
@@ -94,9 +96,8 @@ function content_64222261869c48_64909816 (Smarty_Internal_Template $_smarty_tpl)
         </div>
       </div>
     </div>
-      
-  <?php echo '</script'; ?>
->
+    <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
   <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

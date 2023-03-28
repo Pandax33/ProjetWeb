@@ -11,6 +11,7 @@
     
     <link rel="stylesheet" href="../../../Views/css/detail_o.css" type="text/css">
     <link rel="stylesheet" href="../../../Views/css/navbar.css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 
 <body>

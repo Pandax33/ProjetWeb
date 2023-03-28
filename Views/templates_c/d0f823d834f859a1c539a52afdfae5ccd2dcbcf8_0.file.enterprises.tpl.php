@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 15:21:01
+/* Smarty version 4.3.0, created on 2023-03-28 15:51:51
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422e9bd133849_43801671',
+  'unifunc' => 'content_6422f0f761cbe5_58119072',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1680009607,
+      1 => 1680011509,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6422e9bd133849_43801671 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422f0f761cbe5_58119072 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -61,8 +61,8 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 
     <div class="search-container">
   <form id="search-form">
-    <input type="text" id="search-input" placeholder="Rechercher une entreprise...">
-    <button type="submit" class="btn btn-search">Rechercher</button>
+    <input type="text" id="search-input" placeholder="Rechercher une entreprise..." style="width: 150%;">
+    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
   </form>
   <div class="filter-container">
     <label for="filter">Filtrer par :</label>

@@ -26,23 +26,43 @@ class StudentsController extends Controller
         $this ->smarty->assign('role', $_SESSION['role']);
         $this->smarty->assign('myArray', $students);
         $this->smarty->display('students.tpl');
+        
         }
         else{
         // On redirige vers la page d'accueil
         $this->smarty->assign('role', $_SESSION['role']);
-            $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
-            $this->smarty->display('error403.tpl');
+        $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
+        $this->smarty->display('error403.tpl');
     }
 }
     public function detail(int $id){
+        if($_SESSION['role'] == 'admin' || $_SESSION['role'] == 'teacher'){
         // On instancie le modèle
         $studentModel = new PersonModel;
-
+        $isModel = new _IsModel;
         // On récupère l'étudiant
         $student = $studentModel->find($id);
+        // On récupère la promotion de l'étudiant a condition qu'il en ait une, sinon on affiche un message
+        $is = $isModel->find($id);
+        if($is == null){
+            //Forcer l'affichage d'un message d'erreur
+            $is = $isModel->find(4);
+        }
 
-        // On affiche la vue
-        $this->render('students/detail', ['student' => $student]);
+        $this->smarty->assign('role', $_SESSION['role']);
+        $this->smarty->assign('etudiant', $student);
+        $this->smarty->assign('pro', $is);
+        $this->smarty->assign('Nom',"Détails de l'étudiant");
+        $this->smarty->display('details/student.tpl');
+         
+       
+    
+        }else{
+            
+            $this->smarty->assign('role', $_SESSION['role']);
+            $this ->smarty->assign('identifiant', $_SESSION['identifiant'] );
+            $this->smarty->display('error403.tpl');
+        }
     }
 
     public function modifier(){

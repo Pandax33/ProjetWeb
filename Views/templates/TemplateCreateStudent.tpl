@@ -1,10 +1,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des articles</title>
+  <title>Heraclès | Création Etudiant</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../Views/css/createOffers.css" type="text/css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
@@ -17,7 +18,7 @@
     
     <div class="container">
         <div class="create-off-border">
-            <label>Create Étudiant</label></div>
+            <label>Création Etudiant</label></div>
             <div class="row mb-3">
     <div class="form-group col-md-6">
       <label for="Prenom">Prenom</label>

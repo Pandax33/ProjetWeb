@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeEnterprise.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
   <meta name="description" content="Liste des entreprises proposées avec leurs informations principales telle que leurs adresses, leur nom, leur activité...">
   <meta name="viewport" content="width=device-width">
   </head>
@@ -19,7 +20,7 @@
   {include file="navbar_s.tpl"}
 {/if}
 
-  <div class="container">
+  <div class="container" style="min-height:90%">
 
     <div class="card card-top">
       <div class="card-body">
@@ -31,12 +32,11 @@
       {include file="buttons/m_enterprise_b.tpl"}</span>
     {/if}
   
-  
         <div class="row">
         {if $myArray|@count > 0}
           {foreach from=$myArray item=object}
             <div class="col-lg-4 col-md-6 col-sm-12 ecart">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;background-color:rgba(255, 255, 255, 0.606)">
                   <img src="../Views/css/enterprise.png" class="card-img-top" alt="Image 1">
                   <div class="card-body">
                     <h5 class="card-title truncate-text" >{$object->Name_E}</h5>
@@ -52,12 +52,13 @@
           {else}
           <p>Aucune donnée trouvée.</p>
           {/if}
-
+          </div>
         </div>
     </div>
  
     </div>
   </section>
+  {include file="footer.tpl"}
   <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');

@@ -1,1 +1,1 @@
-<button class="btn btn-m">Modifier une annonce</button>
+<a href="index.php?p=offers/modifier"><button class="btn btn-m" style="background-color: orange;color:white;font-family: Poppins ExtraBold, sans-serif;">Modifier une annonce</button></a>

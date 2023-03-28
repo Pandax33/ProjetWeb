@@ -1,8 +1,6 @@
 <?php
 
 
-  from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateOffers.tpl' */
-
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',

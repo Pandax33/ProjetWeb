@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 13:35:26
+/* Smarty version 4.3.0, created on 2023-03-28 01:54:56
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64217f7ef421c8_43885525',
+  'unifunc' => 'content_64222cd07079d5_95141478',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1f1aca325f1de4f9a81ab2761dc6a6629ad009d6' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\login.tpl',
-      1 => 1679916230,
+      1 => 1679961260,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64217f7ef421c8_43885525 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64222cd07079d5_95141478 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +31,7 @@ function content_64217f7ef421c8_43885525 (Smarty_Internal_Template $_smarty_tpl)
     <title>Héraclès | Connexion</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Views/css/login.css" type="text/css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 
 <body>
@@ -49,6 +50,7 @@ function content_64217f7ef421c8_43885525 (Smarty_Internal_Template $_smarty_tpl)
             </div>
 
     </div>
+    
 </body>
 
 </html><?php }

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 <body>
 
@@ -19,7 +20,7 @@
     {include file="navbar_s.tpl"}
   {/if}
 
-  <div class="container"> 
+  <div class="container"style="min-height:90%"> 
 
     <div class="card card-top">
       <div class="card-body">
@@ -55,16 +56,23 @@
         {foreach from=$myArray item=object}
           
 
-          <li>
-            <div class="card mb-3" style="max-width: 900px;">
+          <li style="width: 70%; ">
+            <div class="card mb-3" style="max-width: 900px;background-color:rgba(255, 255, 255, 0.625)">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="illustration d'entreprise">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                  <h5 class="card-title offer-title">{$object->Entitled_O} /</h5>
-                    <h5 id="enter"> {$object->ent} </h5>
+
+                  {if $object->State == 1}
+                    <h5 class="card-title">{$object->Entitled_O} /</h5>
+                  {else}
+                    <h5 class="card-title">❌{$object->Entitled_O} /</h5>
+                  {/if}
+          
+                    <h5 id="enter"><a href="index.php?p=offers/list/{$object->ID_E}">{$object->ent} </a><span> à <a href="index.php?p=offers/ville/{$object->Name}">{$object->Name} </a></span></h5>
+
                     <p class="card-text">Durée du stage : {$object->Duration_O}</p> 
                     <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
                     </div>
@@ -81,12 +89,14 @@
               </div>
             </div>
           </li>
+    
         {/foreach}
       
     {else}
       <p>Aucune donnée trouvée.</p>
     {/if}
   </div>
+  {include file="footer.tpl"}
   <script>document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');

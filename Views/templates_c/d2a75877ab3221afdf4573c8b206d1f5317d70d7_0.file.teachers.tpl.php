@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 13:04:21
+/* Smarty version 4.3.0, created on 2023-03-28 13:37:19
   from 'C:\Users\leanb\Desktop\ProjetWeb\Views\templates\teachers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422e5d58aa577_90819859',
+  'unifunc' => 'content_6422ed8f90dc69_79631184',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2a75877ab3221afdf4573c8b206d1f5317d70d7' => 
     array (
       0 => 'C:\\Users\\leanb\\Desktop\\ProjetWeb\\Views\\templates\\teachers.tpl',
-      1 => 1679961296,
+      1 => 1680010636,
       2 => 'file',
     ),
   ),
@@ -26,9 +26,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6422e5d58aa577_90819859 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422ed8f90dc69_79631184 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Desktop\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -87,7 +88,11 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 </small></p>
                     </div>
                     <div class="button-group">
-                      <button class="btn btn-green">Modifier</button>
+
+                      <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+                        <a href="index.php?p=teachers/suppr/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_P;?>
+"><button class="btn btn-green" style="background-color:rgb(249, 97, 42)" >Supprimer le pilote</a></button>
+                        <?php }?>
 
                   </div>
                 </div>
@@ -121,5 +126,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 >
   
 </body>
-</html><?php }
+</html>
+<?php }
 }

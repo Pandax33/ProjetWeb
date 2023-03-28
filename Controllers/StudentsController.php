@@ -164,12 +164,12 @@ foreach ($selectedCompetences as $competence) {
     }
 
     if (!$found) {
-        echo "Compétence sélectionnée non trouvée ou ID_P différent: " . htmlspecialchars($competence) . "<br>";
+        
         $OwnModel->setIdP($idP);
         $OwnModel->setNameCompetence($competence);
         $OwnModel->create($OwnModel);
     } else {
-        echo "Compétence sélectionnée trouvée et ID_P correspondant: " . htmlspecialchars($competence) . "<br>";
+        
     }
     }
     
@@ -178,10 +178,10 @@ foreach ($selectedCompetences as $competence) {
     
     // Affichez les compétences manquantes
     foreach ($missingCompetences as $missingCompetence) {
-    echo "Compétence présente dans Own mais pas dans le retour de compétences : " . htmlspecialchars($missingCompetence) . "<br>";
+    
     $OwnModel->deletePrecis($idP, $missingCompetence);
     }
-    echo "Modification effectuée";
+    
 
         
 
@@ -261,10 +261,10 @@ for ($i = count($personModel->findAll()) - 1; $i >= 0; $i--) {
             
             $OwnModel->setIdP($foundId);
             $OwnModel->setNameCompetence($own);
-            echo $OwnModel->getIdP();
-            echo $OwnModel->getNameCompetence();
+            
+            
             $OwnModel->create($OwnModel);
-            echo '</br>';
+            
         }
 
         $this ->smarty->display('details/c_s.tpl');

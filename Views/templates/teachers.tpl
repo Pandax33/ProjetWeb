@@ -46,6 +46,9 @@
                     </div>
                     <div class="button-group">
                       <button class="btn btn-green">Modifier</button>
+                      {if $role == "admin"}
+                        <a href="index.php?p=teachers/suppr/{$object->ID_P}"><button class="btn btn-green" style="background-color:rgb(249, 97, 42)" >Supprimer le pilote</a></button>
+                        {/if}
 
                   </div>
                 </div>

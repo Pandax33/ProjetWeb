@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 02:07:47
+/* Smarty version 4.3.0, created on 2023-03-28 14:41:32
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\teachers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64222fd34ff366_78806607',
+  'unifunc' => 'content_6422e07cf34261_49597738',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a37c21f257cdb2279ecb8cf412a103499cb61fd' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\teachers.tpl',
-      1 => 1679961296,
+      1 => 1680007292,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64222fd34ff366_78806607 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422e07cf34261_49597738 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -88,6 +88,10 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
                     </div>
                     <div class="button-group">
                       <button class="btn btn-green">Modifier</button>
+                      <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+                        <a href="index.php?p=teachers/suppr/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_P;?>
+"><button class="btn btn-green" style="background-color:rgb(249, 97, 42)" >Supprimer le pilote</a></button>
+                        <?php }?>
 
                   </div>
                 </div>

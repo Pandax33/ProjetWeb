@@ -48,7 +48,7 @@
         <br>
       <a href="index.php?p=offers/postuler/{$offer->ID_O}"><button class="btn btn-post">Postuler</a></button>
       {/if}
-      {if $role == "admin"}
+      {if $role == "admin" || $role == "teacher"}
       <a href="index.php?p=offers/suppr/{$offer->ID_O}"><button class="btn btn-red">Supprimer l'offre</a></button>
       {/if}
       <p> <a href="index.php?p=offers" style="color:black">Retour</a></p>

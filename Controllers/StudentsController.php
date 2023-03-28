@@ -185,7 +185,7 @@ foreach ($selectedCompetences as $competence) {
 
         
 
-        
+    $this ->smarty->display('details/m_s.tpl');
     }
 
     public function cree(){
@@ -267,6 +267,17 @@ for ($i = count($personModel->findAll()) - 1; $i >= 0; $i--) {
             echo '</br>';
         }
 
+        $this ->smarty->display('details/c_s.tpl');
+
+    }
+    public function suppr(int $id){
+        $studentModel = new PersonModel;
+
+        //Supprimer les elements dans la table Offers ayant $id comme ID_O
+        $studentModel->delete($id);
+
+        $this->smarty->display('details/s_s.tpl');
+        
     }
 
     public function delete(){

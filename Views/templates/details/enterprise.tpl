@@ -33,13 +33,21 @@
     <!--Parcourir la liste req de l'objet $offer-->
     <p style="color:rgb(36, 36, 36)"> Localités :
     <br>
-    {foreach $entreprise->loc as $localite}
-    <span style="color:rgba(70, 70, 70, 0.688)"><a href="index.php?p=offers/ville/{$localite}">{$localite}</a></span>
-    {/foreach}
+    <!-- verife si l'array $entreprise->loc existe-->
+    {if isset($entreprise->loc)}
+      {foreach $entreprise->loc as $localite}
+      <span style="color:rgba(70, 70, 70, 0.688)"><a href="index.php?p=offers/ville/{$localite}">{$localite}</a></span>
+      {/foreach}
+    {else}
+      <span style="color:rgba(70, 70, 70, 0.688)">Aucune localité</span>
+    {/if}
     </p>
 
     <p style="margin-bottom: 0; color:rgb(37, 37, 37)">Etudiants déjà en stage chez {$entreprise->Name_E} : <span style="color:rgba(70, 70, 70, 0.688)">{$entreprise->Intership_E}</span></p>
     <p style="color:rgb(36, 36, 36)">Niveau de confiance: <span style="color:rgba(70, 70, 70, 0.555)"> {$entreprise->TrustRate_E} / 5</span></p>
+    {if $role == "admin"}
+      <a href="index.php?p=enterprises/suppr/{$entreprise->ID_E}"><button class="btn btn-red">Supprimer l'entreprise</a></button>
+      {/if}
       <p> <a href="index.php?p=enterprises" style="color:black">Retour</a></p>
 </div>
 

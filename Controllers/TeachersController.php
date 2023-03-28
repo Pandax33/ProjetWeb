@@ -47,6 +47,16 @@ class teachersController extends Controller
         $this->render('teachers/detail', ['teacher' => $teacher]);
     }
 
+    public function suppr(int $id){
+        $teacherModel = new PersonModel;
+
+        //Supprimer les elements dans la table Offers ayant $id comme ID_O
+        $teacherModel->delete($id);
+
+        $this->smarty->display('details/s_t.tpl');
+        
+    }
+
     public function modifier(){
         $teacherModel=new PersonModel;
         $teachers=$teacherModel->findBy(['Role_P' => 'teacher']);
@@ -207,7 +217,7 @@ foreach ($selectedCompetences as $competence) {
 
         
 
-        
+    $this ->smarty->display('details/m_t.tpl');
     }
 
     public function cree(){
@@ -288,7 +298,7 @@ for ($i = count($personModel->findAll()) - 1; $i >= 0; $i--) {
             $OwnModel->create($OwnModel);
             echo '</br>';
         }
-
+        $this ->smarty->display('details/c_t.tpl');
     }
 
 

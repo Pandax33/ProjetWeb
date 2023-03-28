@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 01:58:43
+/* Smarty version 4.3.0, created on 2023-03-28 14:26:12
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64222db3332f45_45022138',
+  'unifunc' => 'content_6422dce4bb8e08_47015675',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '19a50924728e130c8d9e61ce93625808a3c81dfd' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\offre.tpl',
-      1 => 1679961522,
+      1 => 1680006372,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_64222db3332f45_45022138 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422dce4bb8e08_47015675 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +94,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <a href="index.php?p=offers/postuler/<?php echo $_smarty_tpl->tpl_vars['offer']->value->ID_O;?>
 "><button class="btn btn-post">Postuler</a></button>
       <?php }?>
-      <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+      <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin" || $_smarty_tpl->tpl_vars['role']->value == "teacher") {?>
       <a href="index.php?p=offers/suppr/<?php echo $_smarty_tpl->tpl_vars['offer']->value->ID_O;?>
 "><button class="btn btn-red">Supprimer l'offre</a></button>
       <?php }?>

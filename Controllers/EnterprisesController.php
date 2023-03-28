@@ -271,7 +271,6 @@ function filter() {
 
         // Envoyer les offres filtrées sous forme d'objets JSON
         header('Content-Type: application/json');
-        echo json_encode($filteredOffers);
 
         } else {
         // Gestion des erreurs si la méthode n'est pas POST

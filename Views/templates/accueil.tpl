@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="../../Views/css/accueil.css">
     <link rel="stylesheet" href="../../Views/css/navbar.css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
+    <link rel="manifest" href="../../manifest.json">
+  <link rel="apple-touch-icon" href="../../assets/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="white">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="white">
     
 </head>
 
@@ -79,7 +84,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-
+  <script src="../../app.js"></script>
     </script>
 </body>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 02:07:38
+/* Smarty version 4.3.0, created on 2023-03-28 02:14:55
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64222fca218484_53694998',
+  'unifunc' => 'content_6422317f82a8d3_56746743',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1679962056,
+      1 => 1679962495,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64222fca218484_53694998 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422317f82a8d3_56746743 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -52,7 +52,7 @@ function content_64222fca218484_53694998 (Smarty_Internal_Template $_smarty_tpl)
 ?>
   <?php }?>
        <div class="container-fluid text-center">
-        <div class="card-body  welcome-card text-center mx-auto" >
+        <div class="card-body  welcome-card text-center mx-auto" style="margin-top: 50px;" >
           <div class="card d-flex align-items-center justify-content-center">
           <h1 class="card-title">Bienvenue sur <span style="color: rgb(222, 115, 8);">Heraclès</span><span style="">, <?php echo $_smarty_tpl->tpl_vars['titre']->value;?>
 .</span></h1>

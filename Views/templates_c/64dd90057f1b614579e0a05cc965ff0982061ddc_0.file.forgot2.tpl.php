@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 13:35:31
+/* Smarty version 4.3.0, created on 2023-03-28 16:18:39
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\forgot2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64217f8354e0a9_63767220',
+  'unifunc' => 'content_6422f73fa46195_13159990',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '64dd90057f1b614579e0a05cc965ff0982061ddc' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\forgot2.tpl',
-      1 => 1679916230,
+      1 => 1679961260,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64217f8354e0a9_63767220 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422f73fa46195_13159990 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -31,6 +31,7 @@ function content_64217f8354e0a9_63767220 (Smarty_Internal_Template $_smarty_tpl)
     <title>Héraclès | Mot de passe oublié</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Views/css/login.css" type="text/css">
+    <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 
 <body>
@@ -44,6 +45,7 @@ function content_64217f8354e0a9_63767220 (Smarty_Internal_Template $_smarty_tpl)
             </div>
 
     </div>
+    
 </body>
 
 </html><?php }

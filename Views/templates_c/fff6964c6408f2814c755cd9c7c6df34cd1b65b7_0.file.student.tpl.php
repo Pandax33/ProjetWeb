@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 14:29:10
+/* Smarty version 4.3.0, created on 2023-03-28 15:58:28
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\student.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422dd96bb2b92_06712485',
+  'unifunc' => 'content_6422f284b05560_73263899',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fff6964c6408f2814c755cd9c7c6df34cd1b65b7' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\student.tpl',
-      1 => 1680006549,
+      1 => 1680010902,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_6422dd96bb2b92_06712485 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422f284b05560_73263899 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -59,7 +59,7 @@ function content_6422dd96bb2b92_06712485 (Smarty_Internal_Template $_smarty_tpl)
 ">Wishlist de l'étudiant.e</a></p>
     <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin" || $_smarty_tpl->tpl_vars['role']->value == "teacher") {?>
       <a href="index.php?p=students/suppr/<?php echo $_smarty_tpl->tpl_vars['etudiant']->value->ID_P;?>
-"><button class="btn btn-red">Supprimer l'offre</a></button>
+"><button class="btn btn-red">Supprimer l'étudiant</a></button>
       <?php }?>
     
       <p> <a href="index.php?p=students" style="color:black">Retour</a></p>

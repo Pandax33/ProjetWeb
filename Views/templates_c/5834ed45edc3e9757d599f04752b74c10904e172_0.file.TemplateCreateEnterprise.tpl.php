@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 20:15:37
+/* Smarty version 4.3.0, created on 2023-03-28 23:17:13
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateEnterprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64232ec91a4c23_61844439',
+  'unifunc' => 'content_64235959afa230_26385408',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5834ed45edc3e9757d599f04752b74c10904e172' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateEnterprise.tpl',
-      1 => 1680024323,
+      1 => 1680027384,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64232ec91a4c23_61844439 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64235959afa230_26385408 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
   <title>Héraclès | Création Entreprise</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
   <link rel="stylesheet" href="../../Views/css/editENT.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
   <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
@@ -110,7 +109,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <div class="form-group col-md-6">
       <div class="row mb-3">
      <fieldset class="rating">
-    <legend>Notez cet article :</legend>
+    <legend style="font-family: Dela Gothic One">Notez cette entreprise :</legend>
     <input type="radio" id="star5" name="rating" value="5"><label for="star5">☆</label>
     <input type="radio" id="star4" name="rating" value="4"><label for="star4">☆</label>
     <input type="radio" id="star3" name="rating" value="3"><label for="star3">☆</label>

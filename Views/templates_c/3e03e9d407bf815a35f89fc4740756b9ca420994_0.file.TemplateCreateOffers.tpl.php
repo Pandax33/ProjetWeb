@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 09:52:54
+/* Smarty version 4.3.0, created on 2023-03-28 23:33:42
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateOffers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64229cd6800886_36156178',
+  'unifunc' => 'content_64235d363d5b96_80971444',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e03e9d407bf815a35f89fc4740756b9ca420994' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateOffers.tpl',
-      1 => 1679989974,
+      1 => 1680024323,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64229cd6800886_36156178 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64235d363d5b96_80971444 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
@@ -30,7 +30,7 @@ function content_64229cd6800886_36156178 (Smarty_Internal_Template $_smarty_tpl)
 
   <link rel="stylesheet" href="../../Views/css/createOffers.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
-
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.6.0.min.js"><?php echo '</script'; ?>
 >

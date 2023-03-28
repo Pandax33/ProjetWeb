@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 19:31:33
+/* Smarty version 4.3.0, created on 2023-03-29 00:07:43
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64232475e1f0d3_97083384',
+  'unifunc' => 'content_6423652f0e3173_52783138',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1680024668,
+      1 => 1680041262,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64232475e1f0d3_97083384 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423652f0e3173_52783138 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -66,13 +66,13 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
     </div>
 
     <div class="search-container">
-  <form id="search-form">
+  <form id="search-form" style="margin-bottom: 10px;">
     <input type="text" id="search-input" placeholder="Rechercher une offre..." style="width: 150%;">
-    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
+    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px;  margin-bottom: 0;">Rechercher</button>
   </form>
-  <div class="filter-container">
+  <div class="filter-container" style="margin-bottom: 2%;">
     <label for="filter">Filtrer:</label>
-    <select id="filter">
+    <select id="filter" class="menu">
       <option value="all">Tous</option>
       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');

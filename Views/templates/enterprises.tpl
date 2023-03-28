@@ -30,13 +30,13 @@
     </div>
 
     <div class="search-container">
-  <form id="search-form">
+  <form id="search-form" style="margin-bottom: 10px;">
     <input type="text" id="search-input" placeholder="Rechercher une entreprise..." style="width: 150%;">
     <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
   </form>
-  <div class="filter-container">
+  <div class="filter-container" style="margin-bottom: 2%;">
     <label for="filter">Filtrer par :</label>
-    <select id="filter">
+    <select id="filter" class="menu">
       <option value="all">Tous</option>
       {assign var="uniqueCities" value=[]}
 {foreach $myArray as $item}
@@ -45,6 +45,7 @@
         {$uniqueCities[]=$item->Activity_E}
     {/if}
 {/foreach}
+
     </select>
   </div>
 </div>

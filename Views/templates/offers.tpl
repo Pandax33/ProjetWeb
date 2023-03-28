@@ -32,13 +32,13 @@
     </div>
 
     <div class="search-container">
-  <form id="search-form">
+  <form id="search-form" style="margin-bottom: 10px;">
     <input type="text" id="search-input" placeholder="Rechercher une offre..." style="width: 150%;">
-    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
+    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px;  margin-bottom: 0;">Rechercher</button>
   </form>
-  <div class="filter-container">
+  <div class="filter-container" style="margin-bottom: 2%;">
     <label for="filter">Filtrer:</label>
-    <select id="filter">
+    <select id="filter" class="menu">
       <option value="all">Tous</option>
       {foreach $city as $item}
         <option>{$item->Name}</option>

@@ -165,6 +165,39 @@ ul {list-style: none;
     margin-left: 10%;
   }
 
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #search-form {
+    display: flex;
+    align-items: center;
+  }
+
+  #search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+  }
+
+  .filter-container {
+
+    align-items: center;
+  }
+
+  #filter {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 10px;
+  }
   /* créer un média pour changer le flex du button-group */
   @media only screen and (max-width: 1000px) {
     .button-group {
@@ -248,3 +281,34 @@ section{
 span{
   margin-right: 5px;
 }
+
+
+.menu{
+  width: 50%; /* Changez cette valeur en fonction de vos besoins */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 500px) {
+  #search-form {
+    flex-wrap: wrap;
+  }
+  /*Retirer les marges du bouton submit*/
+  .btn-search {
+    margin-left: 0;
+  }
+
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+}
+
+/*Centrer le contenu de .filter-container*/

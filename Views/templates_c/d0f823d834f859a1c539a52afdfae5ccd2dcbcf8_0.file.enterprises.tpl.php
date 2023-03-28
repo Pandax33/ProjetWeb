@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 19:25:25
+/* Smarty version 4.3.0, created on 2023-03-29 00:09:58
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6423230552e016_87000536',
+  'unifunc' => 'content_642365b6d77437_30176534',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1680024182,
+      1 => 1680041398,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6423230552e016_87000536 (Smarty_Internal_Template $_smarty_tpl) {
+function content_642365b6d77437_30176534 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -61,13 +61,13 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
     </div>
 
     <div class="search-container">
-  <form id="search-form">
+  <form id="search-form" style="margin-bottom: 10px;">
     <input type="text" id="search-input" placeholder="Rechercher une entreprise..." style="width: 150%;">
     <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
   </form>
-  <div class="filter-container">
+  <div class="filter-container" style="margin-bottom: 2%;">
     <label for="filter">Filtrer par :</label>
-    <select id="filter">
+    <select id="filter" class="menu">
       <option value="all">Tous</option>
       <?php $_smarty_tpl->_assignInScope('uniqueCities', array());
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['myArray']->value, 'item');
@@ -87,6 +87,7 @@ $_smarty_tpl->_assignInScope('uniqueCities', $_tmp_array);?>
     <?php }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
     </select>
   </div>
 </div>

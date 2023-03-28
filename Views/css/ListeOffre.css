@@ -199,7 +199,7 @@ ul {list-style: none;
   }
   
   .filter-container {
-    display: flex;
+
     align-items: center;
   }
   
@@ -263,3 +263,29 @@ ul {list-style: none;
 
 }
 
+.menu{
+  width: 100%; /* Changez cette valeur en fonction de vos besoins */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*Si la taille de lécran passe sous 500px de longueur, mettre #search-form en wrap*/
+@media only screen and (max-width: 500px) {
+  #search-form {
+    flex-wrap: wrap;
+  }
+  /*Retirer les marges du bouton submit*/
+  .btn-search {
+    margin-left: 0;
+  }
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  input {
+    margin-bottom: 10px;
+  }
+}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 15:58:28
-  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\student.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-28 13:29:01
+  from 'C:\Users\leanb\Desktop\ProjetWeb\Views\templates\details\student.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422f284b05560_73263899',
+  'unifunc' => 'content_6422eb9d7daf93_84374339',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'fff6964c6408f2814c755cd9c7c6df34cd1b65b7' => 
+    '31bc4c34469be3d73324aa27d0c76f16b0e8bc5d' => 
     array (
-      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\student.tpl',
-      1 => 1680010902,
+      0 => 'C:\\Users\\leanb\\Desktop\\ProjetWeb\\Views\\templates\\details\\student.tpl',
+      1 => 1680010137,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_6422f284b05560_73263899 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422eb9d7daf93_84374339 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>

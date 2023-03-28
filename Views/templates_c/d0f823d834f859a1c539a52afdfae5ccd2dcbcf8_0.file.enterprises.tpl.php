@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 02:06:33
+/* Smarty version 4.3.0, created on 2023-03-28 15:51:51
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\enterprises.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64222f897d9b28_55276005',
+  'unifunc' => 'content_6422f0f761cbe5_58119072',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f823d834f859a1c539a52afdfae5ccd2dcbcf8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\enterprises.tpl',
-      1 => 1679961992,
+      1 => 1680011509,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64222f897d9b28_55276005 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422f0f761cbe5_58119072 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -58,6 +58,37 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
         <span class="sel">Entreprises |</span><span class="sel"><a href="index.php?p=offers">Offres</a></span>
       </div>
     </div>
+
+    <div class="search-container">
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Rechercher une entreprise..." style="width: 150%;">
+    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
+  </form>
+  <div class="filter-container">
+    <label for="filter">Filtrer par :</label>
+    <select id="filter">
+      <option value="all">Tous</option>
+      <?php $_smarty_tpl->_assignInScope('uniqueCities', array());
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['myArray']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+    <?php if (!in_array($_smarty_tpl->tpl_vars['item']->value->Activity_E,$_smarty_tpl->tpl_vars['uniqueCities']->value)) {?>
+        <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Activity_E;?>
+</option>
+        <?php $_tmp_array = isset($_smarty_tpl->tpl_vars['uniqueCities']) ? $_smarty_tpl->tpl_vars['uniqueCities']->value : array();
+if (!(is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess)) {
+settype($_tmp_array, 'array');
+}
+$_tmp_array[] = $_smarty_tpl->tpl_vars['item']->value->Activity_E;
+$_smarty_tpl->_assignInScope('uniqueCities', $_tmp_array);?>
+    <?php }
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+    </select>
+  </div>
+</div>
     <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
       <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_enterprise_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -115,6 +146,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     });
   });
   <?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src='../../Views/javascript/enterprise.js'><?php echo '</script'; ?>
 >
   
   <?php echo '<script'; ?>

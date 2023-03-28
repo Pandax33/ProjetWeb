@@ -150,12 +150,12 @@ class teachersController extends Controller
             }
         
             if (!$found) {
-                echo "Promotion sélectionnée non trouvée ou ID_P différent: " . htmlspecialchars($promotion) . "<br>";
+             
                 $IsModel->setIdP($idP);
                 $IsModel->setNamePromotion($promotion);
                 $IsModel->create($IsModel);
             } else {
-                echo "Promotion sélectionnée trouvée et ID_P correspondant: " . htmlspecialchars($promotion) . "<br>";
+       
             }
         }
         
@@ -164,11 +164,11 @@ class teachersController extends Controller
         
         // Affichez les promotions manquantes
         foreach ($missingPromotions as $missingPromotion) {
-            echo "Promotion présente dans Is mais pas dans le retour de promotions : " . htmlspecialchars($missingPromotion) . "<br>";
+          
             $IsModel->deletePrecis($idP, $missingPromotion);
         }
         
-        echo "Modification effectuée";
+        
 
         $OwnModel=new OwnModel;
         $Own=$OwnModel->findAll();
@@ -196,12 +196,12 @@ foreach ($selectedCompetences as $competence) {
     }
 
     if (!$found) {
-        echo "Compétence sélectionnée non trouvée ou ID_P différent: " . htmlspecialchars($competence) . "<br>";
+       
         $OwnModel->setIdP($idP);
         $OwnModel->setNameCompetence($competence);
         $OwnModel->create($OwnModel);
     } else {
-        echo "Compétence sélectionnée trouvée et ID_P correspondant: " . htmlspecialchars($competence) . "<br>";
+        
     }
     }
     
@@ -210,10 +210,10 @@ foreach ($selectedCompetences as $competence) {
     
     // Affichez les compétences manquantes
     foreach ($missingCompetences as $missingCompetence) {
-    echo "Compétence présente dans Own mais pas dans le retour de compétences : " . htmlspecialchars($missingCompetence) . "<br>";
+   
     $OwnModel->deletePrecis($idP, $missingCompetence);
     }
-    echo "Modification effectuée";
+   
 
         
 
@@ -293,10 +293,9 @@ for ($i = count($personModel->findAll()) - 1; $i >= 0; $i--) {
             
             $OwnModel->setIdP($foundId);
             $OwnModel->setNameCompetence($own);
-            echo $OwnModel->getIdP();
-            echo $OwnModel->getNameCompetence();
+            
             $OwnModel->create($OwnModel);
-            echo '</br>';
+       ;
         }
         $this ->smarty->display('details/c_t.tpl');
     }

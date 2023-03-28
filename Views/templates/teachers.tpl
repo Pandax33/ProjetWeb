@@ -1,3 +1,4 @@
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -45,7 +46,7 @@
                     <p class="card-text"><small class="text-muted">Centre : {$object->Name_Center}</small></p>
                     </div>
                     <div class="button-group">
-                      <button class="btn btn-green">Modifier</button>
+
                       {if $role == "admin"}
                         <a href="index.php?p=teachers/suppr/{$object->ID_P}"><button class="btn btn-green" style="background-color:rgb(249, 97, 42)" >Supprimer le pilote</a></button>
                         {/if}

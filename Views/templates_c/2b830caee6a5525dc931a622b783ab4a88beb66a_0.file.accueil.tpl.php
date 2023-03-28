@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 11:27:06
+/* Smarty version 4.3.0, created on 2023-03-28 13:56:11
   from 'C:\Users\leanb\Desktop\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422cf0a52ce86_98241387',
+  'unifunc' => 'content_6422f1fb0e55c4_32687081',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b830caee6a5525dc931a622b783ab4a88beb66a' => 
     array (
       0 => 'C:\\Users\\leanb\\Desktop\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1679962518,
+      1 => 1680011767,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6422cf0a52ce86_98241387 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422f1fb0e55c4_32687081 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -37,6 +37,11 @@ function content_6422cf0a52ce86_98241387 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="../../Views/css/accueil.css">
     <link rel="stylesheet" href="../../Views/css/navbar.css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
+    <link rel="manifest" href="../../manifest.json">
+  <link rel="apple-touch-icon" href="../../assets/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="white">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="white">
     
 </head>
 
@@ -121,7 +126,9 @@ function content_6422cf0a52ce86_98241387 (Smarty_Internal_Template $_smarty_tpl)
   <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-
+  <?php echo '<script'; ?>
+ src="../../app.js"><?php echo '</script'; ?>
+>
     <?php echo '</script'; ?>
 >
 </body>

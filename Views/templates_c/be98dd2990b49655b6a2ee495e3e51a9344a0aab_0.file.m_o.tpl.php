@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 16:18:39
-  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\forgot2.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-28 15:21:45
+  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\m_o.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422f73fa46195_13159990',
+  'unifunc' => 'content_6422e9e9ae5873_90651647',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '64dd90057f1b614579e0a05cc965ff0982061ddc' => 
+    'be98dd2990b49655b6a2ee495e3e51a9344a0aab' => 
     array (
-      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\forgot2.tpl',
-      1 => 1679961260,
+      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\m_o.tpl',
+      1 => 1680009157,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6422f73fa46195_13159990 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422e9e9ae5873_90651647 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -28,7 +28,7 @@ function content_6422f73fa46195_13159990 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Héraclès | Mot de passe oublié</title>
+    <title>Héraclès | Modification Offre</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Views/css/login.css" type="text/css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
@@ -38,10 +38,10 @@ function content_6422f73fa46195_13159990 (Smarty_Internal_Template $_smarty_tpl)
     <br><br>
     <div class="container">
 
-            <h1>Verifiez votre boîte mail 📫</h1>
-                <p >Vous recevrez un lien de réinitialisation pour changer de mot de passe.</p>
+            <h1>Votre offre a bien été modifiée ✒️</h1>
+                <p>Vous pouvez maintenant la consulter depuis la liste des offres</p>
             <div class="forgot-password">
-                <a href="index.php?p=login">Retour à la page d'accueil</a>
+                <a href="index.php?p=offers">Aller à la page des offres</a>
             </div>
 
     </div>

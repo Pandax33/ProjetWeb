@@ -30,8 +30,8 @@
 
     <div class="search-container">
   <form id="search-form">
-    <input type="text" id="search-input" placeholder="Rechercher une entreprise...">
-    <button type="submit" class="btn btn-search">Rechercher</button>
+    <input type="text" id="search-input" placeholder="Rechercher une entreprise..." style="width: 150%;">
+    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
   </form>
   <div class="filter-container">
     <label for="filter">Filtrer par :</label>

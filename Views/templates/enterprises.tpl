@@ -27,6 +27,26 @@
         <span class="sel">Entreprises |</span><span class="sel"><a href="index.php?p=offers">Offres</a></span>
       </div>
     </div>
+
+    <div class="search-container">
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Rechercher une entreprise...">
+    <button type="submit" class="btn btn-search">Rechercher</button>
+  </form>
+  <div class="filter-container">
+    <label for="filter">Filtrer par :</label>
+    <select id="filter">
+      <option value="all">Tous</option>
+      {assign var="uniqueCities" value=[]}
+{foreach $myArray as $item}
+    {if !in_array($item->Activity_E, $uniqueCities)}
+        <option>{$item->Activity_E}</option>
+        {$uniqueCities[]=$item->Activity_E}
+    {/if}
+{/foreach}
+    </select>
+  </div>
+</div>
     {if $role == "admin"}
       <span>{include file="buttons/c_enterprise_b.tpl"}
       {include file="buttons/m_enterprise_b.tpl"}</span>
@@ -68,6 +88,7 @@
     });
   });
   </script>
+  <script src='../../Views/javascript/enterprise.js'></script>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>

@@ -1,24 +1,18 @@
 <?php
-
-/* Smarty version 4.3.0, created on 2023-03-28 10:16:22
-
-  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-28 11:25:48
+  from 'C:\Users\leanb\Desktop\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-
-  'unifunc' => 'content_6422a256adca99_61577304',
-
+  'unifunc' => 'content_6422cebcb990d0_39251152',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '79f47da50ed9612abfc870234465ff4a35f3f2b0' => 
+    '09fbab27fffbc12b84abc7eeaf3ec2de13f97cf9' => 
     array (
-      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-
+      0 => 'C:\\Users\\leanb\\Desktop\\ProjetWeb\\Views\\templates\\offers.tpl',
       1 => 1679991380,
-
       2 => 'file',
     ),
   ),
@@ -32,10 +26,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-
-function content_6422a256adca99_61577304 (Smarty_Internal_Template $_smarty_tpl) {
-
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
+function content_6422cebcb990d0_39251152 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Desktop\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
 <head>
@@ -74,13 +66,11 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
 
     <div class="search-container">
   <form id="search-form">
-
     <input type="text" id="search-input" placeholder="Rechercher une offre...">
     <button type="submit" class="btn btn-search">Rechercher</button>
   </form>
   <div class="filter-container">
     <label for="filter">Filtrer par :</label>
-
     <select id="filter">
       <option value="all">Tous</option>
       <?php

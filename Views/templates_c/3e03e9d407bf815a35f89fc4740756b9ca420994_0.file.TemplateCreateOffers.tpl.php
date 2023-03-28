@@ -1,4 +1,27 @@
-<html>
+<?php
+/* Smarty version 4.3.0, created on 2023-03-28 09:52:54
+  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateOffers.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.0',
+  'unifunc' => 'content_64229cd6800886_36156178',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '3e03e9d407bf815a35f89fc4740756b9ca420994' => 
+    array (
+      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateOffers.tpl',
+      1 => 1679989974,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_64229cd6800886_36156178 (Smarty_Internal_Template $_smarty_tpl) {
+?><html>
 <head>
   <meta charset="utf-8">
   <title>Héraclès | Création Offre</title>
@@ -8,8 +31,12 @@
   <link rel="stylesheet" href="../../Views/css/createOffers.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.6.0.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"><?php echo '</script'; ?>
+>
 </head>
 <body>
 
@@ -68,9 +95,18 @@
         <label for="Entreprise">Entreprise</label>
         <select id="Entreprise" class="form-control" name="Entreprise">
         <option selected>Choisir...</option>
-        {foreach $enterprise as $item}
-          <option data-ID="{$item->ID_E}">{$item->Name_E}</option>
-        {/foreach}
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['enterprise']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+          <option data-ID="<?php echo $_smarty_tpl->tpl_vars['item']->value->ID_E;?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value->Name_E;?>
+</option>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         
       </select>
       </div>
@@ -79,9 +115,17 @@
         <label for="Lieux">Lieux</label>
         <select id="Lieux" class="form-control" name="Lieux">
 
-        {foreach $city as $item}
-          <option>{$item->Name}</option>
-        {/foreach}
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+          <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Name;?>
+</option>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         
       </select>
 
@@ -91,9 +135,17 @@
         <label for="Competence">Competence</label>
         <select id="Competence" class="form-control" name="competence[]" multiple >
       
-        {foreach $competence as $item}
-          <option>{$item->Name_Competence}</option>
-        {/foreach}
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['competence']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+          <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Name_Competence;?>
+</option>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       
       </select>
       </div>
@@ -101,9 +153,17 @@
       <div class="form-group col-md-6">
         <label for="Promotion">Promotion</label>
         <select id="Promotion" class="form-control" name="Promotion[]" multiple>
-        {foreach $promotion as $item}
-          <option >{$item->Name_Promotion}</option>
-        {/foreach}
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['promotion']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+          <option ><?php echo $_smarty_tpl->tpl_vars['item']->value->Name_Promotion;?>
+</option>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       
       </select>
       </div></div>
@@ -142,6 +202,9 @@
 
 </body>
 
-<script src="../../Views/javascript/TemplateCreateOffers.js"></script>
+<?php echo '<script'; ?>
+ src="../../Views/javascript/TemplateCreateOffers.js"><?php echo '</script'; ?>
+>
 
-</html>
+</html><?php }
+}

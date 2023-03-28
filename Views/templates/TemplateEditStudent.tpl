@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des articles</title>
+  <title>Héraclès | Modification Etudiant</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../Views/css/createOffers.css" type="text/css">
@@ -17,7 +17,7 @@
 
     <div class="container">
         <div class="create-off-border">
-            <label>Modify Étudiant</label></div>
+            <label>Modification Étudiant</label></div>
             <div class="row mb-3">
 <div class="form-group col-md-6">
 <label for="Etudiant">Etudiant</label>

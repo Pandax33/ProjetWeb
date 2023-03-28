@@ -1,4 +1,27 @@
-<html>
+<?php
+/* Smarty version 4.3.0, created on 2023-03-28 10:01:54
+  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\TemplateEditEnterprise.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.0',
+  'unifunc' => 'content_64229ef2823441_08679644',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'e88ce5d17c106ab11636537eef75519cbade27e6' => 
+    array (
+      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateEditEnterprise.tpl',
+      1 => 1679990286,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_64229ef2823441_08679644 (Smarty_Internal_Template $_smarty_tpl) {
+?><html>
 <head>
   <meta charset="utf-8">
   <title>Heraclès | Modification Entreprise</title>
@@ -6,8 +29,12 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../Views/css/TemplateEditEnterprise.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.6.0.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"><?php echo '</script'; ?>
+>
 
 </head>
 <body>
@@ -24,9 +51,24 @@
       <label for="inputNom" name="Nom">Nom</label>
       <select id="inputNom" name ="Nom" class="form-control">
         <option selected>Choose...</option>
-       {foreach $entreprises as $item}
-  <option data-activity="{$item->Activity_E}" data-ID="{$item->ID_E}" data-Intership="{$item->Intership_E}" data-description="{$item->Description_E}" data-visibility="{$item->Visibility_E}" data-localite="{$item->Localite}" data-TrustRate="{$item->TrustRate_E}">{$item->Name_E}</option>
-{/foreach}
+       <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['entreprises']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+  <option data-activity="<?php echo $_smarty_tpl->tpl_vars['item']->value->Activity_E;?>
+" data-ID="<?php echo $_smarty_tpl->tpl_vars['item']->value->ID_E;?>
+" data-Intership="<?php echo $_smarty_tpl->tpl_vars['item']->value->Intership_E;?>
+" data-description="<?php echo $_smarty_tpl->tpl_vars['item']->value->Description_E;?>
+" data-visibility="<?php echo $_smarty_tpl->tpl_vars['item']->value->Visibility_E;?>
+" data-localite="<?php echo $_smarty_tpl->tpl_vars['item']->value->Localite;?>
+" data-TrustRate="<?php echo $_smarty_tpl->tpl_vars['item']->value->TrustRate_E;?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value->Name_E;?>
+</option>
+<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </select>
     </div>
     
@@ -61,9 +103,17 @@
         <label for="inputLocalite">Localite</label>
         <select id="inputLocalite" class="form-control" name="citys[]" multiple >
         <option selected>Choose...</option>
-        {foreach $city as $item}
-          <option>{$item->Name}</option>
-        {/foreach}
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');
+$_smarty_tpl->tpl_vars['item']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
+$_smarty_tpl->tpl_vars['item']->do_else = false;
+?>
+          <option><?php echo $_smarty_tpl->tpl_vars['item']->value->Name;?>
+</option>
+        <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <option>oui</option>
       </select>
       </div>
@@ -99,10 +149,15 @@
 </div>
 
 
-<script src = "../../Views/javascript/TemplateEditEnterprise.js"> </script>
-<script>$(document).ready(function () {
+<?php echo '<script'; ?>
+ src = "../../Views/javascript/TemplateEditEnterprise.js"> <?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+>$(document).ready(function () {
     $('#inputLocalite').select2();
     
-});</script>
+});<?php echo '</script'; ?>
+>
 </body>
-</html>
+</html><?php }
+}

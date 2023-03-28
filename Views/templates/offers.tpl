@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 <body>
+
+
 <!--Si le role dans la session = admin, alors inclure navbar_s.tpl, de meme pour les roles teacher et student-->
   {if $role == "admin"}
     {include file="navbar_a.tpl"}
@@ -24,10 +26,29 @@
       <div class="card-body">
         <span class="sel">Offres |</span><span class="sel"><a href="index.php?p=enterprises">Entreprises</a></span>
       </div>
+
+      
     </div>
+
+    <div class="search-container">
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Rechercher une offre...">
+    <button type="submit" class="btn btn-search">Rechercher</button>
+  </form>
+  <div class="filter-container">
+    <label for="filter">Filtrer par :</label>
+    <select id="filter">
+      <option value="all">Tous</option>
+      <option value="filter1">Filtre 1</option>
+      <option value="filter2">Filtre 2</option>
+      <option value="filter3">Filtre 3</option>
+    </select>
+  </div>
+</div>
      <!--Si le role est admin, inclure le fichier createoffer.tpl-->
     {if $role == "admin"}
       <span>{include file="buttons/c_offer_b.tpl"}
+      
       {include file="buttons/m_offer_b.tpl"}</span>
     {/if}
 
@@ -43,6 +64,7 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
+
                   {if $object->State == 1}
                     <h5 class="card-title">{$object->Entitled_O} /</h5>
                   {else}
@@ -50,6 +72,7 @@
                   {/if}
           
                     <h5 id="enter"><a href="index.php?p=offers/list/{$object->ID_E}">{$object->ent} </a><span> à <a href="index.php?p=offers/ville/{$object->Name}">{$object->Name} </a></span></h5>
+
                     <p class="card-text">Durée du stage : {$object->Duration_O}</p> 
                     <p class="card-text"><small class="text-muted">{$object->DatePublish_O}</small></p>
                     </div>
@@ -85,6 +108,6 @@
   </script>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-  
+  <script src='../../Views/javascript/offers.js'></script>
 </body>
 </html>

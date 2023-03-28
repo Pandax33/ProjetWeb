@@ -57,6 +57,7 @@ foreach ($offers as $offer) {
             $enterprise_name = $enterprise->Name_E;
             break;
         }
+    
     }
 
     
@@ -72,6 +73,8 @@ foreach ($offers as $offer) {
         $this->smarty->assign('myArray', $new_offers);
         $this->smarty->assign('Nom','Liste des offres');
         $this->smarty->display('offers.tpl');
+
+        var_dump($new_offers);
 
     }
 
@@ -561,6 +564,84 @@ foreach ($selectedCompetences as $competence) {
         $this->smarty->assign('role', $_SESSION['role']);
         $this->smarty->display('postuler.tpl');
     }
+
+
+    function getSampleOffers() {
+        return [
+            (object)[
+                'ID_O' => '1',
+                'Entitled_O' => 'Stage développement web',
+                'Duration_O' => '6 mois',
+                'Salary_O' => '1200€/mois',
+                'DatePublish_O' => '2022-01-01 10:00:00',
+                'Description' => 'Nous recherchons un développeur web pour rejoindre notre équipe de développement. Les tâches principales incluent la programmation, la maintenance et lamélioration de nos sites web.',
+                'Space_O' => '15',
+                'State' => '0',
+                'ID_E' => '1',
+                'LinkPicture' => '',
+                'Name' => 'Lyon',
+                'wish' => 0,
+                'ent' => 'Société Générale'
+            ],
+            (object)[
+                'ID_O' => '1',
+                'Entitled_O' => 'Stage développement web',
+                'Duration_O' => '6 mois',
+                'Salary_O' => '1200€/mois',
+                'DatePublish_O' => '2022-01-01 10:00:00',
+                'Description' => 'Nous recherchons un développeur web pour rejoindre notre équipe de développement. Les tâches principales incluent la programmation, la maintenance et lamélioration de nos sites web.',
+                'Space_O' => '15',
+                'State' => '0',
+                'ID_E' => '1',
+                'LinkPicture' => '',
+                'Name' => 'Lyon',
+                'wish' => 0,
+                'ent' => 'Société Générale'
+            ],
+            
+            // Ajoutez ici les autres offres en suivant le même format
+        ];
+    }
+    
+    function applySearchAndFilter($searchText, $filter) {
+        // Récupérer toutes les offres (remplacez cette fonction par votre propre logique pour récupérer les offres)
+        $ModelOffers= new OffersModel;
+        $allOffers = $ModelOffers->findAll();
+    
+        // Filtrer les offres en fonction du texte de recherche
+        $filteredOffers = array_filter($allOffers, function($offer) use ($searchText) {
+            return strpos(strtolower($offer->Entitled_O), strtolower($searchText)) !== false;
+        });
+    
+        // Appliquer le filtre (à remplacer par votre propre logique pour filtrer les offres en fonction de $filter)
+    // Exemple : Vous pouvez modifier cette partie en fonction de la logique de votre filtre
+    
+
+    return $filteredOffers;
+}
+function filter() {
+    // Vérifiez si les données ont été envoyées via POST
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Récupérez les données POST
+        $postData = json_decode(file_get_contents('php://input'), true);
+        $searchText = $postData['searchText'];
+        $filter = $postData['filter'];
+
+        // Appliquez la recherche et les filtres
+        // Vous devrez implémenter votre propre logique pour rechercher et filtrer les offres en fonction de $searchText et $filter
+        $filteredOffers = $this->applySearchAndFilter($searchText, $filter);
+
+        // Envoyer les offres filtrées sous forme d'objets JSON
+        header('Content-Type: application/json');
+        echo json_encode($filteredOffers);
+        } else {
+        // Gestion des erreurs si la méthode n'est pas POST
+        http_response_code(405);
+        echo json_encode(['error' => 'Method Not Allowed']);
+        }
+        }
+    
+
 
     public function apply(int $id){
         $offersModel = new OffersModel;

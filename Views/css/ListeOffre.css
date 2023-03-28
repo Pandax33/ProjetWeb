@@ -162,6 +162,56 @@ ul {list-style: none;
     margin-left: 10%;
   }
 
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #search-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  #search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+  }
+  
+  .btn-search {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .btn-search:hover {
+    background-color: #0056b3;
+  }
+  
+  .filter-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #filter {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 10px;
+  }
+
   /* créer un média pour changer le flex du button-group */
   @media only screen and (max-width: 1000px) {
     .button-group {
@@ -210,4 +260,6 @@ ul {list-style: none;
 
 .container {
   margin-top: 50px;
+
 }
+

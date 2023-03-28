@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 07:41:22
+/* Smarty version 4.3.0, created on 2023-03-28 08:11:54
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64229a22df9723_50880451',
+  'unifunc' => 'content_6422a14a6190f2_40652501',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '119ee4728659016ed3515b0070ed553f38066699' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679989279,
+      1 => 1679991009,
       2 => 'file',
     ),
   ),
@@ -23,9 +23,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
     'file:buttons/c_offer_b.tpl' => 1,
     'file:buttons/m_offer_b.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_64229a22df9723_50880451 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422a14a6190f2_40652501 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -36,6 +37,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
 </head>
 <body>
 
@@ -52,7 +54,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
 ?>
   <?php }?>
 
-  <div class="container"> 
+  <div class="container"style="min-height:90%"> 
 
     <div class="card card-top">
       <div class="card-body">
@@ -103,18 +105,29 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 ?>
           
 
-          <li>
-            <div class="card mb-3" style="max-width: 900px;">
+          <li style="width: 70%; ">
+            <div class="card mb-3" style="max-width: 900px;background-color:rgba(255, 255, 255, 0.625)">
               <div class="row g-0">
                 <div class="col-md-4">
                   <img src="../Views/css/enterprise.png" class="img-fluid rounded-start" alt="illustration d'entreprise">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                  <h5 class="card-title offer-title"><?php echo $_smarty_tpl->tpl_vars['object']->value->Entitled_O;?>
+
+                  <?php if ($_smarty_tpl->tpl_vars['object']->value->State == 1) {?>
+                    <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['object']->value->Entitled_O;?>
  /</h5>
-                    <h5 id="enter"> <?php echo $_smarty_tpl->tpl_vars['object']->value->ent;?>
- </h5>
+                  <?php } else { ?>
+                    <h5 class="card-title">❌<?php echo $_smarty_tpl->tpl_vars['object']->value->Entitled_O;?>
+ /</h5>
+                  <?php }?>
+          
+                    <h5 id="enter"><a href="index.php?p=offers/list/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_E;?>
+"><?php echo $_smarty_tpl->tpl_vars['object']->value->ent;?>
+ </a><span> à <a href="index.php?p=offers/ville/<?php echo $_smarty_tpl->tpl_vars['object']->value->Name;?>
+"><?php echo $_smarty_tpl->tpl_vars['object']->value->Name;?>
+ </a></span></h5>
+
                     <p class="card-text">Durée du stage : <?php echo $_smarty_tpl->tpl_vars['object']->value->Duration_O;?>
 </p> 
                     <p class="card-text"><small class="text-muted"><?php echo $_smarty_tpl->tpl_vars['object']->value->DatePublish_O;?>
@@ -136,6 +149,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
               </div>
             </div>
           </li>
+    
         <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
@@ -144,6 +158,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <p>Aucune donnée trouvée.</p>
     <?php }?>
   </div>
+  <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
   <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

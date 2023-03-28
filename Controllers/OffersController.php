@@ -567,47 +567,7 @@ foreach ($selectedCompetences as $competence) {
         $this->smarty->display('postuler.tpl');
     }
 
-<<<<<<< HEAD
-    
-=======
 
-    function getSampleOffers() {
-        return [
-            (object)[
-                'ID_O' => '1',
-                'Entitled_O' => 'Stage développement web',
-                'Duration_O' => '6 mois',
-                'Salary_O' => '1200€/mois',
-                'DatePublish_O' => '2022-01-01 10:00:00',
-                'Description' => 'Nous recherchons un développeur web pour rejoindre notre équipe de développement. Les tâches principales incluent la programmation, la maintenance et lamélioration de nos sites web.',
-                'Space_O' => '15',
-                'State' => '0',
-                'ID_E' => '1',
-                'LinkPicture' => '',
-                'Name' => 'Lyon',
-                'wish' => 0,
-                'ent' => 'Société Générale'
-            ],
-            (object)[
-                'ID_O' => '1',
-                'Entitled_O' => 'Stage développement web',
-                'Duration_O' => '6 mois',
-                'Salary_O' => '1200€/mois',
-                'DatePublish_O' => '2022-01-01 10:00:00',
-                'Description' => 'Nous recherchons un développeur web pour rejoindre notre équipe de développement. Les tâches principales incluent la programmation, la maintenance et lamélioration de nos sites web.',
-                'Space_O' => '15',
-                'State' => '0',
-                'ID_E' => '1',
-                'LinkPicture' => '',
-                'Name' => 'Lyon',
-                'wish' => 0,
-                'ent' => 'Société Générale'
-            ],
-            
-            // Ajoutez ici les autres offres en suivant le même format
-        ];
-    }
->>>>>>> edf27b5c6abe077b5a64eee1aaa1529d0c978dde
     
     function applySearchAndFilter($searchText, $filter) {
         // Récupérer toutes les offres (remplacez cette fonction par votre propre logique pour récupérer les offres)

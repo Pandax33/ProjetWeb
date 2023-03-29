@@ -23,7 +23,12 @@
         <span class="sel">Etudiants |</span>
       </div>
     </div>
-
+    <div class="search-container">
+    <form id="search-form" style="margin-bottom: 10px;">
+      <input type="text" id="search-input" placeholder="Rechercher une entreprise..." style="width: 150%;">
+      <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
+    </form>
+    </div>
     {if $role == "admin"}
       <span>{include file="buttons/c_student_b.tpl"}
       {include file="buttons/m_student_b.tpl"}</span>

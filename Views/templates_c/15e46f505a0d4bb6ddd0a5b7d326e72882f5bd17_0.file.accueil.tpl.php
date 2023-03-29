@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 22:54:21
+/* Smarty version 4.3.0, created on 2023-03-29 08:52:33
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642353fd0c45f1_97491520',
+  'unifunc' => 'content_6423e031e90084_17134666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1680036860,
+      1 => 1680072751,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_642353fd0c45f1_97491520 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423e031e90084_17134666 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -72,7 +72,7 @@ function content_642353fd0c45f1_97491520 (Smarty_Internal_Template $_smarty_tpl)
       <h1 style="text-align: center; margin-bottom:20px">Les entreprises du moment</h1>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
-            <img src="../../../Views/css/orange.jpg" class="card-img" alt="Orange logo">
+            <img src="../../../Views/css/orange.webp" class="card-img" alt="Orange logo">
             <div class="card-body">
               <h5 class="card-title">Orange</h5>
               <p class="card-text" style="color:gray">Géant de la télecommunication, compte plus de 266 millions de clients dans le monde...</p>
@@ -82,7 +82,7 @@ function content_642353fd0c45f1_97491520 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
-            <img src="../../../Views/css/sanofi.jpg" class="card-img-top" alt="Sanofi logo">
+            <img src="../../../Views/css/sanofi.webp" class="card-img-top" alt="Sanofi logo">
             <div class="card-body">
                 <h5 class="card-title">Sanofi</h5>
                 <p class="card-text" style="color:gray">Sanofi est une entreprise transnationale française dont les activités incluent la pharmacie et les vaccins.</p>
@@ -92,7 +92,7 @@ function content_642353fd0c45f1_97491520 (Smarty_Internal_Template $_smarty_tpl)
           </div>
           <div class="col-md-4" style="width: 20rem;">
             <div class="card">
-                <img src="../../../Views/css/toto.png" class="card-img-top" alt="Total logo">
+                <img src="../../../Views/css/toto.webp" class="card-img-top" alt="Total logo">
               <div class="card-body">
                 <h5 class="card-title">Total</h5>
                 <p class="card-text" style="color:gray">TotalEnergies SE est une compagnie mondiale de production d’hydrocarbures et d’autres sources d’énergies.</p>

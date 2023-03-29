@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 08:11:54
+/* Smarty version 4.3.0, created on 2023-03-29 07:09:41
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\offers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422a14a6190f2_40652501',
+  'unifunc' => 'content_6423e4354448c9_91422650',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '119ee4728659016ed3515b0070ed553f38066699' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\offers.tpl',
-      1 => 1679991009,
+      1 => 1680073300,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6422a14a6190f2_40652501 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423e4354448c9_91422650 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -38,6 +38,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
 </head>
 <body>
 
@@ -65,13 +66,13 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
     </div>
 
     <div class="search-container">
-  <form id="search-form">
-    <input type="text" id="search-input" placeholder="Rechercher une offre...">
-    <button type="submit" class="btn btn-search">Rechercher</button>
+  <form id="search-form" style="margin-bottom: 10px;">
+    <input type="text" id="search-input" placeholder="Rechercher une offre..." style="width: 150%;">
+    <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px;  margin-bottom: 0;">Rechercher</button>
   </form>
-  <div class="filter-container">
-    <label for="filter">Filtrer par :</label>
-    <select id="filter">
+  <div class="filter-container" style="margin-bottom: 2%;">
+    <label for="filter">Filtrer:</label>
+    <select id="filter" class="menu">
       <option value="all">Tous</option>
       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['city']->value, 'item');
@@ -135,7 +136,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
                     </div>
                     <div class="button-group">
                     <a href="index.php?p=offers/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
-" class="btn btn-orange">En savoir plus</a>
+" class="btn btn-orange" style="margin-right: 10px;">En savoir plus</a>
                     <?php if ($_smarty_tpl->tpl_vars['object']->value->wish == 0 && $_smarty_tpl->tpl_vars['role']->value == "student") {?>
                       <a href="index.php?p=offers/addWishlist/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_O;?>
 "><button class="btn btn-green">Ajouter à la Wishlist</a></button>

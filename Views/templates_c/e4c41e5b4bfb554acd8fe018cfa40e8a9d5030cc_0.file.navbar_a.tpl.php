@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 08:11:19
+/* Smarty version 4.3.0, created on 2023-03-29 07:07:20
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\navbar_a.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422a12791f800_31013743',
+  'unifunc' => 'content_6423e3a81288c1_38796403',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e4c41e5b4bfb554acd8fe018cfa40e8a9d5030cc' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\navbar_a.tpl',
-      1 => 1679991009,
+      1 => 1680009760,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6422a12791f800_31013743 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423e3a81288c1_38796403 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="navbar sticky-top bg-body-tertiary">
     <div class="navbar-brand">
       <span>Héraclès </span>
@@ -35,7 +35,7 @@ function content_6422a12791f800_31013743 (Smarty_Internal_Template $_smarty_tpl)
 
       
       <li class="nav-item profile-item mobile-only"><a href="#" class="nav-link">Profile</a></li>
-      <li class="nav-item sign-item mobile-only"><a href="index.php?p=login" class="nav-link1">Sign Out</a></li>
+      <li class="nav-item sign-item mobile-only"><a href="index.php?p=main" class="nav-link1">Sign Out</a></li>
 
     </ul>
    

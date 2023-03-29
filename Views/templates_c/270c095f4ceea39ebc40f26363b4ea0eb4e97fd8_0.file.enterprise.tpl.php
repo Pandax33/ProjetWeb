@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 08:12:53
+/* Smarty version 4.3.0, created on 2023-03-29 07:09:05
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\details\enterprise.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422a1854b72e0_26622687',
+  'unifunc' => 'content_6423e411a0df18_03309737',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '270c095f4ceea39ebc40f26363b4ea0eb4e97fd8' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\enterprise.tpl',
-      1 => 1679991009,
+      1 => 1680073300,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
   ),
 ),false)) {
-function content_6422a1854b72e0_26622687 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423e411a0df18_03309737 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,10 +35,11 @@ function content_6422a1854b72e0_26622687 (Smarty_Internal_Template $_smarty_tpl)
     <title>Héraclès | <?php echo $_smarty_tpl->tpl_vars['entreprise']->value->Name_E;?>
 </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
+    <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
     <link rel="stylesheet" href="../../../Views/css/detail_o.css" type="text/css">
     <link rel="stylesheet" href="../../../Views/css/navbar.css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
+    <link rel="stylesheet" href="../../../Views/css/detail_e.css">
 </head>
 
 <body>
@@ -64,26 +65,42 @@ function content_6422a1854b72e0_26622687 (Smarty_Internal_Template $_smarty_tpl)
     <!--Parcourir la liste req de l'objet $offer-->
     <p style="color:rgb(36, 36, 36)"> Localités :
     <br>
-    <?php
+    <!-- verife si l'array $entreprise->loc existe-->
+    <?php if ((isset($_smarty_tpl->tpl_vars['entreprise']->value->loc))) {?>
+      <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['entreprise']->value->loc, 'localite');
 $_smarty_tpl->tpl_vars['localite']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['localite']->value) {
 $_smarty_tpl->tpl_vars['localite']->do_else = false;
 ?>
-    <span style="color:rgba(70, 70, 70, 0.688)"><a href="index.php?p=offers/ville/<?php echo $_smarty_tpl->tpl_vars['localite']->value;?>
+      <span style="color:rgba(70, 70, 70, 0.688)"><a href="index.php?p=offers/ville/<?php echo $_smarty_tpl->tpl_vars['localite']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['localite']->value;?>
 </a></span>
-    <?php
+      <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+    <?php } else { ?>
+      <span style="color:rgba(70, 70, 70, 0.688)">Aucune localité</span>
+    <?php }?>
     </p>
 
     <p style="margin-bottom: 0; color:rgb(37, 37, 37)">Etudiants déjà en stage chez <?php echo $_smarty_tpl->tpl_vars['entreprise']->value->Name_E;?>
  : <span style="color:rgba(70, 70, 70, 0.688)"><?php echo $_smarty_tpl->tpl_vars['entreprise']->value->Intership_E;?>
 </span></p>
-    <p style="color:rgb(36, 36, 36)">Niveau de confiance: <span style="color:rgba(70, 70, 70, 0.555)"> <?php echo $_smarty_tpl->tpl_vars['entreprise']->value->TrustRate_E;?>
+    <p style="margin-bottom:0;color:rgb(36, 36, 36)">Confiance du pilote: <span style="color:rgba(70, 70, 70, 0.555)"> <?php echo $_smarty_tpl->tpl_vars['entreprise']->value->TrustRate_E;?>
  / 5</span></p>
-      <p> <a href="index.php?p=enterprises" style="color:black">Retour</a></p>
+    <p style="color:rgb(36, 36, 36);">Confiance des étudiants: <span style="color:rgba(70, 70, 70, 0.555)"> <?php echo $_smarty_tpl->tpl_vars['grade']->value->moy;?>
+ / 5   </span><span style="font-size: 80%;"> (<?php echo $_smarty_tpl->tpl_vars['nbenotes']->value->nb;?>
+)</span></p>
+    <p><a href="index.php?p=enterprises/noter/<?php echo $_smarty_tpl->tpl_vars['entreprise']->value->ID_E;?>
+" style="color: orange">Noter cette entreprise</a></p>
+
+    <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+      <a href="index.php?p=enterprises/suppr/<?php echo $_smarty_tpl->tpl_vars['entreprise']->value->ID_E;?>
+"><button class="btn btn-red">Supprimer l'entreprise</a></button>
+      <?php }?>
+
+      <p><a href="index.php?p=enterprises" style="color:black">Retour</a></p>
 </div>
 
 <p style="text-align: center;"><a href="index.php?p=offers/list/<?php echo $_smarty_tpl->tpl_vars['entreprise']->value->ID_E;?>

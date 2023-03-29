@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 15:33:09
+/* Smarty version 4.3.0, created on 2023-03-29 07:08:54
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\teachers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421b73550a953_90404209',
+  'unifunc' => 'content_6423e406dbed14_53066635',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c91475073fd57b7630c174a42642daec6275e2df' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\teachers.tpl',
-      1 => 1679930702,
+      1 => 1680073300,
       2 => 'file',
     ),
   ),
@@ -23,11 +23,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
     'file:buttons/c_teacher_b.tpl' => 1,
     'file:buttons/m_teacher_b.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6421b73550a953_90404209 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423e406dbed14_53066635 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -35,7 +37,8 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeTeachers.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
-
+  <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
 </head>
 <body>
 <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
@@ -85,7 +88,11 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
 </small></p>
                     </div>
                     <div class="button-group">
-                      <button class="btn btn-green">Modifier</button>
+
+                      <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+                        <a href="index.php?p=teachers/suppr/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_P;?>
+"><button class="btn btn-green" style="background-color:rgb(249, 97, 42)" >Supprimer le pilote</a></button>
+                        <?php }?>
 
                   </div>
                 </div>
@@ -100,6 +107,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <p>Aucune donnée trouvée.</p>
     <?php }?>
   </div>
+  <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
   <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
@@ -117,5 +126,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 >
   
 </body>
-</html><?php }
+</html>
+<?php }
 }

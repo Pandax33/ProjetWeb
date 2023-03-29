@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 15:33:08
+/* Smarty version 4.3.0, created on 2023-03-29 07:14:09
   from 'C:\Users\leanb\Documents\GitHub\ProjetWeb\Views\templates\students.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421b73440dda0_54672104',
+  'unifunc' => 'content_6423e541ee31a3_49347294',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '137a013aa0b12b656fa78ff5ec1da722f81b7d95' => 
     array (
       0 => 'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\students.tpl',
-      1 => 1679930702,
+      1 => 1680074015,
       2 => 'file',
     ),
   ),
@@ -23,9 +23,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_s.tpl' => 1,
     'file:buttons/c_student_b.tpl' => 1,
     'file:buttons/m_student_b.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6421b73440dda0_54672104 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423e541ee31a3_49347294 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -35,6 +36,8 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\leanb\\Documents\
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeStudent.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   </head>
 <body>
 <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
@@ -86,7 +89,7 @@ $_smarty_tpl->tpl_vars['object']->do_else = false;
                     <div class="button-group">
                       <a href="index.php?p=students/detail/<?php echo $_smarty_tpl->tpl_vars['object']->value->ID_P;?>
 " class="btn btn-orange">Voir les statistiques</a>
-                      <button class="btn btn-green">Modifier</button>
+                      
 
                   </div>
                 </div>
@@ -101,6 +104,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       <p>Aucune donnée trouvée.</p>
     <?php }?>
   </div>
+  <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
   <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 19:28:51
+/* Smarty version 4.3.0, created on 2023-03-29 10:45:40
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\students.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_642323d31034d4_52000942',
+  'unifunc' => 'content_6423fab4d5ed71_69579004',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cd7cd6f4339bff2c262b8c2184eaf95ecbd9e123' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\students.tpl',
-      1 => 1680024323,
+      1 => 1680079539,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_642323d31034d4_52000942 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423fab4d5ed71_69579004 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.count.php','function'=>'smarty_modifier_count',),));
 ?>
 <html>
@@ -54,8 +54,13 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Aniss\\Documents\
         <span class="sel">Etudiants |</span>
       </div>
     </div>
-
-    <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin") {?>
+    <div class="search-container">
+    <form id="search-form" style="margin-bottom: 10px;">
+      <input type="text" id="search-input" placeholder="Rechercher une entreprise..." style="width: 150%;">
+      <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
+    </form>
+    </div>
+    <?php if ($_smarty_tpl->tpl_vars['role']->value == "admin" || $_smarty_tpl->tpl_vars['role']->value == "teacher") {?>
       <span><?php $_smarty_tpl->_subTemplateRender("file:buttons/c_student_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
       <?php $_smarty_tpl->_subTemplateRender("file:buttons/m_student_b.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

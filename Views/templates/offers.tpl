@@ -47,7 +47,7 @@
   </div>
 </div>
      <!--Si le role est admin, inclure le fichier createoffer.tpl-->
-    {if $role == "admin"}
+    {if $role == "admin" || $role == "teacher"}
       <span>{include file="buttons/c_offer_b.tpl"}
       
       {include file="buttons/m_offer_b.tpl"}</span>

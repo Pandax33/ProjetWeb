@@ -186,7 +186,7 @@ foreach ($selectedCompetences as $competence) {
         
 
     $this ->smarty->display('details/m_s.tpl');
-    var_dump($personModel);
+ 
     }
 
     public function cree(){

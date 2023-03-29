@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-29 10:30:29
-  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\forgot.tpl' */
+/* Smarty version 4.3.0, created on 2023-03-29 10:35:14
+  from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\c_s.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6423f7250085b7_13819287',
+  'unifunc' => 'content_6423f84265b531_68926639',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '2b9a521c9f187f085f837db8896cd29a7ab54b7b' => 
+    'c7cfef812ab2881e9beafe43cb9d97fa16775e62' => 
     array (
-      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\forgot.tpl',
+      0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\c_s.tpl',
       1 => 1680076188,
       2 => 'file',
     ),
@@ -20,15 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6423f7250085b7_13819287 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423f84265b531_68926639 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Héraclès | Mot de passe oublié</title>
+    <title>Héraclès | Création Etudiant</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Views/css/login.css" type="text/css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
@@ -39,14 +39,10 @@ function content_6423f7250085b7_13819287 (Smarty_Internal_Template $_smarty_tpl)
     <br><br>
     <div class="container">
 
-            <h1>Problèmes de connexion ?</h1>
-            <form method="POST" action="index.php?p=login/forgot2">
-                <label for="exampleInputEmail1">Adresse email</label>
-                <input type="email" class="form-control" placeholder="Email" name="email">
-                <button type="submit" class="btn btn-primary" name="validate">Envoyer un mail de récupération</button>
-            </form>
+            <h1>L'étudiant.e a bien été crée👍</h1>
+                <p>Vous pouvez maintenant le consulter depuis la liste des étudiants</p>
             <div class="forgot-password">
-                <a href="index.php?p=login">Retour à la page de connexion</a>
+                <a href="index.php?p=students">Aller à la page des etudiants</a>
             </div>
 
     </div>

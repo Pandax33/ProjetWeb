@@ -31,7 +31,7 @@
        <div class="container-fluid text-center">
         <div class="card-body  welcome-card text-center mx-auto" style="margin-top: 50px;" >
           <div class="card d-flex align-items-center justify-content-center">
-          <h1 class="card-title">Bienvenue sur <span style="color: rgb(222, 115, 8);">Heraclès</span><span style="">, {$titre}.</span></h1>
+          <h1 class="card-title">Bienvenue sur <span style="color: rgb(222, 115, 8);">Heraclès</span></h1>
           </div>
         </div> 
       </div>

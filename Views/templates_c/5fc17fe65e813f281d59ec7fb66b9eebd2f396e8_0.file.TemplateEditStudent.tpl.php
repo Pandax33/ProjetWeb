@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 09:36:44
+/* Smarty version 4.3.0, created on 2023-03-29 10:35:26
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\TemplateEditStudent.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422990c4d1656_49861793',
+  'unifunc' => 'content_6423f84edaa2a4_77137667',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5fc17fe65e813f281d59ec7fb66b9eebd2f396e8' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateEditStudent.tpl',
-      1 => 1679961248,
+      1 => 1680076188,
       2 => 'file',
     ),
   ),
@@ -20,15 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6422990c4d1656_49861793 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423f84edaa2a4_77137667 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des articles</title>
+  <title>Héraclès | Modification Etudiant</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../Views/css/createOffers.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.6.0.min.js"><?php echo '</script'; ?>
 >
@@ -44,7 +45,7 @@ function content_6422990c4d1656_49861793 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="container">
         <div class="create-off-border">
-            <label>Modify Étudiant</label></div>
+            <label>Modification Étudiant</label></div>
             <div class="row mb-3">
 <div class="form-group col-md-6">
 <label for="Etudiant">Etudiant</label>

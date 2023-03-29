@@ -24,7 +24,7 @@
         <span class="sel">Pilotes |</span>
       </div>
     </div>
-    {if $role == "admin"}
+    {if $role == "admin" || $role == "teacher"}
       <span>{include file="buttons/c_teacher_b.tpl"}
       {include file="buttons/m_teacher_b.tpl"}</span>
     {/if}

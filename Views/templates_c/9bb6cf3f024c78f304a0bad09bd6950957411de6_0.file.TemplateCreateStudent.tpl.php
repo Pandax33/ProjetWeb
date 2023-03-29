@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 09:53:47
+/* Smarty version 4.3.0, created on 2023-03-29 10:34:27
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\TemplateCreateStudent.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_64229d0b437068_00477192',
+  'unifunc' => 'content_6423f8138d92b4_82040060',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bb6cf3f024c78f304a0bad09bd6950957411de6' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\TemplateCreateStudent.tpl',
-      1 => 1679990017,
+      1 => 1680076188,
       2 => 'file',
     ),
   ),
@@ -20,15 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64229d0b437068_00477192 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423f8138d92b4_82040060 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
-  <title>Liste des articles</title>
+  <title>Heraclès | Création Etudiant</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../../Views/css/createOffers.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
   <?php echo '<script'; ?>
  src="https://code.jquery.com/jquery-3.6.0.min.js"><?php echo '</script'; ?>
 >

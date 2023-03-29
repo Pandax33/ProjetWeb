@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 14:41:47
+/* Smarty version 4.3.0, created on 2023-03-29 10:38:55
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\s_t.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422e08bb128f9_72677818',
+  'unifunc' => 'content_6423f91f63cbf5_66206918',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '792b558d0e7f0e8a131be2a93907c2def75326ae' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\s_t.tpl',
-      1 => 1680007258,
+      1 => 1680076188,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6422e08bb128f9_72677818 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423f91f63cbf5_66206918 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -32,6 +32,7 @@ function content_6422e08bb128f9_72677818 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Views/css/login.css" type="text/css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
+    <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
 </head>
 
 <body>
@@ -41,7 +42,7 @@ function content_6422e08bb128f9_72677818 (Smarty_Internal_Template $_smarty_tpl)
             <h1>Ce pilote a bien été supprimée 👍</h1>
                 <p>Vous pouvez maintenant continuer à surveiller 👁️ le reste des pilotes disponibles.</p>
             <div class="forgot-password">
-                <a href="index.php?p=offers">Retour à la page des Pilotes</a>
+                <a href="index.php?p=teachers">Retour à la page des Pilotes</a>
             </div>
 
     </div>

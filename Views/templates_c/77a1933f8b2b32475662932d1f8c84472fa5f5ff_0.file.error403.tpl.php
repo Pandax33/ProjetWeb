@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-27 12:59:54
+/* Smarty version 4.3.0, created on 2023-03-29 10:12:04
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\error403.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6421772a723694_55558987',
+  'unifunc' => 'content_6423f2d4be4de6_52503404',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '77a1933f8b2b32475662932d1f8c84472fa5f5ff' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\error403.tpl',
-      1 => 1679914794,
+      1 => 1680076188,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:navbar_a.tpl' => 1,
     'file:navbar_t.tpl' => 1,
     'file:navbar_s.tpl' => 1,
+    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6421772a723694_55558987 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423f2d4be4de6_52503404 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
   <meta charset="utf-8">
@@ -32,6 +33,8 @@ function content_6421772a723694_55558987 (Smarty_Internal_Template $_smarty_tpl)
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../Views/css/ListeOffre.css" type="text/css">
   <link rel="stylesheet" href="../../Views/css/navbar.css">
+  <link rel="stylesheet" href="../../Views/css/footer.css">
+  <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
 </head>
 <body>
 <!--Si le role dans la session = admin, alors inclure navbar_s.tpl, de meme pour les roles teacher et student-->
@@ -51,6 +54,8 @@ function content_6421772a723694_55558987 (Smarty_Internal_Template $_smarty_tpl)
 <a href="http://localhost/public/index.php?p=accueil" class="btn back-b">Retour à l'accueil</a>
    
   </div>
+  <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
   <?php echo '<script'; ?>
 >document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');

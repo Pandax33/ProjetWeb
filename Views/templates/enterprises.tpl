@@ -49,7 +49,7 @@
     </select>
   </div>
 </div>
-    {if $role == "admin"}
+    {if $role == "admin" || $role == "teacher"}
       <span>{include file="buttons/c_enterprise_b.tpl"}
       {include file="buttons/m_enterprise_b.tpl"}</span>
     {/if}

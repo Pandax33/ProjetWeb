@@ -29,7 +29,7 @@
       <button type="submit" class="btn btn-search" style="margin-left: 10px; margin-right:10px">Rechercher</button>
     </form>
     </div>
-    {if $role == "admin"}
+    {if $role == "admin" || $role == "teacher"}
       <span>{include file="buttons/c_student_b.tpl"}
       {include file="buttons/m_student_b.tpl"}</span>
     {/if}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 14:38:32
+/* Smarty version 4.3.0, created on 2023-03-29 10:33:53
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\details\s_s.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422dfc846aa91_42580722',
+  'unifunc' => 'content_6423f7f17eedb3_89603793',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ab154bcf82fa9ce8833c541db23facfbc1f63df9' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\details\\s_s.tpl',
-      1 => 1680007092,
+      1 => 1680076188,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6422dfc846aa91_42580722 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423f7f17eedb3_89603793 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -32,6 +32,7 @@ function content_6422dfc846aa91_42580722 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Views/css/login.css" type="text/css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
+    <link rel="icon" type="image/x-icon" href="../../Views/css/images/LogoH.png">
 </head>
 
 <body>

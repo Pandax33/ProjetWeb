@@ -6,7 +6,7 @@ body {
 
     justify-content: center;
     align-items: center;
-    background-image: url("img1.png");
+    background-image: url("img1.webp");
     background-size: cover;
     backdrop-filter: blur(5px);
   }
@@ -130,7 +130,7 @@ body {
     min-height: 100px;
     /*Laisser de l'espace vide en haut */
     font-family: Poppins ExtraBold, sans-serif;
-    background-image: url('img1.png');
+    background-image: url('img1.webp');
     background-size: cover;
     background-repeat: repeat;
     justify-content: center;

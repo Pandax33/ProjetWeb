@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.0, created on 2023-03-28 13:13:48
+/* Smarty version 4.3.0, created on 2023-03-29 09:22:19
   from 'C:\Users\Aniss\Documents\GitHub\ProjetWeb\Views\templates\accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.0',
-  'unifunc' => 'content_6422cbecb43652_91100239',
+  'unifunc' => 'content_6423e72b2d0917_61993993',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15e46f505a0d4bb6ddd0a5b7d326e72882f5bd17' => 
     array (
       0 => 'C:\\Users\\Aniss\\Documents\\GitHub\\ProjetWeb\\Views\\templates\\accueil.tpl',
-      1 => 1680002028,
+      1 => 1680074526,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6422cbecb43652_91100239 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423e72b2d0917_61993993 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -37,6 +37,11 @@ function content_6422cbecb43652_91100239 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="../../Views/css/accueil.css">
     <link rel="stylesheet" href="../../Views/css/navbar.css">
     <link rel="stylesheet" href="../../Views/css/footer.css">
+    <link rel="manifest" href="../../manifest.json">
+  <link rel="apple-touch-icon" href="../../assets/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="white">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="white">
     
 </head>
 
@@ -65,7 +70,7 @@ function content_6422cbecb43652_91100239 (Smarty_Internal_Template $_smarty_tpl)
       <h1 style="text-align: center; margin-bottom:20px">Les entreprises du moment</h1>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
-            <img src="../../../Views/css/orange.jpg" class="card-img" alt="Orange logo">
+            <img src="../../../Views/css/orange.webp" class="card-img" alt="Orange logo">
             <div class="card-body">
               <h5 class="card-title">Orange</h5>
               <p class="card-text" style="color:gray">Géant de la télecommunication, compte plus de 266 millions de clients dans le monde...</p>
@@ -75,7 +80,7 @@ function content_6422cbecb43652_91100239 (Smarty_Internal_Template $_smarty_tpl)
         </div>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
-            <img src="../../../Views/css/sanofi.jpg" class="card-img-top" alt="Sanofi logo">
+            <img src="../../../Views/css/sanofi.webp" class="card-img-top" alt="Sanofi logo">
             <div class="card-body">
                 <h5 class="card-title">Sanofi</h5>
                 <p class="card-text" style="color:gray">Sanofi est une entreprise transnationale française dont les activités incluent la pharmacie et les vaccins.</p>
@@ -85,7 +90,7 @@ function content_6422cbecb43652_91100239 (Smarty_Internal_Template $_smarty_tpl)
           </div>
           <div class="col-md-4" style="width: 20rem;">
             <div class="card">
-                <img src="../../../Views/css/toto.png" class="card-img-top" alt="Total logo">
+                <img src="../../../Views/css/toto.webp" class="card-img-top" alt="Total logo">
               <div class="card-body">
                 <h5 class="card-title">Total</h5>
                 <p class="card-text" style="color:gray">TotalEnergies SE est une compagnie mondiale de production d’hydrocarbures et d’autres sources d’énergies.</p>
@@ -121,7 +126,9 @@ function content_6422cbecb43652_91100239 (Smarty_Internal_Template $_smarty_tpl)
   <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-
+  <?php echo '<script'; ?>
+ src="../../app.js"><?php echo '</script'; ?>
+>
     <?php echo '</script'; ?>
 >
 </body>

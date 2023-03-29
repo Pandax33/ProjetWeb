@@ -39,31 +39,31 @@
       <h1 style="text-align: center; margin-bottom:20px">Les entreprises du moment</h1>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
-            <img src="../../../Views/css/orange.webp" class="card-img" alt="Orange logo">
+            <img src="../../../Views/css/orange.webp" class="card-img" alt="Orange logo" style="width: 100%; height: auto;">
             <div class="card-body">
               <h5 class="card-title">Orange</h5>
               <p class="card-text" style="color:gray">Géant de la télecommunication, compte plus de 266 millions de clients dans le monde...</p>
-              <a href="#" class="btn btn-success" style="justify-content:center">En savoir plus</a>
+              <a href="index.php?p=enterprises" class="btn btn-success" style="justify-content:center">En savoir plus</a>
             </div>
           </div>
         </div>
         <div class="col-md-4" style="width: 20rem;">
           <div class="card">
-            <img src="../../../Views/css/sanofi.webp" class="card-img-top" alt="Sanofi logo">
+            <img src="../../../Views/css/sanofi.webp" class="card-img-top" alt="Sanofi logo" style="width: 100%; height: auto;">
             <div class="card-body">
                 <h5 class="card-title">Sanofi</h5>
                 <p class="card-text" style="color:gray">Sanofi est une entreprise transnationale française dont les activités incluent la pharmacie et les vaccins.</p>
-                <a href="#" class="btn btn-success">En savoir plus</a>
+                <a href="index.php?p=enterprises" class="btn btn-success">En savoir plus</a>
               </div>
             </div>
           </div>
           <div class="col-md-4" style="width: 20rem;">
             <div class="card">
-                <img src="../../../Views/css/toto.webp" class="card-img-top" alt="Total logo">
+                <img src="../../../Views/css/toto.webp" class="card-img-top" alt="Total logo" style="width: 100%; height: auto;">
               <div class="card-body">
                 <h5 class="card-title">Total</h5>
                 <p class="card-text" style="color:gray">TotalEnergies SE est une compagnie mondiale de production d’hydrocarbures et d’autres sources d’énergies.</p>
-                <a href="#" class="btn btn-success">En savoir plus</a>
+                <a href="index.php?p=enterprises" class="btn btn-success">En savoir plus</a>
               </div>
             </div>
           </div>

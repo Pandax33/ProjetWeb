@@ -16,6 +16,7 @@
   <meta name="apple-mobile-web-app-status-bar" content="white">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="white">
+  <meta name="description" content="Page d'accueil, permettant de se diriger vers différentes pages et differents service">
     
 </head>
 

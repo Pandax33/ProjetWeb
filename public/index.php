@@ -2,6 +2,21 @@
 
 use App\Autoloader;
 use App\Core\Main;
+use App\Models\CenterModel;
+use App\Models\CityModel;
+use App\Models\CompetenceModel;
+use App\Models\ConcernModel;
+use App\Models\EnterpriseModel;
+use App\Models\GradeModel;
+use App\Models\LocateModel;
+use App\Models\OffersModel;
+use App\Models\OwnModel;
+use App\Models\PersonModel;
+use App\Models\PromotionModel;
+use App\Models\RequestModel;
+use App\Models\UsersModel;
+use App\Models\WishlistModel;
+use App\Models\_IsModel;
 
 define('ROOT', dirname(__DIR__));
 
@@ -14,8 +29,6 @@ $app = new Main();
 
 // On lance l'application
 $app->start();
-
-
 
 
 

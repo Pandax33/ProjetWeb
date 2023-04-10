@@ -10,6 +10,9 @@ class Model extends Db
 {
     // Table de la base de données
     protected $table;
+    protected $IdCollumName;
+
+    protected $Collumdeux;
 
     //Instance de Db
     private $db;
@@ -38,73 +41,10 @@ class Model extends Db
     return $this->requete("SELECT * FROM {$this->table} WHERE $liste_champs", $valeurs)->fetchAll();
     }
 
-    public function find(int $id)
+    public function find($id)
     {
-        return $this->requete("SELECT * FROM {$this->table} WHERE id = ?", [$id])->fetch();
+        return $this->requete("SELECT * FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id])->fetch();
     }
-
-<<<<<<< HEAD
-    public function create(Model $model)
-{
-    $champs = [];
-    $inter = [];
-    $valeurs = [];
-
-    // On boucle pour éclater le tableau
-    foreach($model as $champ => $valeur){
-        // INSERT INTO annonces (titre, description, actif) VALUES (?, ?, ?)
-        if($valeur !== null && $champ != 'db' && $champ != 'table'){
-            $champs[] = $champ;
-            $inter[] = "?";
-            $valeurs[] = $valeur;
-        }
-    }
-
-    // On transforme le tableau "champs" en une chaine de caractères
-    $liste_champs = implode(', ', $champs);
-    $liste_inter = implode(', ', $inter);
-
-    // On exécute la requête
-    return $this->requete('INSERT INTO '.$this->table.' ('. $liste_champs.')VALUES('.$liste_inter.')', $valeurs);
-}
-
-public function update(int $id, Model $model)
-{
-    $champs = [];
-    $valeurs = [];
-
-    // On boucle pour éclater le tableau
-    foreach($model as $champ => $valeur){
-        // UPDATE annonces SET titre = ?, description = ?, actif = ? WHERE id= ?
-        if($valeur !== null && $champ != 'db' && $champ != 'table'){
-            $champs[] = "$champ = ?";
-            $valeurs[] = $valeur;
-        }
-    }
-    $valeurs[] = $id;
-
-    // On transforme le tableau "champs" en une chaine de caractères
-    $liste_champs = implode(', ', $champs);
-
-    // On exécute la requête
-    return $this->requete('UPDATE '.$this->table.' SET '. $liste_champs.' WHERE id = ?', $valeurs);
-}
-
-public function hydrate(array $donnees)
-{
-    foreach ($donnees as $key => $value){
-        // On récupère le nom du setter correspondant à l'attribut.
-        $method = 'set'.ucfirst($key);
-        
-        // Si le setter correspondant existe.
-        if (method_exists($this, $method)){
-            // On appelle le setter.
-            $this->$method($value);
-        }
-    }
-    return $this;
-}
-=======
 //CREATE
     public function create(Model $model)
     {
@@ -116,7 +56,7 @@ public function hydrate(array $donnees)
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        if($valeur !== null && $champ != 'table' && $champ != 'db'){
+        if($valeur !== null  && $champ != 'IdCollumName'  && $champ != 'Collumdeux' && $champ != 'table' && $champ != 'db'){
         $champs[] = $champ;
         $inter[] = "?";
         $valeurs[]= $valeur;
@@ -127,11 +67,12 @@ public function hydrate(array $donnees)
 
     
     // On exécute la requête
+
     return $this->requete("INSERT INTO {$this->table} ($liste_champs) VALUES ($liste_inter)", $valeurs);
     }
 
 //UPDATE
-    public function update(int $id, Model $model)
+    public function update($id, Model $model)
     {
         //update offers set entitled = ?, duration = ?, date_publish = ?, salary = ?, space_available = ?, state = ?, description = ? where id = ?
         $champs = [];
@@ -140,9 +81,15 @@ public function hydrate(array $donnees)
     // On boucle pour "éclater le tableau"
     foreach($model as $champ => $valeur)
     {
-        if($valeur !== null && $champ != 'table' && $champ != 'db'){
-        $champs[] = "$champ = ?";
-        $valeurs[]= $valeur;
+        if($valeur !== null && $champ != 'table' && $champ != 'IdCollumName' && $champ != 'Collumdeux' && $champ != 'db'){
+            $champs[] = "$champ = ?";
+
+            // Convertir les booléens en entiers
+            if (is_bool($valeur)) {
+                $valeur = (int) $valeur;
+            }
+
+            $valeurs[]= $valeur;
         }
     }
     $valeurs[] = $id;
@@ -150,17 +97,20 @@ public function hydrate(array $donnees)
 
     
     // On exécute la requête
-    return $this->requete("UPDATE {$this->table} SET $liste_champs WHERE id = ?", $valeurs );
+    return $this->requete("UPDATE {$this->table} SET $liste_champs WHERE {$this->IdCollumName} = ?", $valeurs );
     } 
 
 //DELETE
     public function delete(int $id)
     {
     // DELETE FROM offers WHERE id = ?
-    return $this->requete("DELETE FROM {$this->table} WHERE id = ?", [$id]);
+    return $this->requete("DELETE FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id]);
     }
-    
->>>>>>> 1f6612f640ff40bacfe6bde3f6be563e898f15a3
+
+    public function deletePrecis(int $id, $Param)
+    {
+        return $this->requete("DELETE FROM {$this->table} WHERE {$this->IdCollumName} = ? and {$this->Collumdeux} = ?", [$id,$Param]);
+    }
 
     /**
     * Méthode qui exécutera les requêtes

@@ -45,7 +45,6 @@ class Model extends Db
     {
         return $this->requete("SELECT * FROM {$this->table} WHERE {$this->IdCollumName} = ?", [$id])->fetch();
     }
-
 //CREATE
     public function create(Model $model)
     {

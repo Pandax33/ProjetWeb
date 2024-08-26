@@ -1,13 +1,34 @@
-# Site web de gestion d'offres de stage - Héraclès
+# Héraclès - Plateforme de Gestion d'Offres de Stages
 
 ## Description
 
-Notre site web aura pour vocation d’être une solution à la fois pour les étudiants mais aussi pour les pilotes, cherchant un outil commun pour le suivi et la recherche de stage. En effet, aujourd’hui il existe de nombreuses solutions en ligne de suivi d’activité, d’offres de stages, mais peu proposant les deux à la fois. L’enjeu de notre plateforme sera donc d’associer les deux en offrant une solution à la fois unique et adaptée aux besoin des établissements scolaires dans le suivi et la proposition de stage à un large nombre d’étudiants.
+Héraclès est une plateforme web dédiée à la gestion et au suivi des offres de stages, conçue pour répondre aux besoins des étudiants et des établissements scolaires. Notre solution se distingue par l'intégration des fonctionnalités de recherche d'offres et de suivi de stages, permettant ainsi aux établissements d'accompagner efficacement un large nombre d'étudiants.
 
-## Justification du nom : Héraclès
+Aujourd'hui, il existe de nombreuses plateformes proposant des solutions de gestion d'activité ou d'offres de stages, mais peu offrent une combinaison des deux. Héraclès se positionne comme une plateforme unique, adaptée aux besoins des établissements scolaires, en simplifiant le processus de suivi et en offrant une vue d'ensemble sur les stages proposés aux étudiants.
 
-Héraclès, également connu sous le nom d'Hercule, serait un personnage grec en rapport avec les stages en raison de son histoire légendaire. Selon la mythologie grecque, Héraclès a dû accomplir plusieurs travaux pour prouver sa valeur et sa force. Ces travaux étaient souvent des tâches difficiles et dangereuses qui lui ont permis de développer ses compétences et d'acquérir de l'expérience.
+## Pourquoi le nom "Héraclès" ?
 
-De même, les stages permettent aux étudiants et aux jeunes professionnels de développer des compétences, d'acquérir de l'expérience et de prouver leur valeur sur le marché du travail. Tout comme Héraclès, les stagiaires doivent souvent relever des défis et faire face à des situations difficiles, mais cela leur permet de grandir et de devenir plus forts.
+Héraclès, également connu sous le nom d'Hercule, est une figure mythologique grecque célèbre pour ses exploits héroïques. Dans la mythologie, Héraclès a dû accomplir de nombreux travaux pour prouver sa valeur et développer ses compétences. De la même manière, les stages permettent aux étudiants de relever des défis, d'acquérir de l'expérience, et de prouver leur valeur sur le marché du travail.
 
-En fin de compte, Héraclès représente une figure inspirante pour les stagiaires car il symbolise la persévérance, la force et la capacité de surmonter les obstacles pour atteindre ses objectifs.
+Le nom Héraclès incarne les valeurs de persévérance, de force et de dépassement de soi, que nous souhaitons transmettre à travers notre plateforme. Tout comme le héros légendaire, les stagiaires doivent surmonter des obstacles pour atteindre leurs objectifs et grandir dans leur parcours professionnel.
+
+## Fonctionnalités principales
+
+- Recherche d'offres de stage adaptées aux besoins des étudiants.
+- Suivi des stages pour les établissements scolaires.
+- Interface intuitive et conviviale.
+- Gestion centralisée des offres et des candidatures.
+
+## Technologies utilisées
+
+- PHP pour le backend
+- JavaScript (app.js) pour les fonctionnalités frontend
+- Base de données relationnelle
+- Intégration avec un système de gestion de dépendances via Composer
+
+## Installation
+
+1. Clonez le dépôt Git.
+2. Installez les dépendances avec Composer :
+   ```bash
+   composer install
